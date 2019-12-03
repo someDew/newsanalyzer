@@ -1,2 +1,2 @@
-import "./pages/index.css";
+import "./pages/about.css";
 import "./vendor/fonts.css";
