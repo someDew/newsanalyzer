@@ -15,7 +15,7 @@ module.exports = {
     context: __dirname + '/src',
 
     entry: {
-        main: './index.js',
+        index: './index.js',
         analitics: './analitics.js',
         about: './about.js'
     },
@@ -85,21 +85,21 @@ module.exports = {
             title: 'NewsAnalizer',
             inject: false, // стили НЕ нужно прописывать внутри тегов
             // hash: true, // для страницы нужно считать хеш
-            template: './index.html', // откуда брать образец для сравнения с текущим видом проекта
+            template: './pages/index.html', // откуда брать образец для сравнения с текущим видом проекта
             filename: 'index.html' // имя выходного фай ла, то есть того, что окажется в папке dist после сборки
         }),
         new HtmlWebpackPlugin({
             title: 'About',
             inject: false, // стили НЕ нужно прописывать внутри тегов
             // hash: true, // для страницы нужно считать хеш
-            template: './index.html', // откуда брать образец для сравнения с текущим видом проекта
+            template: './pages/about.html', // откуда брать образец для сравнения с текущим видом проекта
             filename: 'about.html' // имя выходного файла, то есть того, что окажется в папке dist после сборки
         }),
         new HtmlWebpackPlugin({
             title: 'Analitics',
             inject: false, // стили НЕ нужно прописывать внутри тегов
             // hash: true, // для страницы нужно считать хеш
-            template: './index.html', // откуда брать образец для сравнения с текущим видом проекта
+            template: './pages/analitics.html', // откуда брать образец для сравнения с текущим видом проекта
             filename: 'analitics.html' // имя выходного файла, то есть того, что окажется в папке dist после сборки
         }),
         new WebpackMd5Hash(),

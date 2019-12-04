@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><%= htmlWebpackPlugin.options.title %></title>
-  <link rel="icon" type="image/svg" sizes="32x32" href="<%= require('./images/favicon.svg') %>">
-  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.main.css %>">
+  <link rel="icon" type="image/svg" sizes="32x32" href="<%= require('../images/favicon.svg') %>">
+  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.analitics.css %>">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
 
     </footer>
   </div>
-  <script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+  <script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks.analitics.entry %>"></script>
 </body>
 
 </html>
