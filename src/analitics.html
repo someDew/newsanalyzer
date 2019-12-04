@@ -5,19 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content=""
+  <meta name="description" content="newsfeed on demand">
+  <meta name="author" content="Andrew Bubnov">
   <title><%= htmlWebpackPlugin.options.title %></title>
-  <link rel="icon" type="image/svg" sizes="32x32" href="<%= require('../images/favicon.svg') %>">
-  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.index.css %>">
+  <link rel="icon" type="image/svg" sizes="32x32" href="<%= require('./images/favicon.svg') %>">
+  <link rel="stylesheet" type="text/css" href="<%= htmlWebpackPlugin.files.chunks.analitics.css %>">
 </head>
 
 <body>
   <div class="root">
     <header class="header root__section">
       <p class="logo" alt="" src="">NewsAnalyzer</p>
-      <nav class="header header__nav">
-
-      </nav>
     </header>
     <content class="content root__section">
 
@@ -26,7 +24,7 @@
 
     </footer>
   </div>
-  <script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
+  <script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks.analitics.entry %>"></script>
 </body>
 
 </html>

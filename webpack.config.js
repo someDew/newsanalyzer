@@ -8,6 +8,8 @@ const isDev = process.env.NODE_ENV === 'development'; // переменная д
 
 const webpack = require('webpack');
 
+const bundlePath = './pages/[name]/';
+
 module.exports = {
 
     // entry: { main: './src/index.js' }, // точка входа для wp
@@ -15,14 +17,14 @@ module.exports = {
     context: __dirname + '/src',
 
     entry: {
-        index: './index.js',
-        analitics: './analitics.js',
-        about: './about.js'
+        index: './pages/index/index.js',
+        analitics: './pages/analitics/analitics.js',
+        about: './pages/about/about.js'
     },
 
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[chunkhash].js'
+        filename: './pages/[name]/[name].[chunkhash].js'
     },
     module: {
         rules: [ // тут описываются правила
@@ -75,31 +77,34 @@ module.exports = {
         /* new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
         }), */
-        new MiniCssExtractPlugin({
+        new MiniCssExtractPlugin({            
             // Options similar to the same options in webpackOptions.output
             // both options are optional
-            filename: isDev ? '[name].css' : '[name].[chunkhash].css',
-            chunkFilename: isDev ? '[id].css' : '[id].[chunkhash].css',
+            // filename: isDev ? '[name].css' : '[name].[chunkhash].css',
+            // chunkFilename: isDev ? '[id].css' : '[id].[chunkhash].css',
+
+            filename: isDev ? bundlePath + '[name].css' : bundlePath + '[name].[chunkhash].css',
+            chunkFilename: isDev ? bundlePath + '[id].css' : bundlePath + '[id].[chunkhash].css',
         }),
         new HtmlWebpackPlugin({
             title: 'NewsAnalizer',
             inject: false, // стили НЕ нужно прописывать внутри тегов
             // hash: true, // для страницы нужно считать хеш
-            template: './pages/index.html', // откуда брать образец для сравнения с текущим видом проекта
+            template: 'index.html', // откуда брать образец для сравнения с текущим видом проекта
             filename: 'index.html' // имя выходного фай ла, то есть того, что окажется в папке dist после сборки
         }),
         new HtmlWebpackPlugin({
             title: 'About',
             inject: false, // стили НЕ нужно прописывать внутри тегов
             // hash: true, // для страницы нужно считать хеш
-            template: './pages/about.html', // откуда брать образец для сравнения с текущим видом проекта
+            template: 'about.html', // откуда брать образец для сравнения с текущим видом проекта
             filename: 'about.html' // имя выходного файла, то есть того, что окажется в папке dist после сборки
         }),
         new HtmlWebpackPlugin({
             title: 'Analitics',
             inject: false, // стили НЕ нужно прописывать внутри тегов
             // hash: true, // для страницы нужно считать хеш
-            template: './pages/analitics.html', // откуда брать образец для сравнения с текущим видом проекта
+            template: 'analitics.html', // откуда брать образец для сравнения с текущим видом проекта
             filename: 'analitics.html' // имя выходного файла, то есть того, что окажется в папке dist после сборки
         }),
         new WebpackMd5Hash(),

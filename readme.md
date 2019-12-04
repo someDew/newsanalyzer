@@ -1,5 +1,5 @@
 # NewsAnalyzer
-## v0.0.1
+## v0.0.2
 ---
   
 ### About:
@@ -20,9 +20,17 @@ Hi! And wellcome.
 - In section 'About' user can see me :) and some boring words;
 - Also, user can view the commit history in the application repository on github.com.
 
+### Use technology:
+
+- ECMAScript 2019;
+- CSS;
+- HTML5;
+- WebPack4;
+
 ### Whats new:
 
-- Created github repo with coolest ever readme file
+- Built environment for automatic build, development and publication of the project;
+- Created github repo with coolest ever readme file.
 
 ### Issues:
 
