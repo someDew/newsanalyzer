@@ -1,0 +1,41 @@
+.page {
+	align-items: center;
+    display: flex;
+    flex-direction: column;
+	margin: 0;
+	background-image: url(../../images/titleback.jpg);
+	
+	width: 100%;
+  	max-width: 1440px;
+	min-width: 320px;	
+	
+	/* Оптимизация шрифров под устройства */
+
+	text-rendering: optimizeLegibility; 
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+}
+
+@media screen and (max-width: 1440px) {
+    .page {		
+		max-width: 1440px;}
+}
+
+@media screen and (max-width: 768px) {
+    .page {		
+		max-width: 768px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+    .page {		
+			max-width: 425px;
+			min-width: 320px;
+			width: 100%;
+			
+			margin: 15px 0 38px;
+	}
+}
