@@ -1,0 +1,15 @@
+.search__container {
+    height: 78%;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    
+    max-width: 608px;
+    align-self: center;
+    justify-self: center;
+    justify-content: space-around;
+
+    
+}

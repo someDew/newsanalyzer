@@ -1,0 +1,24 @@
+.link {
+
+    font-family: Roboto;    
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+
+    text-decoration: none;
+    opacity: .8;
+
+}
+
+.link:visited {
+    color: inherit;
+}
+
+.link:hover {
+    color: inherit;
+    opacity: 1;
+  }
+
+:link {
+    color: inherit;
+}

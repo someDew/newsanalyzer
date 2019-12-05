@@ -1,7 +1,9 @@
-.header__nav-item {
+.search__subtitle {
+
     font-family: Roboto;
     font-style: normal;
-    font-weight: 500;
+    font-weight: normal;
     font-size: 18px;
     line-height: 24px;
+    
 }

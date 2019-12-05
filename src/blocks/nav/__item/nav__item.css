@@ -1,0 +1,8 @@
+@import url(./_select/nav__item_select.css);
+
+.nav__item {    
+    display: flex;
+    align-items: center;
+
+    margin-left: 33px;    
+}

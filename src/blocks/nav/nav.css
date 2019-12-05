@@ -1,0 +1,19 @@
+@import url(./__item/nav__item.css);
+
+.nav {
+    /* display: grid;
+    grid-template-areas:
+    "main" "about";
+
+    grid-template-rows: 100%;
+    grid-template-columns: 1fr 1fr;
+
+    grid-column-gap: 11px; */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: stretch;
+
+    margin: 0px 100px 0px 50px;
+}

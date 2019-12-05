@@ -1,0 +1,14 @@
+.search__input {
+    width: 100%;
+    
+    background: none;
+    border: none;
+
+    margin-left: 24px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+}
