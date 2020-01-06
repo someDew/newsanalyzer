@@ -27,6 +27,13 @@ Hi! And wellcome.
 - HTML5;
 - WebPack4;
 
+### Fast start:
+
+1. Download repo and unpack on your local
+2. To install environment `npm install`
+3. To build project local run `npm run build`
+4. To develop/debug project local run `npm run dev`
+
 ### Whats new:
 
 - Built environment for automatic build, development and publication of the project;

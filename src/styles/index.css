@@ -1,10 +1,10 @@
-@import url(./blocks/header/header.css);
-@import url(./blocks/footer/footer.css);
-@import url(./blocks/nav/nav.css);
-@import url(./blocks/link/link.css);
-@import url(./blocks/search/search.css);
-@import url(./blocks/social/social.css);
-@import url(./vendor/fonts.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/nav/nav.css);
+@import url(../blocks/link/link.css);
+@import url(../blocks/search/search.css);
+@import url(../blocks/social/social.css);
+@import url(fonts.css);
 
 html {
     font-family: Roboto;
@@ -46,7 +46,7 @@ body {
     
 	margin: 0;
     
-    background-image: url(./images/titleback.jpg);
+    background-image: url(../images/titleback.jpg);
 	background-position: center top 64%;	
 	background-size: cover;	
 	

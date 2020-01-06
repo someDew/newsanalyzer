@@ -10,19 +10,15 @@ const webpack = require('webpack');
 
 module.exports = {
 
-    // entry: { main: './src/index.js' }, // точка входа для wp
-
-    context: __dirname + '/src',
-
     entry: {
-        index: './index.js',
-        analitics: './analitics.js',
-        about: './about.js'
+        index: './src/scripts/index.js',
+        analitics: './src/scripts/analitics.js',
+        about: './src/scripts/about.js'
     },
 
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[chunkhash].js'
+        filename: 'scripts/[name].[chunkhash].js'
     },
     module: {
         rules: [ // тут описываются правила
@@ -33,12 +29,12 @@ module.exports = {
             },
             {
                 test: /\.(eot|ttf|woff|woff2)$/,
-                loader: 'file-loader?name=./vendor/[name].[ext]'
+                loader: 'file-loader?name=vendor/[name].[ext]'
             },
             {
                 test: /\.(png|jpg|gif|ico|svg)$/,
                 use: [
-                    'file-loader?name=./images/[name].[ext]', // указали папку, куда складывать изображения
+                    'file-loader?name=images/[name].[ext]', // указали папку, куда складывать изображения
                     {
                         loader: 'image-webpack-loader',
                         options: { disable: true }
@@ -49,59 +45,39 @@ module.exports = {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
                     {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            hmr: isDev,
-                            reloadAll: true,
-                        },
+                        loader: isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+                        options: isDev ? '' : { publicPath: '../' }
                     },
-                    'css-loader',
-                    'postcss-loader',
-                    //'sass-loader',                  
-                ],
-            },
-            /* {
-                test: /\.css$/i,
-                use: [
-                    (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
                     'css-loader',
                     'postcss-loader'
                 ]
-            }, */
+            },
         ]
     },
     plugins: [
-
-        /* new MiniCssExtractPlugin({
-            filename: '[name].[contenthash].css'
-        }), */
-        new MiniCssExtractPlugin({            
-            // Options similar to the same options in webpackOptions.output
-            // both options are optional
-            filename: isDev ? '[name].css' : '[name].[chunkhash].css',
-            chunkFilename: isDev ? '[id].css' : '[id].[chunkhash].css',
-
-            // filename: isDev ? bundlePath + '[name].css' : bundlePath + '[name].[chunkhash].css',
-            // chunkFilename: isDev ? bundlePath + '[id].css' : bundlePath + '[id].[chunkhash].css',
+        new MiniCssExtractPlugin({
+            filename: 'styles/[name].[chunkhash].css',
         }),
         new HtmlWebpackPlugin({
             title: 'NewsAnalizer',
             inject: false, // стили НЕ нужно прописывать внутри тегов
-            template: 'index.html', // откуда брать образец для сравнения с текущим видом проекта
-            filename: 'index.html' // имя выходного фай ла, то есть того, что окажется в папке dist после сборки
+            template: './src/pages/index.html', // откуда брать образец для сравнения с текущим видом проекта
+            filename: 'index.html', // имя выходного фай ла, то есть того, что окажется в папке dist после сборки
+            chunks: ['index']
         }),
         new HtmlWebpackPlugin({
             title: 'About',
-            inject: false, // стили НЕ нужно прописывать внутри тегов
-            template: 'about.html', // откуда брать образец для сравнения с текущим видом проекта
-            filename: 'about.html' // имя выходного файла, то есть того, что окажется в папке dist после сборки
+            inject: false,
+            template: './src/pages/about.html',
+            filename: 'about.html',
+            chunks: ['about']
         }),
         new HtmlWebpackPlugin({
             title: 'Analitics',
-            inject: false, // стили НЕ нужно прописывать внутри тегов
-            // hash: true, // для страницы нужно считать хеш
-            template: 'analitics.html', // откуда брать образец для сравнения с текущим видом проекта
-            filename: 'analitics.html' // имя выходного файла, то есть того, что окажется в папке dist после сборки
+            inject: false,
+            template: './src/pages/analitics.html',
+            filename: 'analitics.html',
+            chunks: ['analitics']
         }),
         new WebpackMd5Hash(),
         new webpack.DefinePlugin({
