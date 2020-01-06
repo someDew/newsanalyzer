@@ -1,0 +1,11 @@
+@import url(./__item/social__item.css);
+
+.social {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: stretch;
+
+    
+}

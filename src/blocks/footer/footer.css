@@ -1,0 +1,12 @@
+@import url(./__nav/footer__nav.css);
+@import url(./__coryright/footer__copyright.css);
+
+
+.footer {
+    display: flex;
+    background: #FFFFFF;
+
+    justify-content: space-around;
+    
+    grid-area: footer;
+}

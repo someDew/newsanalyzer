@@ -1,7 +1,9 @@
 @import url(./blocks/header/header.css);
+@import url(./blocks/footer/footer.css);
 @import url(./blocks/nav/nav.css);
 @import url(./blocks/link/link.css);
 @import url(./blocks/search/search.css);
+@import url(./blocks/social/social.css);
 @import url(./vendor/fonts.css);
 
 html {
@@ -65,12 +67,8 @@ body {
 }
 
 @media screen and (max-width: 320px) {
-    .page {		
-			max-width: 425px;
-			min-width: 320px;
-			width: 100%;
-			
-			margin: 15px 0 38px;
+    .page {					
+		width: 100%;
 	}
 }
 

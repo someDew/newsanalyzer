@@ -1,0 +1,8 @@
+.results {
+    display: grid;
+
+    grid-template-areas:
+    "title link"
+    "block"
+    "add";
+}
