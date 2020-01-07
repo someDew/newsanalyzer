@@ -1,8 +1,19 @@
+@import url(./__title/results__title.css);
+@import url(./__link/results__link.css);
+@import url(./__block/results__block.css);
+@import url(./__button/results__button.css);
+
 .results {
     display: grid;
 
     grid-template-areas:
     "title link"
-    "block"
-    "add";
+    "block block"
+    "button button";
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 174px 1fr 192px;
+
+    background: #F5F6F7;
+    padding: 16px 7%;
 }

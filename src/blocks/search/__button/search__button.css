@@ -1,15 +1,13 @@
 .search__button {
-    width: 240px;
-    border-radius: 33px;
-    border: none;
-    background-color: #2F71E5;
-
     font-family: Roboto, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 24px;
     color: inherit;
-    
 
+    width: 240px;
+    border-radius: 33px;
+    border: none;
+    background-color: #2F71E5;
 }

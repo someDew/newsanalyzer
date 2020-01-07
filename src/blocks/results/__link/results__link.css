@@ -1,0 +1,13 @@
+.results__link {
+    grid-area: link;
+
+    font-family: Roboto, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+
+    display: flex;
+    align-self: center;
+    justify-self: flex-end;
+}
