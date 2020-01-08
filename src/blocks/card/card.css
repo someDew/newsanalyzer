@@ -14,8 +14,8 @@
     "text"
     "link";
 
-    grid-template-rows: 227px 44px 1fr 1fr 54px;
-    grid-template-columns: 1fr;
+    grid-template-rows: 227px 44px auto 1fr 54px;
+    grid-template-columns: 400px;
 
     background: #FFFFFF;
     border-radius: 16px;
