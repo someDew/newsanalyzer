@@ -7,6 +7,7 @@
 @import url(../blocks/results/results.css);
 @import url(../blocks/button/button.css);
 @import url(../blocks/card/card.css);
+@import url(../blocks/author/author.css);
 @import url(fonts.css);
 
 html {
@@ -50,8 +51,8 @@ body {
 	margin: 0;
     
     background-image: url(../images/titleback.jpg);
-	background-position: center top 64%;	
-	background-size: cover;	
+	background-position: center 64%;	
+	background-size: contain;
 	
 	width: 100%;
   	max-width: 1440px;

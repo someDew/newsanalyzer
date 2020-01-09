@@ -1,6 +1,10 @@
 .card__pic {
     grid-area: pic;
 
-    background-position: center;	
-	background-size: cover;
+    display: flex;    
+
+    justify-self: center;
+    align-self: stretch;
+    
+    height: 100%;
 }

@@ -1,3 +1,17 @@
 .card__text {
     grid-area: text;
+
+    display: flex;
+    
+    padding: 0 24px 0 24px;
+
+    font-family: Roboto, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+
+    padding-top: 16px;
+
+    background: #FFFFFF;
 }
