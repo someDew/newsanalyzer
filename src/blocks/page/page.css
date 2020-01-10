@@ -1,0 +1,39 @@
+.page {	
+    display: grid;
+    grid-template-areas:
+    "header"
+    "search"
+    "content"
+    "footer";
+
+    grid-template-rows:80px 496px 1fr 80px;
+    grid-template-columns: 100%;
+    
+	margin: 0;
+    
+    background-image: url(../../images/titleback.jpg);
+	
+    background-size: contain;
+    background-repeat: no-repeat;    
+
+	width: 100%;
+  	max-width: 1440px;
+	min-width: 320px;	
+}
+
+@media screen and (max-width: 1440px) {
+    .page {		
+		max-width: 1440px;}
+}
+
+@media screen and (max-width: 768px) {
+    .page {		
+		max-width: 768px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+    .page {					
+		width: 100%;
+	}
+}
