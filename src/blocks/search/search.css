@@ -6,6 +6,9 @@
 @import url(./__button/search__button.css);
 
 .search {    
-    display: grid;    
+    display: flex;
+    
+    flex-direction: column;
+
     background-color: rgba(0,0,0, .4);
 }
