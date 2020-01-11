@@ -5,10 +5,11 @@
 @import url(./__input/search__input.css);
 @import url(./__button/search__button.css);
 
-.search {    
-    display: flex;
-    
+.search {
+
+    display: flex;    
     flex-direction: column;
+    justify-content: center;
 
     background-color: rgba(0,0,0, .4);
 }

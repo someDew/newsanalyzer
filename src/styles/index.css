@@ -41,20 +41,21 @@ body {
 .page {	
     display: grid;
     grid-template-areas:
-    
+    "header"
     "search"
     "content"
     "footer";
 
-    grid-template-rows:calc(80px + 496px) 1fr 80px;
+	/* grid-template-rows:calc(80px + 496px) 1fr 80px; */
+	grid-template-rows:80px 496px 1fr 80px;
     grid-template-columns: 100%;
     
 	margin: 0;
     
-    /* background-image: url(../../images/titleback.jpg);
+    background-image: url(../images/titleback_1440px.jpg);
 	
     background-size: contain;
-    background-repeat: no-repeat;  */   
+    background-repeat: no-repeat;    
 
 	width: 100%;
   	max-width: 1440px;

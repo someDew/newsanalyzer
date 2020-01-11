@@ -15,16 +15,15 @@
 <body>
   <div class="page">    
 
-    <search class="search">
+    <header class="header header_main-page">
+      <p class="header__logo" alt="NewsAnalyzer">NewsAnalyzer</p>
+      <nav class="nav header__nav">
+        <a class="nav__item nav__item_select link" href="./index.html">Главная</a>
+        <a class="nav__item link" href="./about.html">О проекте</a>
+      </nav>
+    </header>
 
-      <header class="header header_main-page">
-        <p class="header__logo" alt="NewsAnalyzer">NewsAnalyzer</p>
-        <nav class="nav header__nav">
-          <a class="nav__item nav__item_select link" href="./index.html">Главная</a>
-          <a class="nav__item link" href="./about.html">О проекте</a>
-        </nav>
-      </header>
-
+    <search class="search">    
       <div class="search__container">
         <h1 class="search__title">Что в мире творится?</h1>
         <h2 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
@@ -34,11 +33,6 @@
             placeholder="введите тему запроса">
           <button class="button search__button">Искать</button>
           <span class="error search__error"></span>
-
-          <picture>
-            
-          </picture>
-
         </form>
       </div>
     </search>
