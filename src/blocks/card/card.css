@@ -14,8 +14,8 @@
     "text"
     "link";
 
-    grid-template-rows: 272px 44px auto 1fr 54px;
-    grid-template-columns: minmax(220px, 400px);
+    grid-template-columns: 1.7vw 1fr 1.7vw;
+    grid-template-rows: 20vw 44px auto minmax(0, 1fr) 54px;
 
     background: #FFF;
     border-radius: 16px;
@@ -24,4 +24,20 @@
     text-decoration: none;
 
     overflow: hidden;
+
+    max-height: 576px;
+}
+
+@media screen and (min-width: 1440px) {
+
+    .card {		
+        grid-template-rows: 272px 44px auto minmax(0, 1fr) 54px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .card {		
+        grid-template-rows: 20vw 44px auto minmax(0, 1fr) 48px;
+    }
 }

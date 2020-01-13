@@ -36,6 +36,8 @@ body {
 	
 	display: flex;
 	justify-content: center;
+
+	font-size: 100px;
 }
 
 .page {	
@@ -64,13 +66,14 @@ body {
 	min-width: 320px;	
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 1440px) {
+
     .page {		
 		max-width: 1440px;}
 }
 
 @media screen and (max-width: 768px) {
-    .page {		
+    .page {
 		max-width: 768px;
 	}
 }
