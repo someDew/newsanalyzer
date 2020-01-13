@@ -54,8 +54,10 @@ body {
     
     background-image: url(../images/titleback_1440px.jpg);
 	
-    background-size: contain;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;
+	background-position-x: 47%;
+	background-position-y: -12%;
+
 
 	width: 100%;
   	max-width: 1440px;
