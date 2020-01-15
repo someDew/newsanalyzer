@@ -15,19 +15,20 @@
 <body>
   <div class="page">
 
-    <header class="header header_main-page">
-      <p class="header__logo" alt="NewsAnalyzer">NewsAnalyzer</p>
-      <nav class="nav header__nav">
-        <a class="nav__item nav__item_select link" href="./index.html">Главная</a>
-        <a class="nav__item link" href="./about.html">О проекте</a>
-      </nav>
-    </header>
-
     <search class="search">
+
+      <header class="header header_main-page">
+        <p class="header__logo" alt="NewsAnalyzer">NewsAnalyzer</p>
+        <nav class="nav header__nav">
+          <a class="nav__item nav__item_select link" href="./index.html">Главная</a>
+          <a class="nav__item link" href="./about.html">О проекте</a>
+        </nav>
+      </header>
+
       <div class="search__container">
         <h1 class="search__title">Что в мире творится?</h1>
-        <blockquote class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в
-          новостях за прошедшую неделю.</blockquote>
+        <h2 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
+          прошедшую неделю.</h2>
         <form action="" class="form search__form">
           <input type="text" class="input search__input" name="news-search" required="yes"
             placeholder="введите тему запроса">
@@ -35,19 +36,88 @@
           <span class="error search__error"></span>
         </form>
       </div>
+
+      <!-- <picture class="search__back">        
+        <source srcset="images/titleback_1440px.jpg" media="(max-width: 1440px)">
+        <source srcset="images/titleback_1280px.jpg" media="(max-width: 1280px)">
+        <source srcset="images/titleback_720px.jpg" media="(max-width: 720px)">
+        <img src="images/titleback_1440px.jpg" alt="background">
+      </picture> -->
+
     </search>
 
     <main class="content">
-      <div class="results">
-        
-      </div>
+      <section class="results" disable>
+        <h3 class="results__title">Результаты поиска</h3>
+        <a class="results__link link" href="analitics.html">Посмотреть аналитику ></a>
+        <div class="results__block">
+
+          <a class="card" href="">
+            <img src="images/card-pic-default.jpg" alt="" class="card__pic">
+            <time class="card__date">29 февраля, 2020</time>
+            <h4 class="card__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+            <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
+              tempora explicabo ipsum at, maiores quam ullam cum quis ipsa rem accusamus aliquid ad veniam ut iusto.
+              Odio?Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
+              tempora explicabo ipsum at, maiores quam ullam cum quis ipsa rem accusamus aliquid ad veniam ut iusto.
+              Odio?</p>
+            <span class="card__link">ЛЕНТА.РУ</span>
+          </a>
+
+
+
+          <a class="card" href="">
+            <img src="images/card-pic-default.jpg" alt="" class="card__pic">
+            <time class="card__date">29 февраля, 2020</time>
+            <h4 class="card__title">Similique id cupiditate velit tempora explicabo ipsum at, maiores quam ullam cum
+              quis ipsa rem accusamus aliquid ad veniam ut iusto.
+            </h4>
+            <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
+              tempora explicabo ipsum at, maiores quam ullam cum quis ipsa rem accusamus aliquid ad veniam ut iusto.
+              Odio?</p>
+            <span class="card__link">ЛЕНТА.РУ</span>
+          </a>
+          <a class="card" href="">
+            <img src="images/card-pic-default.jpg" alt="" class="card__pic">
+            <time class="card__date">29 февраля, 2020</time>
+            <h4 class="card__title">Lorem ipsum dolor sit amet consectetur elit.</h4>
+            <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
+              tempora explicabo ipsum at, maiores quam ullam cum quis ipsa rem accusamus aliquid ad veniam ut iusto.
+              Odio?</p>
+            <span class="card__link">ЛЕНТА.РУ</span>
+          </a>
+          <a class="card" href="">
+            <img src="images/card-pic-default.jpg" alt="" class="card__pic">
+            <time class="card__date">29 февраля, 2020</time>
+            <h4 class="card__title">Lorem ipsum dolor.</h4>
+            <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
+              tempora explicabo ipsum at, maiores quam ullam cum quis ipsa rem accusamus aliquid ad veniam ut iusto.
+              Odio?</p>
+            <span class="card__link">ЛЕНТА.РУ</span>
+          </a>
+          <a class="card" href="">
+            <img src="images/card-pic-default.jpg" alt="" class="card__pic">
+            <time class="card__date">29 февраля, 2020</time>
+            <h4 class="card__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+            <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
+              tempora explicabo ipsum at, maiores quam ullam cum quis ipsa rem accusamus aliquid ad veniam ut iusto.
+              Odio?</p>
+            <span class="card__link">ЛЕНТА.РУ</span>
+          </a>
+
+
+
+
+        </div>
+        <button class="results__button button">Показать больше</button>
+      </section>
     </main>
 
     <footer class="footer">
-      <p class="copyright footer__copyright">© 2019 Andrew B.</p>
+      <p class="copyright footer__copyright">© 2019 Andrew</p>
       <nav class="nav footer__nav">
-        <a class="nav__item link" href="./index.html">Главная</a>
-        <a class="nav__item link" href="./about.html">О проекте</a>
+        <a class="nav__item link" href="index.html">Главная</a>
+        <a class="nav__item link" href="about.html">О проекте</a>
         <a class="nav__item link" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
       </nav>
       <div class="social">
