@@ -48,8 +48,8 @@ body {
     "content"
     "footer";
 
-	/* grid-template-rows:calc(80px + 496px) 1fr 80px; */
-	grid-template-rows:80px 496px 1fr 80px;
+	
+	grid-template-rows:auto auto 1fr auto;
     grid-template-columns: 100%;
     
 	margin: 0;
@@ -66,20 +66,25 @@ body {
 	min-width: 320px;	
 }
 
-@media screen and (min-width: 1440px) {
+/* @media screen and (min-width: 1441px) {
 
     .page {		
-		max-width: 1440px;}
+		
+
+		
+	}
 }
 
 @media screen and (max-width: 768px) {
     .page {
-		max-width: 768px;
+		
+
+		
 	}
 }
 
 @media screen and (max-width: 320px) {
     .page {					
-		width: 100%;
+		
 	}
-}
+} */

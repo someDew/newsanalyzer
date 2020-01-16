@@ -6,10 +6,23 @@
 @import url(./__button/search__button.css);
 
 .search {
-
     display: flex;    
     flex-direction: column;
     justify-content: center;
 
     background-color: rgba(0,0,0, .4);
+
+    height: 496px;
+}
+
+@media screen and (max-width: 1440px) {
+    .search {
+		height: calc(150px + 24vw); /* 496 - 336  */
+	}
+}
+
+@media screen and (max-width: 768px) {
+    .search {
+		height: calc(150px + 24vw); /* 336 - 480  undone! */
+	}
 }
