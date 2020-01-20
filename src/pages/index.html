@@ -28,9 +28,11 @@
         <h1 class="search__title">Что в мире творится?</h1>
         <h2 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
           прошедшую неделю.</h2>
-        <form action="" class="form search__form">
-          <input type="text" class="input search__input" name="news-search" required="yes"
-            placeholder="введите тему запроса">
+        <form action="submit" class="form search__form">
+          <div class="search__input">
+            <input type="text" class="input" name="news-search" required="yes"
+              placeholder="введите тему запроса">
+          </div>
           <button class="button search__button">Искать</button>
           <span class="error search__error"></span>
         </form>

@@ -1,13 +1,28 @@
 .search__container {
-    height: 78%;
+    height: auto;
 
     color: white;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+        
+    grid-template-columns: 100%;
+    grid-template-rows: auto 2vw auto 4vw auto;
     
     max-width: 608px;
+    min-width: 288px;
+    
     align-self: center;
-    justify-self: center;
-    justify-content: space-around;
 }
+
+/* @media screen and (max-width: 1440px) {
+    .search__container {
+    height: calc(174px + 10vw);  /* -> 248px 
+
+	}
+}
+
+@media screen and (max-width: 460px) {
+    .search__container {
+        height: auto;
+	}
+} */

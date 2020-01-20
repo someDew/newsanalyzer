@@ -8,11 +8,13 @@
     grid-template-columns: [start] 104px [wrap-start] auto [logo] repeat(8, minmax(5px, 200px)) [nav] auto [wrap-end] 104px [end];
 
     height: 80px;
+
+    box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
 }
 
 @media screen and (max-width: 1440px) {
     .header {
-        grid-template-columns: [start] minmax(6vw, 1fr) [wrap-start] auto [logo] repeat(8, minmax(5px, 200px)) [nav] auto [wrap-end] minmax(6vw, 1fr) [end];
+        grid-template-columns: [start] minmax(6vw, 1fr) [wrap-start] auto [logo] repeat(8, minmax(3px, 200px)) [nav] auto [wrap-end] minmax(6vw, 1fr) [end];
         
         height: calc(40px + 3vw);
 	}

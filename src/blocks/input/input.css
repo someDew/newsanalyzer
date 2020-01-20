@@ -1,0 +1,16 @@
+.input {
+    border: unset;
+    background: unset;
+
+    width: 100%;
+
+    font-family: Roboto, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+
+    padding: 0 24px;
+
+    border-radius: 34px;
+}

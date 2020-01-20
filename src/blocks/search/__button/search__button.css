@@ -10,4 +10,23 @@
     border-radius: 33px;
     border: none;
     background-color: #2F71E5;
+
+    z-index: 10;
+
+    grid-row: 3/4;
+}
+
+@media screen and (max-width: 1440px) {
+    .search__button {
+        width: calc(76px + 12.2vw);
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .search__button {
+        width: 100%;
+        height: 56px;
+
+        justify-self: center;
+    }
 }

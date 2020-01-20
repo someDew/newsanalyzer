@@ -5,6 +5,8 @@
     font-weight: normal;
     font-size: 60px;
     line-height: 64px;
+
+    grid-row: 1/2;
     
 }
 
