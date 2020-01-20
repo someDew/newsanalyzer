@@ -9,4 +9,15 @@
     color: #B6BCBF;
     
     align-self: center;    
+
+    grid-column: copy-start/copy-end;
 }
+    
+
+@media screen and (max-width: 768px) {
+    .footer__copyright {
+        grid-column: nav-start/soc-end;
+        grid-row: copy-start/copy-end;
+	}
+}
+
