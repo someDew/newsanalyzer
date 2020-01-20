@@ -40,12 +40,15 @@
     </search>
 
     <main class="content">
-
       <section class="preloader">
         <i class="preloader__spiner"></i>
         <span class="preloader__text">Идет поиск новостей...</span>
       </section>
-
+      <section class="notfound">
+        <img class="notfound__img" src="<%=require('../images/notfound.svg')%>" alt="image results not found">
+        <p class="notfound__title">Ничего не найдено</p>
+        <span class="notfound__text">К сожалению по вашему запросу<br>ничего не найдено.</span>
+      </section>
       <section class="results">
         <h3 class="results__title">Результаты поиска</h3>
         <a class="results__link link" href="analitics.html">Посмотреть аналитику ></a>

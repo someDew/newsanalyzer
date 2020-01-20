@@ -1,0 +1,12 @@
+.notfound__img {
+    width: 96px;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 720px) {
+
+    .notfound__img {		
+        width: 64px;
+        margin-bottom: 20px;
+    }
+}

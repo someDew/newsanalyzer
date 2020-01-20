@@ -1,0 +1,13 @@
+.notfound__text {
+    font-family: Roboto, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    
+    text-align: center;
+    
+    color: #B6BCBF;
+
+    margin-top: 16px;
+}

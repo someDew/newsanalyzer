@@ -6,7 +6,7 @@
     line-height: 24px;
     color: inherit;
 
-    width: 240px;
+    width: 168px;
     border-radius: 33px;
     border: none;
     background-color: #2F71E5;
@@ -18,7 +18,7 @@
 
 @media screen and (max-width: 1440px) {
     .search__button {
-        width: calc(76px + 12.2vw);
+        width: calc(79px + 7vw);
     }
 }
 
