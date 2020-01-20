@@ -28,9 +28,11 @@
         <h1 class="search__title">Что в мире творится?</h1>
         <h2 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
           прошедшую неделю.</h2>
-        <form action="" class="form search__form">
-          <input type="text" class="input search__input" name="news-search" required="yes"
-            placeholder="введите тему запроса">
+        <form action="submit" class="form search__form">
+          <div class="search__input">
+            <input type="text" class="input" name="news-search" required="yes"
+              placeholder="введите тему запроса">
+          </div>
           <button class="button search__button">Искать</button>
           <span class="error search__error"></span>
         </form>
@@ -38,6 +40,15 @@
     </search>
 
     <main class="content">
+      <section class="preloader">
+        <i class="preloader__spiner"></i>
+        <span class="preloader__text">Идет поиск новостей...</span>
+      </section>
+      <section class="notfound">
+        <img class="notfound__img" src="images/notfound.svg" alt="image results not found">
+        <p class="notfound__title">Ничего не найдено</p>
+        <span class="notfound__text">К сожалению по вашему запросу<br>ничего не найдено.</span>
+      </section>
       <section class="results">
         <h3 class="results__title">Результаты поиска</h3>
         <a class="results__link link" href="analitics.html">Посмотреть аналитику ></a>
@@ -123,7 +134,7 @@
         <a class="nav__item link" href="about.html">О проекте</a>
         <a class="nav__item link" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
       </nav>
-      <div class="social">
+      <div class="social footer__social">
         <a class="social__item" href="https://github.com/somedew/newsanalyzer"><img alt="github"
             src="images/github.svg"></a>
         <a class="social__item" href="https://facebook.com"><img alt="facebook"
