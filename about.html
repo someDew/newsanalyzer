@@ -8,7 +8,7 @@
   <meta name="description" content="newsfeed on demand">
   <meta name="author" content="Andrew Bubnov">
   <title>About</title>
-  <link rel="icon" type="image/svg" sizes="32x32" href="images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   <link rel="stylesheet" type="text/css" href="styles/about.7a5277c6dded1e63a344.css">
 </head>
 
@@ -16,7 +16,7 @@
   <div class="page">
 
     <header class="header">
-      <p class="header__logo" alt="NewsAnalyzer">NewsAnalyzer</p>
+      <h1 class="header__logo" alt="NewsAnalyzer">NewsAnalyzer</h1>
       <nav class="nav header__nav">
         <a class="nav__item link" href="./index.html">Главная</a>
         <a class="nav__item nav__item_select link" href="./about.html">О проекте</a>
@@ -25,7 +25,7 @@
 
     <main class="content">
       <section class="forclients">
-        <h3 class="forclients__title">Клиентам</h3>
+        <h2 class="forclients__title">Клиентам</h2>
         <p class="forclients__text">Этот сайт — дипломный проект студента Яндкс.Практикума. Его цель — показать, чему
           научился студент, и какими технологиями владеет.<br><br>Вёртска сайта выполнена по методологии БЭМ. Это делает
           сайт гибким и масштабируемым. Кроме того, добавлять новые страницы и функциальность проще и быстрее, чем в
@@ -39,9 +39,32 @@
           потенциальная аудитория возрастает.<br><br>Проект был проверен экспертами Яндекс.Практикума. И если вашему бизесу
           нужен сайт, мы рекомендуем обратиться к этому студенту.</p>
       </section>
+
+    <secion class="tech">
+      <h2 class="tech__title">Используемые технологии</h2>
+      <div class="tech__block">
+        <div class="tech__card">
+          <h3 class="tech__name">HTML 5</h3>
+          <img class="tech__logo" type="image/svg+xml" src="images/html.svg" alt="html 5 logo">
+        </div>
+        <div class="tech__card">
+          <h3 class="tech__name">CSS 3</h3>
+          <img class="tech__logo" type="image/svg+xml" src="images/css.svg" alt="css 3 logo">
+        </div>
+        <div class="tech__card">
+          <h3 class="tech__name">ES 2019</h3>
+          <img class="tech__logo" type="image/svg+xml" src="images/js.svg" alt="java script 2019 logo">
+        </div>
+        <div class="tech__card">
+          <h3 class="tech__name">WebPack</h3>
+          <img class="tech__logo" type="image/svg+xml" src="images/webpack.svg" alt="web pack logo">
+        </div>
+      </div>
+    </secion>
+
       <section class="author">
         <img class="author__pic" src="images/author_full.jpg" alt="site autors photo">
-        <h3 class="author__title">Об авторе:</h3>
+        <h2 class="author__title">Об авторе:</h2>
         <p class="author__text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы
           занимаетесь, какими технологиями разработки владете.
           <br><br>
@@ -62,12 +85,11 @@
         <a class="nav__item link" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
       </nav>
       <div class="social footer__social">
-        <a class="social__item" href="https://github.com/somedew/newsanalyzer"><img alt="github"
-            src="images/github.svg"></a>
-        <a class="social__item" href="https://facebook.com"><img alt="facebook"
-            src="images/fb3.svg"></a>
+        <a class="social__item" href="https://github.com/somedew/newsanalyzer"><img alt="github" type="image/svg+xml"src="images/github.svg"></a>
+        <a class="social__item" href="https://facebook.com"><img alt="facebook" type="image/svg+xml"src="images/fb3.svg"></a>
       </div>
     </footer>
+
   </div>
   <script type="text/javascript" src="scripts/about.7a5277c6dded1e63a344.js"></script>
 </body>
