@@ -16,6 +16,13 @@
     line-height: 46px;
 }
 
+@media screen and (max-width: 1440px) {
+
+    .author__title {
+        margin-top: 4.5vw;
+    }
+}
+
 @media screen and (max-width: 768px) {
 
     .author__title {		

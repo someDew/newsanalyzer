@@ -1,0 +1,6 @@
+@import url(./__name/tech__name.css);
+@import url(./__logo/tech__logo.css);
+
+.tech__card {
+    display: block;
+}

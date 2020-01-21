@@ -1,0 +1,39 @@
+@import url(./__card/tech__card.css);
+
+.tech__block {
+    grid-column:4/5;
+    grid-row: 2/3;
+
+    display: grid;
+    grid-template-columns: repeat(4, 120px);
+
+    justify-self: center;
+
+    column-gap: 40px;
+    row-gap: 32px;
+
+    max-width: calc(120px + 358px + 120px);
+
+    margin-top: 13px;
+}
+
+@media screen and (max-width: 1080px) {
+
+    .tech__block {
+        grid-column:2/3;
+        grid-row: 3/4;
+       
+        margin-top: 40px;
+        
+        max-width: 100%;
+
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .tech__block {
+        grid-template-columns: repeat(2, 120px);
+
+    }
+}

@@ -1,0 +1,30 @@
+@import url(./__title/tech__title.css);
+@import url(./__block/tech__block.css);
+
+
+.tech {
+    display: grid;
+
+    grid-template-columns: 104px 344px 104px auto 104px;
+    grid-template-rows: 80px auto 80px;
+
+    background: #F5F6F7;
+}
+
+@media screen and (max-width: 1440px) {
+
+    .tech {
+        grid-template-columns: 7vw minmax(304px, 334px) minmax(36px, 104px) auto 7vw;
+        grid-template-rows: 5vw auto 5vw;
+
+        
+    }
+}
+
+@media screen and (max-width: 1080px) {
+
+    .tech {
+        grid-template-columns: 7vw auto 7vw;
+        grid-template-rows: 5vw auto auto 5vw;        
+    }
+}

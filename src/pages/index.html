@@ -16,7 +16,7 @@
   <div class="page">
 
     <header class="header header_main-page">
-      <p class="header__logo" alt="NewsAnalyzer">NewsAnalyzer</p>
+      <h1 class="header__logo" alt="NewsAnalyzer">NewsAnalyzer</h1>
       <nav class="nav header__nav">
         <a class="nav__item nav__item_select link" href="./index.html">Главная</a>
         <a class="nav__item link" href="./about.html">О проекте</a>
@@ -25,9 +25,9 @@
 
     <search class="search">
       <div class="search__container">
-        <h1 class="search__title">Что в мире творится?</h1>
-        <h2 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
-          прошедшую неделю.</h2>
+        <h2 class="search__title">Что в мире творится?</h1>
+        <h3 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
+          прошедшую неделю.</h3>
         <form action="submit" class="form search__form">
           <div class="search__input">
             <input type="text" class="input" name="news-search" required="yes"
@@ -45,7 +45,7 @@
         <span class="preloader__text">Идет поиск новостей...</span>
       </section>
       <section class="notfound">
-        <img class="notfound__img" src="<%=require('../images/notfound.svg')%>" alt="image results not found">
+        <img class="notfound__img" type="image/svg+xml" src="<%=require('../images/notfound.svg')%>" alt="image results not found">
         <p class="notfound__title">Ничего не найдено</p>
         <span class="notfound__text">К сожалению по вашему запросу<br>ничего не найдено.</span>
       </section>
@@ -55,7 +55,7 @@
         <div class="results__block">
 
           <a class="card" href="">
-            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="" class="card__pic">
+            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="" type="image/jpeg"class="card__pic">
             <time class="card__date">29 февраля, 2020</time>
             <h4 class="card__title">Lorem ipsum dolor. Lorem ipsum dolor.</h4>
             <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
@@ -69,7 +69,7 @@
 
 
           <a class="card" href="">
-            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="default news image" class="card__pic">
+            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="default news image" type="image/jpeg"class="card__pic">
             <time class="card__date">29 февраля, 2020</time>
             <h4 class="card__title">Similique.</h4>
             <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
@@ -78,7 +78,7 @@
             <span class="card__link">ЛЕНТА.РУ</span>
           </a>
           <a class="card" href="">
-            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="" class="card__pic">
+            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="" type="image/jpeg" class="card__pic">
             <time class="card__date">29 февраля, 2020</time>
             <h4 class="card__title">Lorem ipsum dolor sit amet consectetur elit. Lorem ipsum dolor sit amet consectetur
               elit.</h4>
@@ -88,7 +88,7 @@
             <span class="card__link">ЛЕНТА.РУ</span>
           </a>
           <a class="card" href="">
-            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="" class="card__pic">
+            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="" type="image/jpeg" class="card__pic">
             <time class="card__date">29 февраля, 2020</time>
             <h4 class="card__title">Lorem ipsum dolor.</h4>
             <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
@@ -97,7 +97,7 @@
             <span class="card__link">ЛЕНТА.РУ</span>
           </a>
           <a class="card" href="">
-            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="" class="card__pic">
+            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="" type="image/jpeg" class="card__pic">
             <time class="card__date">29 февраля, 2020</time>
             <h4 class="card__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
             <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
@@ -113,8 +113,8 @@
         <button class="results__button button">Показать больше</button>
       </section>
       <section class="author">
-        <img class="author__pic" src="<%= require('../images/author_full.jpg') %>" alt="site autors photo">
-        <h3 class="author__title">Об авторе:</h3>
+        <img class="author__pic" src="<%= require('../images/author_full.jpg') %>" type="image/jpeg" alt="site autors photo">
+        <h4 class="author__title">Об авторе:</h3>
         <p class="author__text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы
           занимаетесь, какими технологиями разработки владете.
           <br><br>
@@ -136,9 +136,9 @@
       </nav>
       <div class="social footer__social">
         <a class="social__item" href="https://github.com/somedew/newsanalyzer"><img alt="github"
-            src="<%=require('../images/github.svg')%>"></a>
+          type="image/svg+xml" src="<%=require('../images/github.svg')%>"></a>
         <a class="social__item" href="https://facebook.com"><img alt="facebook"
-            src="<%=require('../images/fb3.svg')%>"></a>
+          type="image/svg+xml" src="<%=require('../images/fb3.svg')%>"></a>
       </div>
     </footer>
 
