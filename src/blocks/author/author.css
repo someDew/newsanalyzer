@@ -5,21 +5,15 @@
 .author {
     display: grid;
 
-    grid-template-columns: minmax(24px, 40px) minmax(232px, 464px) minmax(32px, 56px) minmax(300px, 1fr) minmax(24px, 40px);
-    grid-template-rows: 5vw auto 1fr 5vw;
+    grid-template-columns: 104px 464px 56px 1fr 104px;
+    grid-template-rows: 80px auto 1fr 80px;
 }
 
-@media screen and (min-width: 1440px) {
-
+@media screen and (max-width: 1440px) {
+    
     .author {		
-        grid-template-rows: 80px auto 1fr 80px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-
-    .author {		
-        grid-template-rows: 40px auto 1fr 40px;
+        grid-template-columns: 7vw minmax(232px, 464px) 3.8vw minmax(288px, 10000px) 7vw;
+        grid-template-rows: 5vw auto 1fr 5vw;
     }
 }
 
@@ -27,6 +21,6 @@
 
     .author {		
         grid-template-columns: 7vw 1fr 7vw;
-        grid-template-rows: 6vw 1fr auto auto 6vw;        
+        grid-template-rows: 6vw 1fr 16px auto auto 6vw;        
     }
 }

@@ -1,2 +1,54 @@
 @import url(../blocks/header/header.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/nav/nav.css);
+@import url(../blocks/link/link.css);
+@import url(../blocks/social/social.css);
+@import url(../blocks/preloader/preloader.css);
 @import url(fonts.css);
+
+html {
+    font-family: Roboto, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	font-style: normal;
+	
+	margin: 0;
+
+    text-rendering: optimizeLegibility; 
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, blockquote, nav, div, form, input, button, section {
+	/* border: 1px red solid; */
+    margin: 0;
+}
+
+body {
+	margin: 0;	
+	overflow-x: hidden;
+	
+    display: flex;
+    justify-content: center;
+
+	font-size: 16px;
+}
+
+.page {	
+    display: grid;
+    grid-template-areas:
+    "header"
+    "content"
+	"footer";
+	
+	background-color: #fff;
+
+	
+	grid-template-rows:auto 1fr auto;
+    grid-template-columns: 100%;
+    
+	width: 100%;
+  	max-width: 1440px;
+	min-width: 320px;	
+}
