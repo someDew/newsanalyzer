@@ -8,7 +8,7 @@
   <meta name="description" content="newsfeed on demand">
   <meta name="author" content="Andrew Bubnov">
   <link rel="icon" type="image/png" sizes="32x32" href="<%= require('../images/favicon.png') %>">
-  <link rel="stylesheet" type="text/css" href="<%= htmlWebpackPlugin.files.chunks.index.css %>">
+  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.index.css %>">
   <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 
@@ -51,7 +51,7 @@
       </section>
       <section class="results">
         <h3 class="results__title">Результаты поиска</h3>
-        <a class="results__link link" href="analitics.html">Посмотреть аналитику ></a>
+        <a class="results__link link" href="analitics.html">Посмотреть аналитику<img src="<%=require('../images/arrow.svg')%>" alt="open github" class="link__arrow"></a>
         <div class="results__block">
 
           <a class="card" href="">
@@ -144,7 +144,7 @@
 
   </div>
 
-  <script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
+  <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
 
 </body>
 

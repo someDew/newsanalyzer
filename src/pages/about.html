@@ -9,7 +9,7 @@
   <meta name="author" content="Andrew Bubnov">
   <title><%= htmlWebpackPlugin.options.title %></title>
   <link rel="icon" type="image/png" sizes="32x32" href="<%= require('../images/favicon.png') %>">
-  <link rel="stylesheet" type="text/css" href="<%= htmlWebpackPlugin.files.chunks.about.css %>">
+  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.about.css %>">
 </head>
 
 <body>
@@ -40,27 +40,27 @@
           нужен сайт, мы рекомендуем обратиться к этому студенту.</p>
       </section>
 
-    <secion class="tech">
-      <h2 class="tech__title">Используемые технологии</h2>
-      <div class="tech__block">
-        <div class="tech__card">
-          <h3 class="tech__name">HTML 5</h3>
-          <img class="tech__logo" type="image/svg+xml" src="<%=require('../images/html.svg')%>" alt="html 5 logo">
+      <secion class="tech">
+        <h2 class="tech__title">Используемые технологии</h2>
+        <div class="tech__block">
+          <div class="tech__card">
+            <h3 class="tech__name">HTML 5</h3>
+            <img class="tech__logo" type="image/svg+xml" src="<%=require('../images/html.svg')%>" alt="html 5 logo">
+          </div>
+          <div class="tech__card">
+            <h3 class="tech__name">CSS 3</h3>
+            <img class="tech__logo" type="image/svg+xml" src="<%=require('../images/css.svg')%>" alt="css 3 logo">
+          </div>
+          <div class="tech__card">
+            <h3 class="tech__name">ES 2019</h3>
+            <img class="tech__logo" type="image/svg+xml" src="<%=require('../images/js.svg')%>" alt="java script 2019 logo">
+          </div>
+          <div class="tech__card">
+            <h3 class="tech__name">WebPack</h3>
+            <img class="tech__logo" type="image/svg+xml" src="<%=require('../images/webpack.svg')%>" alt="web pack logo">
+          </div>
         </div>
-        <div class="tech__card">
-          <h3 class="tech__name">CSS 3</h3>
-          <img class="tech__logo" type="image/svg+xml" src="<%=require('../images/css.svg')%>" alt="css 3 logo">
-        </div>
-        <div class="tech__card">
-          <h3 class="tech__name">ES 2019</h3>
-          <img class="tech__logo" type="image/svg+xml" src="<%=require('../images/js.svg')%>" alt="java script 2019 logo">
-        </div>
-        <div class="tech__card">
-          <h3 class="tech__name">WebPack</h3>
-          <img class="tech__logo" type="image/svg+xml" src="<%=require('../images/webpack.svg')%>" alt="web pack logo">
-        </div>
-      </div>
-    </secion>
+      </secion>
 
       <section class="author">
         <img class="author__pic" src="<%= require('../images/author_full.jpg') %>" alt="site autors photo">
@@ -74,6 +74,34 @@
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit dicta libero labore. Beatae excepturi commodi
           harum vitae distinctio qui, ipsum officia facilis deleniti illum architecto assumenda ducimus blanditiis id
           explicabo?</p>
+      </section>
+
+      <section class="github">
+        <h2 class="github__title">История&nbsp;коммитов из&nbsp;GitHub</h2>
+        <a href="https://github.com/someDew/newsanalyzer" class="github__link link">Открыть на GitHub<img src="<%=require('../images/arrow.svg')%>" alt="open github" class="link__arrow"></a>
+          <div class="github__slider">
+            <!-- Swiper layouts -->
+            <div class="swiper-container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  ...
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+          
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+          
+              <!-- If we need scrollbar -->
+              <div class="swiper-scrollbar"></div>          
+            </div>
+            
+        </div>
       </section>
     </main>
 
@@ -91,7 +119,7 @@
     </footer>
 
   </div>
-  <script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
+  <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
 </body>
 
 </html>

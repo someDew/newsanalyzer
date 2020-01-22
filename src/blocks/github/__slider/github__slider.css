@@ -1,0 +1,6 @@
+.github__slider {
+    grid-area: slider;
+
+    width: 100%;
+    height: 30vw;
+}

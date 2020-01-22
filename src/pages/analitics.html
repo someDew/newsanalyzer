@@ -9,7 +9,7 @@
   <meta name="author" content="Andrew Bubnov">
   <title><%= htmlWebpackPlugin.options.title %></title>
   <link rel="icon" type="image/svg+xml" sizes="32x32" href="<%= require('../images/favicon.png') %>">
-  <link rel="stylesheet" type="text/css" href="<%= htmlWebpackPlugin.files.chunks.analitics.css %>">
+  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.analitics.css %>">
 </head>
 
 <body>
@@ -44,7 +44,7 @@
 
   </div>
 
-  <script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks.analitics.entry %>"></script>
+  <script src="<%= htmlWebpackPlugin.files.chunks.analitics.entry %>"></script>
 
 </body>
 
