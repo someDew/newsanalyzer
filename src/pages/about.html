@@ -77,39 +77,29 @@
       </section>
 
       <section class="github">
-        <h2 class="github__title">История&nbsp;коммитов из&nbsp;GitHub</h2>
-        <a href="https://github.com/someDew/newsanalyzer" class="github__link link">Открыть на GitHub<img src="<%=require('../images/arrow.svg')%>" alt="open github" class="link__arrow"></a>
-          <div class="github__slider">
-            <!-- Swiper layouts -->
-            <div class="swiper-container">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide">Slide 1</div>
-                  <div class="swiper-slide">Slide 2</div>
-                  <div class="swiper-slide">Slide 3</div>
-                  ...
-              </div>
-              <!-- If we need pagination -->
-              <div class="swiper-pagination"></div>
+        <h2 class="github__title">История коммитов из&nbsp;GitHub</h2>
+        <a href="https://github.com/someDew/newsanalyzer" class="github__link link">Открыть&nbsp;на&nbsp;GitHub<img src="<%=require('../images/arrow.svg')%>" alt="open github" class="link__arrow"></a>
+        <button class="github__button button">Открыть&nbsp;на&nbsp;GitHub</button>
+        
+        <div class="github__slider">
+
+          <div class="github__card">
+            <time class="github__date">2 января, 1988</time>
+            <img class="github__pic" type="image/png" src="<%=require('../images/default-user.png')%>" alt="contributor photo">
+            <h3 class="github__name">Default User</h3>
+            <span class="github__text"></span>
+            <p class="github__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet officia, ut accusantium molestiae itaque eum, quia maiores, adipisci quam repudiandae similique cupiditate dolorem voluptatum nisi odit commodi unde enim praesentium!</p>
+          </div>          
           
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-          
-              <!-- If we need scrollbar -->
-              <div class="swiper-scrollbar"></div>          
-            </div>
-            
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p class="copyright footer__copyright">© 2019 Andrew</p>
+      <p class="copyright footer__copyright">©&nbsp;2019&nbsp;Andrew</p>
       <nav class="nav footer__nav">
         <a class="nav__item link" href="index.html">Главная</a>
-        <a class="nav__item link" href="about.html">О проекте</a>
+        <a class="nav__item link" href="about.html">О&nbsp;проекте</a>
         <a class="nav__item link" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
       </nav>
       <div class="social footer__social">

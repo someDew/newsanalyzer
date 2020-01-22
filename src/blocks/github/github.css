@@ -1,27 +1,39 @@
 @import url(./__title/github__title.css);
 @import url(./__link/github__link.css);
 @import url(./__slider/github__slider.css);
+@import url(./__button/github__button.css);
 
 .github {
     display: grid;
 
-    grid-template-areas:
-    "title link"
-    "sep sep"
-    "slider slider";
-    
-    grid-template-columns: 1fr auto;
-    grid-template-rows: 110px 64px auto;
+    grid-template-columns: 104px 1fr auto 104px;
+    grid-template-rows: 80px auto 64px auto  80px;
 
     background: #F5F6F7;
-    padding: 16px 6.9%;
-
 }
 
 @media screen and (max-width: 1440px) {
 
-    .results {		
-        grid-template-rows: 8vw 4vw auto;
+    .github {		
+        grid-template-columns: 7vw 1fr auto 7vw;
+        grid-template-rows: 5vw auto 4vw auto  5vw;
+    }
+}
+
+@media screen and (max-width: 950px) {
+
+    .github {		
+        grid-template-columns: 7vw minmax(288px, 410px) auto 7vw;
+        
+    }
+}
+
+@media screen and (max-width: 570px) {
+
+    .github {		
+        grid-template-columns: 7vw auto 7vw;
+        grid-template-rows: 5vw auto 4vw auto 2vw auto 5vw;
+        
     }
 }
 

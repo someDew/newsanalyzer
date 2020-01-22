@@ -1,0 +1,23 @@
+.github__button {
+    display: none;    
+
+}
+
+@media screen and (max-width: 570px) {
+
+    .github__button {
+        display: block;
+        
+        grid-column: 2/3;
+        grid-row: 6/7;
+
+        justify-self: center;
+    
+        width: 288px;
+        height: 56px;
+
+        border: 1px solid #1A1B22;
+        box-sizing: border-box;
+        border-radius: 90px;
+    }
+}
