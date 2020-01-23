@@ -8,6 +8,8 @@
     font-size: 18px;
     line-height: 26px;
 
+    display: block;
+
     align-self: end;
     justify-self: right;
 }

@@ -1,0 +1,19 @@
+.github__card-name {
+    font-family: Roboto Slab, Georgia, "Times",	"Nimbus Roman No9 L", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    color: #1A1B22;
+
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
+
+@media screen and (max-width: 768px) {
+
+    .github__card-name {		
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
