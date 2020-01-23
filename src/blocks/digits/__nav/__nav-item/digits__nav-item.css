@@ -1,0 +1,13 @@
+.digits__nav-item {
+    font-family: Roboto, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+
+    opacity: 1;
+}
+
+.digits__nav-item:last-of-type {
+    opacity: 0.6;
+}

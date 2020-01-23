@@ -6,8 +6,6 @@
 @import url(./__indicator/github__indicator.css);
 
 .github {
-    position: relative;
-
     display: grid;
 
     grid-template-columns: 104px 600px auto 104px;
