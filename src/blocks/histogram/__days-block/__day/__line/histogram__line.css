@@ -1,6 +1,6 @@
-@import url(./__line-item/gisto__line-item.css);
+@import url(./__line-item/histogram__line-item.css);
 
-.gisto__line {
+.histogram__line {
     grid-column: 3/4;
 
     display: grid;

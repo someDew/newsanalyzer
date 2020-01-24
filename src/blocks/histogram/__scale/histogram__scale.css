@@ -1,0 +1,14 @@
+@import url(./__mark/histogram__mark.css);
+
+.histogram__scale {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    grid-column: 3/4;
+    grid-row: 2/3;    
+}
+
+.histogram__scale:last-of-type {
+    grid-row: 4/5;
+}

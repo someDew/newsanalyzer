@@ -1,0 +1,15 @@
+@import url(./__date/histogram__date.css);
+@import url(./__quantity/histogram__quantity.css);
+@import url(./__line/histogram__line.css);
+
+.histogram__day {
+    display: grid;
+
+    grid-template-columns: 50px 54px auto;
+}
+
+@media screen and (max-width: 450px) {
+    .histogram__day {
+		grid-template-columns: 50px 24px auto;
+	}
+}

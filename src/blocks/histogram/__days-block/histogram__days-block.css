@@ -1,6 +1,6 @@
-@import url(./__day/gisto__day.css);
+@import url(./__day/histogram__day.css);
 
-.gisto__days-block {
+.histogram__days-block {
     grid-column: 1/4;
     grid-row: 3/4;
 
@@ -12,7 +12,7 @@
 }
 
 @media screen and (max-width: 450px) {
-    .gisto__days-block {
+    .histogram__days-block {
 		row-gap: 24px;
 	}
 }
