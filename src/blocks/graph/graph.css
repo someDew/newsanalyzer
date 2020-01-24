@@ -1,0 +1,29 @@
+@import url(./__title/graph__title.css);
+@import url(./__block/graph__block.css);
+
+.graph {
+    background: #F5F6F7;
+
+    display: grid;
+
+    grid-template-columns: 104px auto 104px;
+    grid-template-rows: 80px auto 64px auto 80px;
+
+    background: #F5F6F7;
+}
+
+@media screen and (max-width: 1440px) {
+
+    .graph {		
+        grid-template-columns: 7vw auto 7vw;
+        grid-template-rows: 5vw auto 48px auto 5vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .graph {		
+        grid-template-columns: 5vw auto 5vw;
+        grid-template-rows: 5vw auto 4vw auto 5vw;        
+    }
+}

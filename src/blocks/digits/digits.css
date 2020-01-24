@@ -9,7 +9,7 @@
     grid-template-columns: 104px auto 1fr 104px;
     grid-template-rows: 40px auto 80px auto 24px auto 80px;
 
-    background: #F5F6F7;
+    background: #fff;
 }
 
 @media screen and (max-width: 1440px) {
