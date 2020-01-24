@@ -1,0 +1,25 @@
+@import url(./__mark/gisto__mark.css);
+
+.gisto__scale {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    grid-column: 3/4;
+    grid-row: 2/3;
+
+    font-family: Roboto, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    
+    color: #B6BCBF;
+}
+
+.gisto__scale:last-of-type {
+    grid-row: 4/5;
+}

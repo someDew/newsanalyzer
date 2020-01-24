@@ -1,0 +1,17 @@
+@import url(./__head-date/gisto__head-date.css);
+@import url(./__head-quantity/gisto__head-quantity.css);
+@import url(./__scale/gisto__scale.css);
+@import url(./__days-block/gisto__days-block.css);
+
+.gisto {
+    display:grid;
+
+    grid-template-columns: 50px 54px auto;
+    grid-template-rows: auto 44px auto 44px;
+}
+
+@media screen and (max-width: 450px) {
+    .gisto {
+		grid-template-columns: 50px 24px auto;
+	}
+}

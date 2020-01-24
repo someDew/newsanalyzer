@@ -1,0 +1,10 @@
+@import url(./__line-item/gisto__line-item.css);
+
+.gisto__line {
+    grid-column: 3/4;
+
+    display: grid;
+
+    grid-template-columns: repeat(100, 1%);
+    
+}

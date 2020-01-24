@@ -1,0 +1,18 @@
+@import url(./__day/gisto__day.css);
+
+.gisto__days-block {
+    grid-column: 1/4;
+    grid-row: 3/4;
+
+    display:grid;    
+
+    grid-template-rows: repeat(7, 24px);
+
+    row-gap: 56px;
+}
+
+@media screen and (max-width: 450px) {
+    .gisto__days-block {
+		row-gap: 24px;
+	}
+}

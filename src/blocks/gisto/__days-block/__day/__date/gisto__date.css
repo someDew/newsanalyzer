@@ -1,0 +1,12 @@
+.gisto__date {
+    grid-column: 1/2;
+
+    font-family: Roboto, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+
+    color: #1A1B22;
+
+    align-self: center;
+}
