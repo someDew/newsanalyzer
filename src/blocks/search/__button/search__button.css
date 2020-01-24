@@ -16,12 +16,6 @@
     grid-row: 3/4;
 }
 
-@media screen and (max-width: 1440px) {
-    .search__button {
-        width: calc(79px + 7vw);
-    }
-}
-
 @media screen and (max-width: 460px) {
     .search__button {
         width: 100%;

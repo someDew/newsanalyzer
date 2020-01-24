@@ -13,7 +13,7 @@
 
 @media screen and (max-width: 1440px) {
     .search__form {
-        height: calc(36px + 2vw);
+        height: calc(38px + 2vw);
     }
 }
 

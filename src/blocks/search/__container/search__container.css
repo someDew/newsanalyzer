@@ -1,15 +1,21 @@
 .search__container {
-    height: auto;
+    grid-column: 2/3;
+    grid-row: 2/3;
 
     color: white;
 
     display: grid;
         
-    grid-template-columns: 100%;
-    grid-template-rows: auto 2vw auto 3vw auto;
+    grid-template-columns: minmax(448px, 608px);
+    grid-template-rows: auto 32px auto 64px auto;
     
-    max-width: 608px;
-    min-width: 288px;
-    
-    align-self: center;
+    justify-self: center;
 }
+
+@media screen and (max-width: 768px) {
+
+    .search__container {		
+        grid-template-columns: minmax(288px, 448px);
+        grid-template-rows: auto 16px auto 24px auto;
+    }
+  }
