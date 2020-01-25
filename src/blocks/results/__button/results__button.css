@@ -14,3 +14,7 @@
     height: 66px;
     background-color: #fff;
 }
+
+.results__button:hover {
+    opacity: .6;
+}

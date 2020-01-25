@@ -13,4 +13,11 @@
     padding: 0 24px;
 
     border-radius: 34px;
+
+    outline: none;
 }
+
+.input:focus {
+    box-shadow: #347eff 0px 0px 1px 1px;
+}
+

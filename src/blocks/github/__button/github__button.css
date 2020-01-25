@@ -1,6 +1,9 @@
 .github__button {
-    display: none;    
+    display: none;
+}
 
+.github__button:hover {
+    opacity: .6;
 }
 
 @media screen and (max-width: 570px) {
