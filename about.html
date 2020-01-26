@@ -63,7 +63,15 @@
       </secion>
 
       <section class="author">
-        <img class="author__pic" src="images/author_full.jpg" alt="site autors photo">
+
+        <picture class="author__pic">
+          <source type="image/jpeg" media="(max-width: 345px)" srcset="images/author_300px.jpg">
+          <source type="image/jpeg" media="(max-width: 610px)" srcset="images/author_512px.jpg">
+          <source type="image/jpeg" media="(max-width: 690px)" srcset="images/author_300px.jpg">
+          <img src="images/author_512px.jpg" alt="site autors photo">
+        </picture>
+
+        
         <h2 class="author__title">Об&nbsp;авторе</h2>
         <p class="author__text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы
           занимаетесь, какими технологиями разработки владете.

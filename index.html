@@ -13,29 +13,35 @@
 </head>
 
 <body>
-  <div class="page">
+  <div class="page page_main">
+
+    <picture class="page__back">
+      <source type="image/jpeg" media="(max-width: 720px)" srcset="images/titleback_720px.jpg">
+      <source type="image/jpeg" media="(max-width: 1024px)" srcset="images/titleback_1024px.jpg">
+      <img src="images/titleback_1440px.jpg" alt="page background">
+    </picture>
 
     <header class="header header_main-page">
       <h1 class="header__logo" alt="NewsAnalyzer">NewsAnalyzer</h1>
       <nav class="nav header__nav">
         <a class="nav__item nav__item_select link" href="./index.html">Главная</a>
-        <a class="nav__item link" href="./about.html">О проекте</a>
+        <a class="nav__item link" href="./about.html">О&nbsp;проекте</a>
       </nav>
     </header>
 
     <search class="search">
       <div class="search__container">
         <h2 class="search__title">Что в мире творится?</h1>
-        <h3 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
-          прошедшую неделю.</h3>
-        <form action="submit" class="form search__form">
-          <div class="search__input">
-            <input type="text" class="input" name="news-search" required="yes"
-              placeholder="введите тему запроса">
-          </div>
-          <button class="button search__button">Искать</button>
-          <span class="error search__error"></span>
-        </form>
+          <h3 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях
+            за
+            прошедшую неделю.</h3>
+          <form action="submit" class="form search__form">
+            <div class="search__input">
+              <input type="text" class="input" name="news-search" required="yes" placeholder="введите тему запроса">
+            </div>
+            <button class="button search__button">Искать</button>
+            <span class="error search__error"></span>
+          </form>
       </div>
     </search>
 
@@ -45,17 +51,19 @@
         <span class="preloader__text">Идет поиск новостей...</span>
       </section>
       <section class="notfound notfoundr_disable">
-        <img class="notfound__img" type="image/svg+xml" src="images/notfound.svg" alt="image results not found">
+        <img class="notfound__img" type="image/svg+xml" src="images/notfound.svg"
+          alt="image results not found">
         <p class="notfound__title">Ничего не найдено</p>
         <span class="notfound__text">К сожалению по вашему запросу<br>ничего не найдено.</span>
       </section>
       <section class="results">
         <h3 class="results__title">Результаты поиска</h3>
-        <a class="results__link link" href="analitics.html">Посмотреть&nbsp;аналитику<img src="images/arrow.svg" alt="open github" class="link__arrow"></a>
+        <a class="results__link link" href="analitics.html">Посмотреть&nbsp;аналитику<img
+            src="images/arrow.svg" alt="open github" class="link__arrow"></a>
         <div class="results__block">
 
           <a class="card" href="">
-            <img src="images/card-pic-default.jpg" alt="" type="image/jpeg"class="card__pic">
+            <img src="images/card-pic-default.jpg" alt="" type="image/jpeg" class="card__pic">
             <time class="card__date">29 февраля, 2020</time>
             <h4 class="card__title">Lorem ipsum dolor. Lorem ipsum dolor.</h4>
             <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
@@ -69,7 +77,8 @@
 
 
           <a class="card" href="">
-            <img src="images/card-pic-default.jpg" alt="default news image" type="image/jpeg"class="card__pic">
+            <img src="images/card-pic-default.jpg" alt="default news image" type="image/jpeg"
+              class="card__pic">
             <time class="card__date">29 февраля, 2020</time>
             <h4 class="card__title">Similique.</h4>
             <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
@@ -113,17 +122,23 @@
         <button class="results__button button">Показать&nbsp;больше</button>
       </section>
       <section class="author">
-        <img class="author__pic" src="images/author_full.jpg" type="image/jpeg" alt="site autors photo">
+        <picture class="author__pic">
+          <source type="image/jpeg" media="(max-width: 345px)" srcset="images/author_300px.jpg">
+          <source type="image/jpeg" media="(max-width: 610px)" srcset="images/author_512px.jpg">
+          <source type="image/jpeg" media="(max-width: 690px)" srcset="images/author_300px.jpg">
+          <img src="images/author_512px.jpg" alt="site autors photo">
+        </picture>
         <h4 class="author__title">Об&nbsp;авторе</h3>
-        <p class="author__text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы
-          занимаетесь, какими технологиями разработки владете.
-          <br><br>
-          Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
-          потенциальным заказчикам.
-          <br><br>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit dicta libero labore. Beatae excepturi commodi
-          harum vitae distinctio qui, ipsum officia facilis deleniti illum architecto assumenda ducimus blanditiis id
-          explicabo?</p>
+          <p class="author__text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы
+            занимаетесь, какими технологиями разработки владете.
+            <br><br>
+            Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
+            потенциальным заказчикам.
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit dicta libero labore. Beatae excepturi
+            commodi
+            harum vitae distinctio qui, ipsum officia facilis deleniti illum architecto assumenda ducimus blanditiis id
+            explicabo?</p>
       </section>
     </main>
 
@@ -135,10 +150,10 @@
         <a class="nav__item link" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
       </nav>
       <div class="social footer__social">
-        <a class="social__item" href="https://github.com/somedew/newsanalyzer"><img alt="github"
-          type="image/svg+xml" src="images/github.svg"></a>
-        <a class="social__item" href="https://facebook.com"><img alt="facebook"
-          type="image/svg+xml" src="images/fb3.svg"></a>
+        <a class="social__item" href="https://github.com/somedew/newsanalyzer"><img alt="github" type="image/svg+xml"
+            src="images/github.svg"></a>
+        <a class="social__item" href="https://facebook.com"><img alt="facebook" type="image/svg+xml"
+            src="images/fb3.svg"></a>
       </div>
     </footer>
 
