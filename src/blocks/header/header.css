@@ -3,6 +3,8 @@
 @import url(./_main-page/header_main-page.css);
 
 .header {
+    grid-area: header;
+
     display: grid;
 
     grid-template-columns: [start] 104px [wrap-start] auto [logo] repeat(8, minmax(5px, 200px)) [nav] auto [wrap-end] 104px [end];

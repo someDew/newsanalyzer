@@ -1,0 +1,12 @@
+@import url(./_main/page_main.css);
+@import url(./__back/page__back.css);
+
+.page {
+    background-color: #fff;
+    
+	width: 100%;
+  	max-width: 1440px;
+    min-width: 320px;	
+    
+    z-index: 10;
+}

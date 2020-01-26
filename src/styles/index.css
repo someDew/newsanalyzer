@@ -1,9 +1,11 @@
 
+@import url(../blocks/page/page.css);
 @import url(../blocks/header/header.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/nav/nav.css);
 @import url(../blocks/link/link.css);
 @import url(../blocks/search/search.css);
+@import url(../blocks/content/content.css);
 @import url(../blocks/social/social.css);
 @import url(../blocks/results/results.css);
 @import url(../blocks/button/button.css);
@@ -29,8 +31,7 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6, p, a, blockquote, nav, div, form, input, button, section {
-	/* border: 1px red solid; */
-    margin: 0;
+	margin: 0;
 }
 
 body {
@@ -42,52 +43,3 @@ body {
 
 	font-size: 16px;
 }
-
-.page {	
-    display: grid;
-    grid-template-areas:
-    "header"
-    "search"
-    "content"
-    "footer";
-
-	
-	grid-template-rows:auto auto 1fr auto;
-    grid-template-columns: 100%;
-    
-	margin: 0;
-    
-    background-image: url(../images/titleback_1440px.jpg);
-	
-    background-repeat: no-repeat;
-	background-position-x: 47%;
-	background-position-y: -12%;
-
-
-	width: 100%;
-  	max-width: 1440px;
-	min-width: 320px;	
-}
-
-/* @media screen and (min-width: 1441px) {
-
-    .page {		
-		
-
-		
-	}
-}
-
-@media screen and (max-width: 768px) {
-    .page {
-		
-
-		
-	}
-}
-
-@media screen and (max-width: 320px) {
-    .page {					
-		
-	}
-} */

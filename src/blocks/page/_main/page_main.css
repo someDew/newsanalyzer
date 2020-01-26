@@ -1,0 +1,13 @@
+.page.page_main {	
+    display: grid;
+    grid-template-areas:
+    "header"
+    "search"
+    "content"
+    "footer";
+	
+	grid-template-rows: [start] auto [head] auto [search] 1fr [foot] auto [end];
+    grid-template-columns: 100%;
+    
+    position: relative;
+}

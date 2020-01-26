@@ -1,0 +1,9 @@
+.page__back {
+    z-index: -1;
+
+    grid-row: start/search;
+    position: absolute;
+
+    justify-self: center;
+    align-self: center;
+}
