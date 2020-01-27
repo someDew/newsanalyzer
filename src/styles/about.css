@@ -25,8 +25,9 @@ html {
 	-moz-text-size-adjust: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, blockquote, nav, div, form, input, button, section {
+h1, h2, h3, h4, h5, h6, p, a, blockquote, nav, div, form, input, button, section, li, ol {
 	margin: 0;
+	padding: 0;
 }
 
 body {
