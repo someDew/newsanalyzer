@@ -1,5 +1,5 @@
 # NewsAnalyzer
-## v0.0.2
+## v0.0.3
 ---
   
 ### About:
@@ -36,6 +36,7 @@ Hi! And wellcome.
 
 ### Whats new:
 
+- Created all app layouts
 - Built environment for automatic build, development and publication of the project;
 - Created github repo with coolest ever readme file.
 
