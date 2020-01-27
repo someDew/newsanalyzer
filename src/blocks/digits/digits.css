@@ -1,0 +1,36 @@
+@import url(./__nav/digits__nav.css);
+@import url(./__title/digits__title.css);
+@import url(./__request/digits__request.css);
+@import url(./__block/digits__block.css);
+
+.digits {
+    display: grid;
+
+    grid-template-columns: 104px auto 1fr 104px;
+    grid-template-rows: 40px auto 80px auto 24px auto 80px;
+
+    background: #fff;
+}
+
+@media screen and (max-width: 1440px) {
+
+    .digits {		
+        grid-template-columns: 7vw auto 1fr 7vw;
+        grid-template-rows: 2.5vw auto 5vw auto 24px auto 5vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .digits {
+        grid-template-rows: 2.5vw auto 5vw auto 16px auto 5vw;
+    }
+}
+
+@media screen and (max-width: 560px) {
+
+    .digits {
+        grid-template-columns: 7vw auto auto 7vw;
+        grid-template-rows: 2.5vw auto 5vw auto auto 16px auto 5vw;
+    }
+}

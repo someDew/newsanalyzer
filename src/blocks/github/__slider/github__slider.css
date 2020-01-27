@@ -1,0 +1,28 @@
+@import url(../../indicator/indicator.css);
+
+.github__slider {
+    grid-column: 2/4;
+    grid-row: 4/5;
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+    column-gap: 16px;
+}
+
+@media screen and (max-width: 570px) {
+
+    .github__slider {
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+}
+
+/* @media screen and (max-width: 666px) {
+
+    .github__slider {
+        grid-template-rows: 1fr;
+    }
+} */

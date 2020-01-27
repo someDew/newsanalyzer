@@ -1,0 +1,30 @@
+@import url(./_select/nav__item_select.css);
+
+.nav__item {
+
+    font-family: Roboto, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;    
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;    
+
+    display: flex;
+    align-items: center;
+
+    white-space: nowrap;
+
+    margin-left: 33px;
+}
+
+.nav__item:first-of-type {
+    margin-left: 0px;
+}
+
+@media screen and (max-width: 450px) {
+
+    .nav__item {		
+        font-size: 16px;
+        line-height: 20px;
+
+        margin-left: 11px;
+    }
+}

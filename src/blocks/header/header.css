@@ -1,0 +1,29 @@
+@import url(./__logo/header__logo.css);
+@import url(./__nav/header__nav.css);
+@import url(./_main-page/header_main-page.css);
+
+.header {
+    grid-area: header;
+
+    display: grid;
+
+    grid-template-columns: [start] 104px [wrap-start] auto [logo] repeat(8, minmax(5px, 200px)) [nav] auto [wrap-end] 104px [end];
+
+    height: 80px;
+
+    box-shadow: inset 0px -1px 0px #D1D2D6;
+}
+
+@media screen and (max-width: 1440px) {
+    .header {
+        grid-template-columns: [start] minmax(6vw, 1fr) [wrap-start] auto [logo] repeat(8, minmax(3px, 200px)) [nav] auto [wrap-end] minmax(6vw, 1fr) [end];
+        
+        height: calc(40px + 3vw);
+	}
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+		height: calc(48px + 2vw);
+	}
+}

@@ -1,0 +1,30 @@
+.github__link {
+    grid-column: 3/4;
+    grid-row: 2/3;
+
+    font-family: Roboto, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+
+    display: block;
+
+    align-self: end;
+    justify-self: right;
+}
+
+@media screen and (max-width: 950px) {
+
+    .github__link {		
+        align-self: start;
+        
+    }
+}
+
+@media screen and (max-width: 570px) {
+
+    .github__link {
+        display: none;
+    }
+}

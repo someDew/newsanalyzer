@@ -1,0 +1,20 @@
+.results__button {
+    grid-area: button;    
+
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    
+    border-radius: 33px;
+    border: none;    
+
+    width: 240px;
+    height: 66px;
+    background-color: #fff;
+}
+
+.results__button:hover {
+    opacity: .6;
+}

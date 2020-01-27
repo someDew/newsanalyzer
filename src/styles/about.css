@@ -1,0 +1,41 @@
+@import url(../blocks/page/page.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/nav/nav.css);
+@import url(../blocks/link/link.css);
+@import url(../blocks/button/button.css);
+@import url(../blocks/social/social.css);
+@import url(../blocks/forclients/forclients.css);
+@import url(../blocks/tech/tech.css);
+@import url(../blocks/author/author.css);
+@import url(../blocks/github/github.css);
+@import url(fonts.css);
+
+html {
+    font-family: Roboto, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	font-style: normal;
+	
+	margin: 0;
+
+    text-rendering: optimizeLegibility; 
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, blockquote, nav, div, form, input, button, section, li, ol {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;	
+	overflow-x: hidden;
+	
+    display: flex;
+    justify-content: center;
+
+	font-size: 16px;
+}

@@ -1,0 +1,11 @@
+.footer__social {
+    grid-column: soc-start/soc-end;
+}
+
+@media screen and (max-width: 768px) {
+    .footer .footer__social {
+        grid-row: nav-start/nav-end;
+
+        align-items: baseline;
+	}
+}

@@ -1,0 +1,10 @@
+@import url(./__line-item/histogram__line-item.css);
+
+.histogram__line {
+    grid-column: 3/4;
+
+    display: grid;
+
+    grid-template-columns: repeat(100, 1%);
+    
+}

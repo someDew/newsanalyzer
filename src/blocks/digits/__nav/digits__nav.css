@@ -1,0 +1,6 @@
+@import url(./__nav-item/digits__nav-item.css);
+
+.digits__nav {
+    grid-column: 2/4;
+    grid-row: 2/3;
+}

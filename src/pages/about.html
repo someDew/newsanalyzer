@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="newsfeed on demand">
+  <meta name="author" content="Andrew Bubnov">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <link rel="icon" type="image/png" sizes="32x32" href="<%= require('../images/favicon.png') %>">
+  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.about.css %>">
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="header">
+      <h1 class="header__logo">NewsAnalyzer</h1>
+      <nav class="nav header__nav">
+        <a class="nav__item link" href="./index.html">Главная</a>
+        <a class="nav__item nav__item_select link" href="./about.html">О проекте</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section class="forclients">
+        <h2 class="forclients__title">Клиентам</h2>
+        <p class="forclients__text">Этот сайт — дипломный проект студента Яндкс.Практикума. Его цель — показать, чему
+          научился студент, и какими технологиями владеет.<br><br>Вёртска сайта выполнена по методологии БЭМ. Это делает
+          сайт гибким и масштабируемым. Кроме того, добавлять новые страницы и функциальность проще и быстрее, чем в
+          проектах, выполненных по другим методологиям. Также
+          сайт проще и дешевле поддерживать.<br><br>Карточки с новостям приходят с сервера и обрабатываются асихронно.
+          То
+          есть сайт продолжает работать, пока от сервера приходит ответ. Это повышает удобство использования
+          сервиса.<br><br>При создании проекта была использона
+          сборка технологией Webpack. Это современных подход к разработке сайтов. Код оптимизируется, а значит, сайт
+          работает быстрее. Также настроена сайт работает в старых браузерах. Даже
+          если посетители — пользователи старых операционных систем у них не будет проблем с отображением. А значит
+          потенциальная аудитория возрастает.<br><br>Проект был проверен экспертами Яндекс.Практикума. И если вашему
+          бизесу
+          нужен сайт, мы рекомендуем обратиться к этому студенту.</p>
+      </section>
+
+      <section class="tech">
+        <h2 class="tech__title">Используемые технологии</h2>
+        <div class="tech__block">
+          <div class="tech__card">
+            <h3 class="tech__name">HTML 5</h3>
+            <img class="tech__logo" src="<%=require('../images/html.svg')%>" alt="html 5 logo">
+          </div>
+          <div class="tech__card">
+            <h3 class="tech__name">CSS 3</h3>
+            <img class="tech__logo" src="<%=require('../images/css.svg')%>" alt="css 3 logo">
+          </div>
+          <div class="tech__card">
+            <h3 class="tech__name">ES 2019</h3>
+            <img class="tech__logo" src="<%=require('../images/js.svg')%>" alt="java script 2019 logo">
+          </div>
+          <div class="tech__card">
+            <h3 class="tech__name">WebPack</h3>
+            <img class="tech__logo" src="<%=require('../images/webpack.svg')%>" alt="web pack logo">
+          </div>
+        </div>
+      </section>
+
+      <section class="author">
+
+        <picture class="author__pic">
+          <source type="image/jpeg" media="(max-width: 345px)" srcset="<%= require('../images/author_300px.jpg') %>">
+          <source type="image/jpeg" media="(max-width: 610px)" srcset="<%= require('../images/author_512px.jpg') %>">
+          <source type="image/jpeg" media="(max-width: 690px)" srcset="<%= require('../images/author_300px.jpg') %>">
+          <img src="<%= require('../images/author_512px.jpg') %>" alt="site autors photo">
+        </picture>
+
+
+        <h2 class="author__title">Об&nbsp;авторе</h2>
+        <p class="author__text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы
+          занимаетесь, какими технологиями разработки владете.
+          <br><br>
+          Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
+          потенциальным заказчикам.
+          <br><br>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit dicta libero labore. Beatae excepturi commodi
+          harum vitae distinctio qui, ipsum officia facilis deleniti illum architecto assumenda ducimus blanditiis id
+          explicabo?</p>
+      </section>
+
+      <section class="github">
+        <h2 class="github__title">История коммитов из&nbsp;GitHub</h2>
+        <a class="github__link link" href="https://github.com/someDew/newsanalyzer">Открыть&nbsp;на&nbsp;GitHub<img
+            src="<%=require('../images/arrow.svg')%>" alt="open github" class="link__arrow"></a>
+        <button class="github__button button">Открыть&nbsp;на&nbsp;GitHub</button>
+        <div class="github__slider">
+
+          <div class="github__card">
+            <span class="github__card-date">2 января, 1988</span>
+            <img class="github__card-pic" src="<%=require('../images/default-user.png')%>" alt="contributor photo">
+            <h3 class="github__card-name">Default User</h3>
+            <a class="github__card-link link" href="">default.mail@web.site</a>
+            <p class="github__card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet officia, ut
+              accusantium molestiae itaque eum, quia maiores, adipisci quam repudiandae similique cupiditate dolorem
+              voluptatum nisi odit commodi unde enim praesentium!</p>
+          </div>
+
+
+
+        </div>
+        <div class="github__indicator">
+          <div class="indicator"></div>
+          <div class="indicator indicator_select"></div>
+          <div class="indicator"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="copyright footer__copyright">©&nbsp;2019&nbsp;Andrew</p>
+      <nav class="nav footer__nav">
+        <a class="nav__item link" href="index.html">Главная</a>
+        <a class="nav__item link" href="about.html">О&nbsp;проекте</a>
+        <a class="nav__item link" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
+      </nav>
+      <div class="social footer__social">
+        <a class="social__item" href="https://github.com/somedew/newsanalyzer"><img alt="github"
+            src="<%=require('../images/github.svg')%>"></a>
+        <a class="social__item" href="https://facebook.com"><img alt="facebook"
+            src="<%=require('../images/fb3.svg')%>"></a>
+      </div>
+    </footer>
+
+  </div>
+  <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
+</body>
+
+</html>

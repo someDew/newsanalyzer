@@ -1,0 +1,40 @@
+@import url(./__title/github__title.css);
+@import url(./__link/github__link.css);
+@import url(./__slider/github__slider.css);
+@import url(./__button/github__button.css);
+@import url(./__card/github__card.css);
+@import url(./__indicator/github__indicator.css);
+
+.github {
+    display: grid;
+
+    grid-template-columns: 104px 600px auto 104px;
+    grid-template-rows: 80px auto 64px auto 56px 80px;
+
+    background: #F5F6F7;
+}
+
+@media screen and (max-width: 1440px) {
+
+    .github {		
+        grid-template-columns: 7vw 600px auto 7vw;
+        grid-template-rows: 5vw auto 4vw auto 56px 5vw;
+    }
+}
+
+@media screen and (max-width: 950px) {
+
+    .github {		
+        grid-template-columns: 7vw minmax(288px, 410px) auto 7vw;
+        grid-template-rows: 5vw auto 4vw auto 40px 5vw;        
+    }
+}
+
+@media screen and (max-width: 570px) {
+
+    .github {		
+        grid-template-columns: 7vw auto 7vw;
+        grid-template-rows: 5vw auto 4vw auto 40px 2vw auto 5vw;
+        
+    }
+}

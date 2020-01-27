@@ -1,0 +1,42 @@
+.author__title {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 50px;
+
+    font-family: Roboto Slab, Georgia, "Times",	"Nimbus Roman No9 L", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+}
+
+@media screen and (max-width: 1440px) {
+
+    .author__title {
+        margin-top: 4.5vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .author__title {		
+        font-size: 30px;
+        line-height: 40px;
+
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 610px) {
+
+    .author__title {
+        grid-column:2/3;
+        grid-row: 4/5;
+    }
+}

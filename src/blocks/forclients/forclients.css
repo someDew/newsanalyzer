@@ -1,0 +1,17 @@
+@import url(./__title/forclients__title.css);
+@import url(./__text/forclients__text.css);
+
+.forclients{
+    display: grid;
+
+    grid-template-columns: 104px 815px auto 521px;
+    grid-template-rows: 80px auto 24px auto 80px;
+}
+
+@media screen and (max-width: 1440px) {
+
+    .forclients {
+        grid-template-columns: 7vw minmax(288px, 815px) auto 7vw;
+        grid-template-rows: 5vw auto 3vw auto 5vw;
+    }
+}

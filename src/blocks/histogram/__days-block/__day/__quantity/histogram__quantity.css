@@ -1,0 +1,17 @@
+.histogram__quantity {
+    grid-column: 2/3;
+
+    font-family: Roboto, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+
+    color: #fff;
+
+    align-self: center;
+    justify-self: end;    
+    position: relative;
+    left: 18px;
+    width: 13px;
+}

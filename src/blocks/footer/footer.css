@@ -1,0 +1,33 @@
+@import url(./__nav/footer__nav.css);
+@import url(./__coryright/footer__copyright.css);
+@import url(./__social/footer__social.css);
+
+
+.footer {
+    grid-area: footer;
+
+    display: grid;
+
+    grid-template-columns: [start] 104px [copy-start] auto [copy-end] repeat(2, minmax(5px, 200px)) [nav-start] auto [nav-end] repeat(2, minmax(5px, 200px)) [soc-start] auto [soc-end] 104px [end];
+    
+    height: 80px;
+}
+
+@media screen and (max-width: 1440px) {
+    .footer {
+        grid-template-columns: [start] minmax(6vw, 1fr) [copy-start] auto [copy-end] repeat(2, minmax(5px, 200px)) [nav-start] auto [nav-end] repeat(2, minmax(5px, 200px)) [soc-start] auto [soc-end] minmax(6vw, 1fr) [end];
+        
+        height: calc(40px + 3vw);
+	}
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        grid-template-columns: [start] 16px [nav-start] auto [nav-end] repeat(2, minmax(8px, 200px)) [soc-start] auto [soc-end] 16px [end];
+        grid-template-rows: [start] 20px [nav-start] auto [nav-end] 40px [copy-start] auto [copy-end] 22px [end];
+
+        height: auto;
+
+		
+	}
+}

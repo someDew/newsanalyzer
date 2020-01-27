@@ -1,0 +1,18 @@
+.button {
+   text-align: center;
+   text-align: -webkit-center;
+   cursor: pointer;
+
+   font-family: Roboto, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+   font-style: normal;
+   font-weight: 700;
+   font-size: 18px;
+   line-height: 24px;
+   color: inherit;
+
+   outline: none;
+}
+
+.button:focus {
+   box-shadow: #347eff 0px 0px 2px 1px;
+}

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="newsfeed on demand">
+  <meta name="author" content="Andrew Bubnov">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <link rel="icon" type="image/svg+xml" sizes="32x32" href="<%= require('../images/favicon.png') %>">
+  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.analitics.css %>">
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="header">
+      <h1 class="header__logo">NewsAnalyzer</h1>
+      <nav class="nav header__nav">
+        <a class="nav__item link" href="./index.html">Главная</a>
+        <a class="nav__item link" href="./about.html">О&nbsp;проекте</a>
+      </nav>
+    </header>
+
+    <main class="content">
+
+
+      <section class="digits">
+        <nav class="digits__nav">
+          <a class="digits__nav-item link" href="./index.html">Главная</a>
+          <a class="digits__nav-item link" href="./analitics.html">/ Аналитика</a>
+        </nav>
+        <h2 class="digits__title">Вы&nbsp;просили:&nbsp;</h2>
+        <span class="digits__request">&laquo;Бубылда - нацональный герой&raquo;</span>
+        <div class="digits__block">
+          <p class="digits__header">Новостей&nbsp;за&nbsp;неделю: <span class="digits__per-week">285</span></p>
+          <p class="digits__header">Упоминаний&nbsp;в&nbsp;заголовках: <span class="digits__in-titles">49</span></p>
+        </div>
+      </section>
+
+      <section class="graph">
+        <h2 class="graph__title">Аналитика по дням</h2>
+        <div class="graph__block">
+
+          <div class="histogram">
+            <p class="histogram__head-date">дата (сентябрь)</p>
+            <p class="histogram__head-quantity">колличество упоминаний</p>
+
+            <div class="histogram__scale">
+              <p class="histogram__mark">0</p>
+              <p class="histogram__mark">25</p>
+              <p class="histogram__mark">50</p>
+              <p class="histogram__mark">75</p>
+              <p class="histogram__mark">100</p>
+            </div>
+
+
+            <div class="histogram__days-block">
+
+              <div class="histogram__day">
+                <span class="histogram__date">31, ср</span>
+                <p class="histogram__quantity">25</p>
+                <div class="histogram__line">
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                </div>
+              </div>
+
+              <div class="histogram__day">
+                <span class="histogram__date">32, чт</span>
+                <p class="histogram__quantity">10</p>
+                <div class="histogram__line">
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                </div>
+              </div>
+
+              <div class="histogram__day">
+                <span class="histogram__date">33, чт</span>
+                <p class="histogram__quantity">50</p>
+                <div class="histogram__line">
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                </div>
+              </div>
+
+              <div class="histogram__day">
+                <span class="histogram__date">34, чт</span>
+                <p class="histogram__quantity">100</p>
+                <div class="histogram__line">
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                </div>
+              </div>
+
+              <div class="histogram__day">
+                <span class="histogram__date">31, ср</span>
+                <p class="histogram__quantity">25</p>
+                <div class="histogram__line">
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                </div>
+              </div>
+
+              <div class="histogram__day">
+                <span class="histogram__date">32, чт</span>
+                <p class="histogram__quantity">10</p>
+                <div class="histogram__line">
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                </div>
+              </div>
+
+              <div class="histogram__day">
+                <span class="histogram__date">33, чт</span>
+                <p class="histogram__quantity">50</p>
+                <div class="histogram__line">
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                  <div class="histogram__line-item"></div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="histogram__scale">
+              <p class="histogram__mark">0</p>
+              <p class="histogram__mark">25</p>
+              <p class="histogram__mark">50</p>
+              <p class="histogram__mark">75</p>
+              <p class="histogram__mark">100</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="copyright footer__copyright">©&nbsp;2019&nbsp;Andrew</p>
+      <nav class="nav footer__nav">
+        <a class="nav__item link" href="index.html">Главная</a>
+        <a class="nav__item link" href="about.html">О&nbsp;проекте</a>
+        <a class="nav__item link" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
+      </nav>
+      <div class="social footer__social">
+        <a class="social__item" href="https://github.com/somedew/newsanalyzer"><img alt="github"
+            src="<%=require('../images/github.svg')%>"></a>
+        <a class="social__item" href="https://facebook.com"><img alt="facebook"
+            src="<%=require('../images/fb3.svg')%>"></a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="<%= htmlWebpackPlugin.files.chunks.analitics.entry %>"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+.github__card-link {
+    font-family: Roboto, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #1A1B22;
+
+    grid-column: 4/5;
+    grid-row: 5/6;
+}

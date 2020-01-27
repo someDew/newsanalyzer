@@ -1,0 +1,23 @@
+.card__pic {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+        
+
+    justify-self: center;
+    
+    
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+@media screen and (max-width: 805px) {
+
+    .card__pic {		
+        width: 100%;
+    }
+}
