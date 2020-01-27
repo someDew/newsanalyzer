@@ -22,38 +22,36 @@
     </picture>
 
     <header class="header header_main-page">
-      <h1 class="header__logo" alt="NewsAnalyzer">NewsAnalyzer</h1>
+      <h1 class="header__logo">NewsAnalyzer</h1>
       <nav class="nav header__nav">
         <a class="nav__item nav__item_select link" href="./index.html">Главная</a>
         <a class="nav__item link" href="./about.html">О&nbsp;проекте</a>
       </nav>
     </header>
 
-    <search class="search">
+    <section class="search">
       <div class="search__container">
-        <h2 class="search__title">Что в мире творится?</h1>
-          <h3 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях
-            за
-            прошедшую неделю.</h3>
-          <form action="submit" class="form search__form">
-            <div class="search__input">
-              <input type="text" class="input" name="news-search" required="yes" placeholder="введите тему запроса">
-            </div>
-            <button class="button search__button">Искать</button>
-            <span class="error search__error"></span>
-          </form>
+        <h2 class="search__title">Что в мире творится?</h2>
+        <h3 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях
+          за прошедшую неделю.</h3>
+        <form action="submit" class="form search__form">
+          <div class="search__input">
+            <input type="text" class="input" name="news-search" required placeholder="введите тему запроса">
+          </div>
+          <button class="button search__button">Искать</button>
+          <span class="error search__error"></span>
+        </form>
       </div>
-    </search>
+    </section>
 
     <main class="content">
       <section class="preloader preloader_disable">
         <i class="preloader__spiner"></i>
-        <span class="preloader__text">Идет поиск новостей...</span>
+        <h3 class="preloader__text">Идет поиск новостей...</h3>
       </section>
       <section class="notfound notfoundr_disable">
-        <img class="notfound__img" type="image/svg+xml" src="<%=require('../images/notfound.svg')%>"
-          alt="image results not found">
-        <p class="notfound__title">Ничего не найдено</p>
+        <img class="notfound__img" src="<%=require('../images/notfound.svg')%>" alt="image results not found">
+        <h3 class="notfound__title">Ничего не найдено</h3>
         <span class="notfound__text">К сожалению по вашему запросу<br>ничего не найдено.</span>
       </section>
       <section class="results">
@@ -63,8 +61,8 @@
         <div class="results__block">
 
           <a class="card" href="">
-            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="" type="image/jpeg" class="card__pic">
-            <time class="card__date">29 февраля, 2020</time>
+            <img class="card__pic" src="<%=require('../images/card-pic-default.jpg')%>" alt="news photo">
+            <time datetime="2020-02-01" class="card__date">01 февраля 2020</time>
             <h4 class="card__title">Lorem ipsum dolor. Lorem ipsum dolor.</h4>
             <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
               tempora explicabo ipsum at, maiores quam ullam cum quis ipsa rem accusamus aliquid ad veniam ut iusto.
@@ -77,9 +75,8 @@
 
 
           <a class="card" href="">
-            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="default news image" type="image/jpeg"
-              class="card__pic">
-            <time class="card__date">29 февраля, 2020</time>
+            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="default news image" class="card__pic">
+            <time datetime="2020-02-01" class="card__date">01 февраля 2020</time>
             <h4 class="card__title">Similique.</h4>
             <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
               tempora explicabo ipsum at, maiores quam ullam cum quis ipsa rem accusamus aliquid ad veniam ut iusto.
@@ -87,8 +84,8 @@
             <span class="card__link">ЛЕНТА.РУ</span>
           </a>
           <a class="card" href="">
-            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="" type="image/jpeg" class="card__pic">
-            <time class="card__date">29 февраля, 2020</time>
+            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="" class="card__pic">
+            <time datetime="2020-02-01" class="card__date">01 февраля 2020</time>
             <h4 class="card__title">Lorem ipsum dolor sit amet consectetur elit. Lorem ipsum dolor sit amet consectetur
               elit.</h4>
             <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
@@ -97,8 +94,8 @@
             <span class="card__link">ЛЕНТА.РУ</span>
           </a>
           <a class="card" href="">
-            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="" type="image/jpeg" class="card__pic">
-            <time class="card__date">29 февраля, 2020</time>
+            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="" class="card__pic">
+            <time datetime="2020-02-01" class="card__date">01 февраля 2020</time>
             <h4 class="card__title">Lorem ipsum dolor.</h4>
             <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
               tempora explicabo ipsum at, maiores quam ullam cum quis ipsa rem accusamus aliquid ad veniam ut iusto.
@@ -106,8 +103,8 @@
             <span class="card__link">ЛЕНТА.РУ</span>
           </a>
           <a class="card" href="">
-            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="" type="image/jpeg" class="card__pic">
-            <time class="card__date">29 февраля, 2020</time>
+            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="" class="card__pic">
+            <time datetime="2020-02-01" class="card__date">01 февраля 2020</time>
             <h4 class="card__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
             <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
               tempora explicabo ipsum at, maiores quam ullam cum quis ipsa rem accusamus aliquid ad veniam ut iusto.
@@ -128,17 +125,16 @@
           <source type="image/jpeg" media="(max-width: 690px)" srcset="<%= require('../images/author_300px.jpg') %>">
           <img src="<%= require('../images/author_512px.jpg') %>" alt="site autors photo">
         </picture>
-        <h4 class="author__title">Об&nbsp;авторе</h3>
-          <p class="author__text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы
-            занимаетесь, какими технологиями разработки владете.
-            <br><br>
-            Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
-            потенциальным заказчикам.
-            <br><br>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit dicta libero labore. Beatae excepturi
-            commodi
-            harum vitae distinctio qui, ipsum officia facilis deleniti illum architecto assumenda ducimus blanditiis id
-            explicabo?</p>
+        <h3 class="author__title">Об&nbsp;авторе</h3>
+        <p class="author__text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы
+          занимаетесь, какими технологиями разработки владете.
+          <br><br>
+          Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
+          потенциальным заказчикам.
+          <br><br>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit dicta libero labore. Beatae excepturi
+          commodi harum vitae distinctio qui, ipsum officia facilis deleniti illum architecto assumenda ducimus blanditiis id
+          explicabo?</p>
       </section>
     </main>
 
@@ -150,9 +146,9 @@
         <a class="nav__item link" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
       </nav>
       <div class="social footer__social">
-        <a class="social__item" href="https://github.com/somedew/newsanalyzer"><img alt="github" type="image/svg+xml"
+        <a class="social__item" href="https://github.com/somedew/newsanalyzer"><img alt="github"
             src="<%=require('../images/github.svg')%>"></a>
-        <a class="social__item" href="https://facebook.com"><img alt="facebook" type="image/svg+xml"
+        <a class="social__item" href="https://facebook.com"><img alt="facebook"
             src="<%=require('../images/fb3.svg')%>"></a>
       </div>
     </footer>

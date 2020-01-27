@@ -12,5 +12,6 @@
     align-self: center;
     justify-self: end;    
     position: relative;
-    left: 18px;    
+    left: 18px;
+    width: 13px;
 }
