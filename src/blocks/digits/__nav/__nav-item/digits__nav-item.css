@@ -5,9 +5,17 @@
     font-size: 18px;
     line-height: 24px;
 
+    margin-right: 6px;
+
+    list-style-type: none;
+}
+
+.digits__nav-item > .link {
     opacity: 1;
 }
 
 .digits__nav-item:last-of-type {
-    opacity: 0.6;
+    margin-right: 0;
+    opacity: .6;
+
 }

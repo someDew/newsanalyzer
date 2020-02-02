@@ -1,5 +1,8 @@
 .nav__item.nav__item_select {
-    opacity: 1;
     border-bottom: 3px solid;
     border-bottom-color: inherit;
+}
+
+.nav__item.nav__item_select > a {
+    opacity: 1;
 }
