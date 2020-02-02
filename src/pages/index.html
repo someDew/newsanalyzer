@@ -24,8 +24,14 @@
     <header class="header header_main-page">
       <h1 class="header__logo">NewsAnalyzer</h1>
       <nav class="nav header__nav">
-        <a class="nav__item nav__item_select link" href="./index.html">Главная</a>
-        <a class="nav__item link" href="./about.html">О&nbsp;проекте</a>
+        <ul>
+          <li class="nav__item nav__item_select">
+            <a class="link" href="./index.html">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a class="link" href="./about.html">О&nbsp;проекте</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
@@ -56,8 +62,9 @@
       </section>
       <section class="results">
         <h3 class="results__title">Результаты поиска</h3>
-        <a class="results__link link" href="analitics.html">Посмотреть&nbsp;аналитику<img
-            src="<%=require('../images/arrow.svg')%>" alt="open github" class="link__arrow"></a>
+        <a class="results__link link" href="analitics.html">Посмотреть&nbsp;аналитику
+          <img src="<%=require('../images/arrow.svg')%>" alt="open github" class="link__arrow">
+        </a>
         <div class="results__block">
 
           <a class="card" href="">
@@ -72,10 +79,8 @@
             <span class="card__link">ЛЕНТА.РУ</span>
           </a>
 
-
-
           <a class="card" href="">
-            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="default news image" class="card__pic">
+            <img class="card__pic" src="<%=require('../images/card-pic-default.jpg')%>" alt="news photo">
             <time datetime="2020-02-01" class="card__date">01 февраля 2020</time>
             <h4 class="card__title">Similique.</h4>
             <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
@@ -84,7 +89,7 @@
             <span class="card__link">ЛЕНТА.РУ</span>
           </a>
           <a class="card" href="">
-            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="" class="card__pic">
+            <img class="card__pic" src="<%=require('../images/card-pic-default.jpg')%>" alt="news photo">
             <time datetime="2020-02-01" class="card__date">01 февраля 2020</time>
             <h4 class="card__title">Lorem ipsum dolor sit amet consectetur elit. Lorem ipsum dolor sit amet consectetur
               elit.</h4>
@@ -94,7 +99,7 @@
             <span class="card__link">ЛЕНТА.РУ</span>
           </a>
           <a class="card" href="">
-            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="" class="card__pic">
+            <img class="card__pic" src="<%=require('../images/card-pic-default.jpg')%>" alt="news photo">
             <time datetime="2020-02-01" class="card__date">01 февраля 2020</time>
             <h4 class="card__title">Lorem ipsum dolor.</h4>
             <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
@@ -103,7 +108,7 @@
             <span class="card__link">ЛЕНТА.РУ</span>
           </a>
           <a class="card" href="">
-            <img src="<%=require('../images/card-pic-default.jpg')%>" alt="" class="card__pic">
+            <img class="card__pic" src="<%=require('../images/card-pic-default.jpg')%>" alt="news photo">
             <time datetime="2020-02-01" class="card__date">01 февраля 2020</time>
             <h4 class="card__title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
             <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
@@ -111,10 +116,7 @@
               Odio?</p>
             <span class="card__link">ЛЕНТА.РУ</span>
           </a>
-
-
-
-
+          
         </div>
         <button class="results__button button">Показать&nbsp;больше</button>
       </section>
@@ -141,9 +143,17 @@
     <footer class="footer">
       <p class="copyright footer__copyright">©&nbsp;2019&nbsp;Andrew</p>
       <nav class="nav footer__nav">
-        <a class="nav__item link" href="index.html">Главная</a>
-        <a class="nav__item link" href="about.html">О&nbsp;проекте</a>
-        <a class="nav__item link" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
+        <ul>
+          <li class="nav__item">
+            <a class="link" href="index.html">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a class="link" href="about.html">О&nbsp;проекте</a>
+          </li>
+          <li class="nav__item">
+            <a class="link" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
+          </li>
+        </ul>
       </nav>
       <div class="social footer__social">
         <a class="social__item" href="https://github.com/somedew/newsanalyzer"><img alt="github"

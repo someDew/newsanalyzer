@@ -1,9 +1,9 @@
 .header__nav { 
     grid-column-start: nav;
-    grid-column-end: wrap-end;    
-}
+    grid-column-end: wrap-end;
 
-.header__nav > .nav__item {
     font-weight: 700;
 }
+
+
 
