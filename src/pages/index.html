@@ -42,9 +42,9 @@
           за прошедшую неделю.</h3>
         <form class="form search__form" action="submit" name="searchForm">
           <div class="search__input">
-            <input type="text" class="input" name="searchInpit" required="yes" placeholder="введите тему запроса">
+            <input type="text" class="input" name="searchInput" required="yes" minlength="2" placeholder="введите тему запроса">
           </div>
-          <button class="button search__button">Искать</button>
+          <button class="button search__button" name="searchSubmit">Искать</button>
           <span class="error search__error"></span>
         </form>
       </div>

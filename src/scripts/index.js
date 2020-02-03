@@ -1,7 +1,5 @@
 import "../styles/index.css";
 
-const searchForm = document.forms.searchForm;
-const searchInpit = searchForm.elements[0];
-const searchSubmit = searchForm.elements[1];
+import SearchInput from "./components/SearchInput";
 
-console.log(searchSubmit)
+const searchInput = new SearchInput();
