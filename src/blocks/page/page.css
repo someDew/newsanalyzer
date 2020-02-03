@@ -11,3 +11,32 @@
     z-index: 10;
     overflow: hidden;
 }
+
+html {
+    font-family: Roboto, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	font-style: normal;
+	
+	margin: 0;
+
+    text-rendering: optimizeLegibility; 
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, blockquote, nav, div, form, input, button, section, ul, li, ol {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;	
+	overflow-x: hidden;
+	
+	display: flex;
+	justify-content: center;
+
+	font-size: 16px;
+}

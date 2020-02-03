@@ -1,7 +1,6 @@
 @import url(./__item/social__item.css);
 
-.social {
-    
+.social {    
     display: flex;
     flex-direction: row;
     justify-content: flex-end;

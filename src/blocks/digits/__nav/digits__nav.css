@@ -4,3 +4,8 @@
     grid-column: 2/4;
     grid-row: 2/3;
 }
+
+.digits__nav > ul {
+    display: flex;
+    flex-direction: row;
+}
