@@ -8,7 +8,7 @@
     display: grid;
     
     grid-template-columns: 1.7vw 1fr 1.7vw;
-    grid-template-rows:  20vw 44px auto minmax(0, 1fr) 54px;
+    grid-template-rows: 20vw 44px auto minmax(0, 1fr) 54px;
 
     background: #FFF;
     border-radius: 16px;
@@ -31,13 +31,14 @@
 @media screen and (max-width: 805px) {
 
     .card {		
-        grid-template-rows:     30vw 44px auto minmax(0, 1fr) 48px;
+        grid-template-rows: 30vw 44px auto minmax(0, 1fr) 48px;
     }
 }
 
 @media screen and (max-width: 495px) {
 
     .card {		
-        grid-template-rows:     60vw 44px auto minmax(0, 1fr) 48px;
+        grid-template-columns: 16px 1fr 16px;
+        grid-template-rows: 60vw 44px auto minmax(0, 1fr) 48px;
     }
 }

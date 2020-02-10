@@ -1,28 +1,48 @@
 export default class SearchInput {
-    constructor() {
-        this.searchForm = document.forms.searchForm;
-        this.input = this.searchForm.elements.searchInput;
-        this.submit = this.searchForm.elements.searchSubmit;
-        this.searchForm.addEventListener('input', (event => console.log(event.target.value)));
-        this.searchForm.addEventListener('input', (event => this.validate(event)));
-        this.searchForm.addEventListener('submit', (event => this.alertInput(event)));
+    constructor(api) {
+        this._api = api;
+
+        this._searchForm = document.forms.searchForm;
+        this._input = this._searchForm.elements.searchInput;
+        this._button = this._searchForm.elements.searchSubmit;
+        this._preloader = document.querySelector('.preloader');
+
+        this._searchForm.addEventListener('submit', this._handleSubmit.bind(this));
+        this._input.addEventListener('input', this._handleInput.bind(this));
+        this._input.addEventListener('invalid', this._handleInvalid.bind(this));
     }
 
-    alertInput(event) {
+    _handleSubmit(event) {
         event.preventDefault();
-        console.log('prevent default');
+        this._blockForm();
+        this._api.getFakeNews()
+            .then((value) => console.log('Ответ newsapi: ' + value))
+            .then()
+            .catch()
+            .finally();
     }
 
-    validate(event) {
-        switch (event.target.validity.valid) {
-            case true:
-                console.log('Валидно: ' + event.target.value);
-                break;
-            case false:
-                console.log('Не валидно: ' + event.target.value);
-        }
+    _showPreloader() {
+        this._preloader.classList.toggle('preloader_disable');
     }
 
+    _blockForm() {
+        this._input.setAttribute('disabled', 'true');
+        this._button.setAttribute('disabled', 'true');
+    }
+
+    _unblockForm() {
+        this._input.removeAttribute('disabled');
+        this._button.removeAttribute('disabled');
+    }
+
+    _handleInput() {
+        this._input.setCustomValidity('');
+    }
+
+    _handleInvalid() {
+        this._input.setCustomValidity('Пожалуйста, введите ключевое слово');
+    }
     
 }
 
