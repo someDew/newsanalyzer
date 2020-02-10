@@ -1,7 +1,7 @@
 export default class SearchInput {
-    constructor(api) {
-        this._api = api;
-
+    constructor(api, newsApi) {
+        this.api = api;
+        this.newsApi = newsApi;
         this._searchForm = document.forms.searchForm;
         this._input = this._searchForm.elements.searchInput;
         this._button = this._searchForm.elements.searchSubmit;
@@ -15,11 +15,15 @@ export default class SearchInput {
     _handleSubmit(event) {
         event.preventDefault();
         this._blockForm();
-        this._api.getFakeNews()
-            .then((value) => console.log('Ответ newsapi: ' + value))
+        this.newsApi._userReq = this._input.value;
+        console.log('Юзер реквест: ' + this.newsApi._userReq);
+        this.newsApi.getNews()
+            /* .then((value) => console.log('Ответ newsapi: ' + value))
             .then()
             .catch()
-            .finally();
+            .finally(this._unblockForm.bind(this)); */
+
+        this._unblockForm();
     }
 
     _showPreloader() {
