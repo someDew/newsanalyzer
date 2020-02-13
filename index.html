@@ -8,7 +8,7 @@
   <meta name="description" content="newsfeed on demand">
   <meta name="author" content="Andrew Bubnov">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
-  <link rel="stylesheet" href="styles/index.ca9b5a04ab149e307170.css">
+  <link rel="stylesheet" href="styles/index.54bdb8027e3246f21c8d.css">
   <title>NewsAnalizer</title>
 </head>
 
@@ -40,11 +40,11 @@
         <h2 class="search__title">Что в мире творится?</h2>
         <h3 class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях
           за прошедшую неделю.</h3>
-        <form action="submit" class="form search__form">
+        <form class="form search__form" action="submit" name="searchForm">
           <div class="search__input">
-            <input type="text" class="input" name="news-search" required placeholder="введите тему запроса">
+            <input type="text" class="input" name="searchInput" required="yes" minlength="2" placeholder="введите тему запроса">
           </div>
-          <button class="button search__button">Искать</button>
+          <button class="button search__button" name="searchSubmit">Искать</button>
           <span class="error search__error"></span>
         </form>
       </div>
@@ -55,10 +55,10 @@
         <i class="preloader__spiner"></i>
         <h3 class="preloader__text">Идет поиск новостей...</h3>
       </section>
-      <section class="notfound notfoundr_disable">
+      <section class="notfound notfound_disable">
         <img class="notfound__img" src="images/notfound.svg" alt="image results not found">
         <h3 class="notfound__title">Ничего не найдено</h3>
-        <span class="notfound__text">К сожалению по вашему запросу<br>ничего не найдено.</span>
+        <span class="notfound__text">Сообщение об<br>ошибке</span>
       </section>
       <section class="results">
         <h3 class="results__title">Результаты поиска</h3>
@@ -91,11 +91,8 @@
           <a class="card" href="">
             <img class="card__pic" src="images/card-pic-default.jpg" alt="news photo">
             <time datetime="2020-02-01" class="card__date">01 февраля 2020</time>
-            <h4 class="card__title">Lorem ipsum dolor sit amet consectetur elit. Lorem ipsum dolor sit amet consectetur
-              elit.</h4>
-            <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id cupiditate velit
-              tempora explicabo ipsum at, maiores quam ullam cum quis ipsa rem accusamus aliquid ad veniam ut iusto.
-              Odio?</p>
+            <h4 class="card__title">«Ростех» попросил передать ему контроль за качеством воздуха</h4>
+            <p class="card__text">Гендиректор «Ростеха» Сергей Чемезов предложил назначить госкорпорацию единственным исполнителем по созданию и эксплуатации госсистемы мониторинга качества воздуха в проекте «Чистый воздух». Об этом говорится в письме главы госкорпорации президенту Владимиру …</p>
             <span class="card__link">ЛЕНТА.РУ</span>
           </a>
           <a class="card" href="">
@@ -165,7 +162,7 @@
 
   </div>
 
-  <script src="scripts/index.ca9b5a04ab149e307170.js"></script>
+  <script src="scripts/index.54bdb8027e3246f21c8d.js"></script>
 
 </body>
 
