@@ -1,46 +1,43 @@
 export default class NewsApi {
     constructor(...props) {
-        this._userReq = '';
         this._apiKey = '645b08dc7d82469f97632a0b65a7e633';
         this._from = '';
-        
+         
     }
 
     _calcFormatDate() {
         const searchPeriod = 7*24*60*60*1000;
         let date = new Date();
-        const fromTimeStamp = new Date().setTime(date.getTime() - searchPeriod);
-        date.setTime(fromTimeStamp);
+        date.setTime(new Date().setTime(date.getTime() - searchPeriod));
 
-        let MM = date.getMonth('MM') + 1;
-        
+        let reqDay = date.getDate().toString();
+        let reqMonth = (date.getMonth() + 1).toString();
+        let reqYear = date.getFullYear().toString();
 
+        const formatDate = (string) => {
+            switch (string.length) {
+                case 1:
+                    string = '0' + string;
+                    return string                    
+                case 2:
+                    return string
+            }
+        }        
 
-        console.log('7 days ago in full date: ' + date);
-        console.log('formated date: ' + date.getFullYear('YYYY') + '-' + (date.getMonth('MM') + 1) + '-' + date.getDate('DD'));
-        console.log('Тип переменной date: ' + typeof date);
-
-        this._from = ''
+        this._from = reqYear + '-' + formatDate(reqMonth) + '-' + formatDate(reqDay);
     }
 
-    getFakeNews() {
-        const fakeFetch = new Promise ((resolve, reject) => {
-            setTimeout(function() {
-                resolve('Таймаут истек');
-            }, 7000);
-        });
-
-        return fakeFetch;
-    }
-
-    getNews() {
+    getNews(string) {
+        console.log('вызван: getNews');
         this._calcFormatDate();
         const url = 'https://newsapi.org/v2/everything?' +
-                    `q=${this._userReq}&` +
+                    `q=${string}&` +
                     `from=${this._from}&` +
                     `sortBy=publishedAt&` +
+                    `language=ru&` +
+                    `pageSize=100&` +
                     `apiKey=${this._apiKey}`;
 
-        return url;
+        return fetch(url);
     }
 }
