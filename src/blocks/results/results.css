@@ -1,7 +1,7 @@
 @import url(./__title/results__title.css);
 @import url(./__link/results__link.css);
-@import url(./__block/results__block.css);
 @import url(./__button/results__button.css);
+@import url(./_disable/results_disable.css);
 
 .results {
     display: grid;
@@ -9,7 +9,7 @@
     grid-template-areas:
     "title link"
     "sep sep"
-    "block block"
+    "cards-list cards-list"
     "button button";
 
     grid-template-columns: 1fr auto;

@@ -1,5 +1,5 @@
 export default class NewsApi {
-    constructor(...props) {
+    constructor() {
         this._apiKey = '645b08dc7d82469f97632a0b65a7e633';
         this._from = '';
          

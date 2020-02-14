@@ -1,5 +1,5 @@
 export default class SearchInput {
-    constructor(api, newsApi) {
+    constructor(api, newsApi, cardsList) {
         this.api = api;
         this.newsApi = newsApi;
         this._searchForm = document.forms.searchForm;
@@ -7,6 +7,7 @@ export default class SearchInput {
         this._button = this._searchForm.elements.searchSubmit;
         this._preloader = document.querySelector('.preloader');
         this._errorMsg = document.querySelector('.notfound');
+        this._cardsList = cardsList;
 
         this._searchForm.addEventListener('submit', this._handleSubmit.bind(this));
         this._input.addEventListener('input', this._handleInput.bind(this));
@@ -20,14 +21,14 @@ export default class SearchInput {
         this._handlePreloader();
         this.newsApi.getNews(this._input.value)
             .then(response => {
-                if (response.ok) {
-                    sessionStorage.setItem('newsData', '');
+                if (response.ok) {                   
                     return response.json();
                 }
                 return Promise.reject(response);
             })
             .then(response => {
-                sessionStorage.setItem('newsData', JSON.stringify(response));
+                this._updateStorage(response, this._input.value)
+                this._cardsList.cardsBlock.classList.remove('results_disable');
             })
             .catch(err => {
                 console.log(err.status);
@@ -37,6 +38,18 @@ export default class SearchInput {
                 this._unblockForm();
                 this._handlePreloader();
             });
+    }
+
+    _updateStorage(json, string) {
+        sessionStorage.clear();
+        sessionStorage.setItem('lastReqest', string);
+        sessionStorage.setItem('showedNews', '0');
+        let totalNews = 0;
+        json.articles.forEach( function(item, index) {
+            sessionStorage.setItem(`news${(index + 1)}`, JSON.stringify(item));
+            totalNews++;
+        });
+        sessionStorage.setItem('totalNews', totalNews);
     }
 
     _handlePreloader() {

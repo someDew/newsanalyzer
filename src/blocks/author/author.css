@@ -7,6 +7,8 @@
 
     grid-template-columns: 104px 464px 56px 1fr 104px;
     grid-template-rows: 80px auto 1fr 80px;
+
+    background-color: #fff;
 }
 
 @media screen and (max-width: 1440px) {
