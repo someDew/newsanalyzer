@@ -1,0 +1,1 @@
+export const SHOW_NEWS_ONCE_TIME = 3;

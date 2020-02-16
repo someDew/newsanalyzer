@@ -1,6 +1,6 @@
 export default class SearchInput {
-    constructor(api, newsApi, cardsList) {
-        this.api = api;
+    constructor(newsApi, cardsList) {
+        
         this.newsApi = newsApi;
         this._searchForm = document.forms.searchForm;
         this._input = this._searchForm.elements.searchInput;
@@ -19,6 +19,7 @@ export default class SearchInput {
         this._hideNotFound();
         this._blockForm();
         this._handlePreloader();
+        document.querySelector('.cards-list').innerHTML = '';
         this.newsApi.getNews(this._input.value)
             .then(response => {
                 if (response.ok) {                   
@@ -28,6 +29,7 @@ export default class SearchInput {
             })
             .then(response => {
                 this._updateStorage(response, this._input.value)
+                this._cardsList.showCardsGroup();
                 this._cardsList.cardsBlock.classList.remove('results_disable');
             })
             .catch(err => {
@@ -97,8 +99,7 @@ export default class SearchInput {
 
     _handleInvalid() {
         this._input.setCustomValidity('Пожалуйста, введите ключевое слово');
-    }
-    
+    }    
 }
 
 

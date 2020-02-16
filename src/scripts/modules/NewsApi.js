@@ -1,8 +1,8 @@
 export default class NewsApi {
-    constructor() {
+    constructor(func) {
         this._apiKey = '645b08dc7d82469f97632a0b65a7e633';
         this._from = '';
-         
+        this._dateFormater = func;
     }
 
     _calcFormatDate() {
@@ -10,21 +10,10 @@ export default class NewsApi {
         let date = new Date();
         date.setTime(new Date().setTime(date.getTime() - searchPeriod));
 
-        let reqDay = date.getDate().toString();
-        let reqMonth = (date.getMonth() + 1).toString();
-        let reqYear = date.getFullYear().toString();
+        const dateFormater = this._dateFormater();
+        const dateObj = dateFormater.getFormatedDateObject(date);
 
-        const formatDate = (string) => {
-            switch (string.length) {
-                case 1:
-                    string = '0' + string;
-                    return string                    
-                case 2:
-                    return string
-            }
-        }        
-
-        this._from = reqYear + '-' + formatDate(reqMonth) + '-' + formatDate(reqDay);
+        this._from = dateObj.formatYear + '-' + dateObj.formatMonth + '-' + dateObj.formatDate;
     }
 
     getNews(string) {

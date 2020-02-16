@@ -1,13 +1,8 @@
 export default class CardsList {
-    constructor(elem, func) {
-        this.cardsBlock = elem;
+    constructor(func, constant) {
+        this.cardsBlock = document.querySelector('.results');
         this._cardInstanceCreator = func;
-    }
-
-    _createNewsCard() {
-        this._takeCardData(); // take data of next news card
-        const newCard = this._cardInstanceCreator(); // created new class Card instance
-        return newCard.buildCard(data);        
+        this._group = constant;
     }
 
     _takeCardData() {
@@ -16,8 +11,20 @@ export default class CardsList {
         return JSON.parse(cardData);
     }
 
-    renderCards() {
+    _renderCard() {
+        const cardData = this._takeCardData();
+        const cardInstance = this._cardInstanceCreator();
 
+        const cardElem = cardInstance.buildCard(cardData);
+        this.cardsBlock.querySelector('.cards-list').appendChild(cardElem);
+    }
+
+    showCardsGroup() {
+        if (sessionStorage.showedNews < sessionStorage.totalNews) {
+            for ( let i = 0; i < this._group; i++) {
+                this._renderCard()
+            }
+        }
     }
 
 }

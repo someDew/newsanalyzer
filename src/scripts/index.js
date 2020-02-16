@@ -1,15 +1,22 @@
+// STYLES
 import "../styles/index.css";
 
-import Api from "./modules/Api";
+// MODULES
 import NewsApi from "./modules/NewsApi";
+import DateFormater from "./modules/DateFormater";
 import SearchInput from "./components/SearchInput";
 import CardsList from "./components/CadrsList";
 import Card from "./components/Card";
 
-const api = new Api();
+// CONSTANTS
+import {SHOW_NEWS_ONCE_TIME as showNewsOnceTime} from "./constants/constants";
 
-const cardInstanceCreator = () => new Card();
+// Create instances for other modules
+const cardInstanceCreator = () => new Card(dateFormaterInstanceCreator);
+const dateFormaterInstanceCreator = () => new DateFormater;
 
-const newsApi = new NewsApi(api);
-const cardsList = new CardsList(document.querySelector('.results'), cardInstanceCreator);
-const searchInput = new SearchInput(api, newsApi, cardsList);
+
+// Create workers
+const newsApi = new NewsApi(dateFormaterInstanceCreator);
+const cardsList = new CardsList(cardInstanceCreator, showNewsOnceTime);
+const searchInput = new SearchInput(newsApi, cardsList);
