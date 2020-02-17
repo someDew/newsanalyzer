@@ -1,3 +1,5 @@
+@import url(./_disabled/results__button_disabled.css);
+
 .results__button {
     grid-area: button;    
 

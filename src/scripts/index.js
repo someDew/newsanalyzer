@@ -18,5 +18,5 @@ const dateFormaterInstanceCreator = () => new DateFormater;
 
 // Create workers
 const newsApi = new NewsApi(dateFormaterInstanceCreator);
-const cardsList = new CardsList(cardInstanceCreator, showNewsOnceTime);
+const cardsList = new CardsList(cardInstanceCreator, showNewsOnceTime, document.querySelector('.results'));
 const searchInput = new SearchInput(newsApi, cardsList);

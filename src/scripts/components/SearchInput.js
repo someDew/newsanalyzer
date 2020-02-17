@@ -16,16 +16,23 @@ export default class SearchInput {
 
     _handleSubmit(event) {
         event.preventDefault();
+        this._handlePreloader();
         this._hideNotFound();
         this._blockForm();
-        this._handlePreloader();
-        document.querySelector('.cards-list').innerHTML = '';
+        sessionStorage.clear();
+        this._cardsList.cardsBlock.querySelector('.cards-list').innerHTML = '';
         this.newsApi.getNews(this._input.value)
-            .then(response => {
-                if (response.ok) {                   
-                    return response.json();
+            .then(res => {                
+                if (res.ok) {                   
+                    return res.json();
                 }
-                return Promise.reject(response);
+                return Promise.reject(res);
+            })
+            .then(res => {
+                if (res.totalResults !== 0) {
+                    return res
+                }
+                return Promise.reject(res);
             })
             .then(response => {
                 this._updateStorage(response, this._input.value)
@@ -33,7 +40,7 @@ export default class SearchInput {
                 this._cardsList.cardsBlock.classList.remove('results_disable');
             })
             .catch(err => {
-                console.log(err.status);
+                console.log('Статус ответа news api: ' + err.status);
                 this._showNotFound(err.status);
             })
             .finally(() => {
@@ -43,7 +50,6 @@ export default class SearchInput {
     }
 
     _updateStorage(json, string) {
-        sessionStorage.clear();
         sessionStorage.setItem('lastReqest', string);
         sessionStorage.setItem('showedNews', '0');
         let totalNews = 0;
@@ -58,11 +64,14 @@ export default class SearchInput {
         this._preloader.classList.toggle('preloader_disable');
     }
 
-    _showNotFound(string) {
+    _showNotFound(err) {
         const message = this._errorMsg.querySelector('.notfound__text');
-        switch (string) {
+        switch (err) {
+            case 'ok':
+                message.innerText = 'К сожалению результаты по данному запросу отсутствуют. Попробуйте изменить запрос.';
+                break;
             case 400:
-                message.innerText = 'К сожалению по вашему запросу ничего не найдено. Попробуйте изменить запрос.';
+                message.innerText = 'Недопустимый формат запроса. Попробуйте изменить запрос.';
                 break;
             case 401:
                 message.innerText = 'К сожалению возникла проблема с авторизацией. Пожалуйста, попробуйте позже.';

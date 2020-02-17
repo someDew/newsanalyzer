@@ -1,8 +1,11 @@
 export default class CardsList {
-    constructor(func, constant) {
-        this.cardsBlock = document.querySelector('.results');
+    constructor(func, constant, domElem) {
+        this.cardsBlock = domElem;
+        this._showMoreButton = domElem.querySelector('.results__button');
         this._cardInstanceCreator = func;
         this._group = constant;
+        
+        this._showMoreButton.addEventListener('click', this.showCardsGroup.bind(this));
     }
 
     _takeCardData() {
@@ -20,11 +23,18 @@ export default class CardsList {
     }
 
     showCardsGroup() {
-        if (sessionStorage.showedNews < sessionStorage.totalNews) {
+        let remainNews = sessionStorage.totalNews - sessionStorage.showedNews;
+        if (remainNews >= this._group) {
             for ( let i = 0; i < this._group; i++) {
                 this._renderCard()
             }
+        } else if (remainNews < this._group) {
+            for ( let i = 0; i < remainNews; i++) {
+                this._renderCard()
+            }
+        }
+        if (sessionStorage.totalNews === sessionStorage.showedNews) {
+            this._showMoreButton.classList.add('results__button_disabled');
         }
     }
-
 }
