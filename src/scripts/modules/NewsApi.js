@@ -1,8 +1,9 @@
 export default class NewsApi {
-    constructor(func) {
-        this._apiKey = '645b08dc7d82469f97632a0b65a7e633';
-        this._from = '';
+    constructor(func, key) {
         this._dateFormater = func;
+        this._apiKey = key;
+
+        this._from = '';
     }
 
     _calcFormatDate() {
@@ -17,7 +18,6 @@ export default class NewsApi {
     }
 
     getNews(string) {
-        console.log('вызван: getNews');
         this._calcFormatDate();
         const url = 'https://newsapi.org/v2/everything?' +
                     `q=${string}&` +

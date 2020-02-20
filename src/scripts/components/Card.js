@@ -1,8 +1,8 @@
-import "../../images/default-cardpic.jpg";
-
 export default class Card {
-    constructor(func) {
+    constructor(func, defImg) {
         this._dateFormater = func;
+        this._defImg = defImg;
+        
         this._cardBlock = document.createElement('li');
         this._cardTemplate = `
         <a class="card" target="_blank">
@@ -11,8 +11,7 @@ export default class Card {
             <h4 class="card__title"></h4>
             <p class="card__text"></p>
             <span class="card__link"></span>
-        </a>
-        `;
+        </a>`;
     }
 
     buildCard(data) {
@@ -23,17 +22,13 @@ export default class Card {
         
         /* change pic if it error on load */
         this._cardBlock.querySelector('.card__pic').addEventListener('error', (event) => {
-            event.target.setAttribute('src', "../../images/default-cardpic.jpg");
+            event.target.setAttribute('src', this._defImg);
         });
-        
-        /* this._cardBlock.querySelector('.card__pic').onerror = () => {
-            this._cardBlock.querySelector('.card__pic').setAttribute('src', "../../images/default-cardpic.jpg");
-        } */
-        
+                
         this._cardBlock.querySelector('.card').setAttribute('href', data.url);
         this._cardBlock.querySelector('.card__pic').setAttribute('src', data.urlToImage);
         this._cardBlock.querySelector('.card__date').setAttribute('datetime', data.publishedAt);
-        this._cardBlock.querySelector('.card__date').innerText = dateObj.formatDate + ' ' + dateObj.formatMonthWord + ' ' + dateObj.formatYear;
+        this._cardBlock.querySelector('.card__date').innerText = dateObj.formatDate + ' ' + dateObj.formatMonthWord.genitive + ' ' + dateObj.formatYear;
         this._cardBlock.querySelector('.card__title').innerText = data.title;
         this._cardBlock.querySelector('.card__text').innerText = data.description;
         this._cardBlock.querySelector('.card__link').innerText = data.source.name;

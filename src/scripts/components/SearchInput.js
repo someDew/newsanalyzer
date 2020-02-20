@@ -30,17 +30,16 @@ export default class SearchInput {
             })
             .then(res => {
                 if (res.totalResults !== 0) {
-                    return res
+                    return res;
                 }
                 return Promise.reject(res);
             })
-            .then(response => {
-                this._updateStorage(response, this._input.value)
+            .then(res => {
+                this._writeStorage(res, this._input.value)
                 this._cardsList.showCardsGroup();
                 this._cardsList.cardsBlock.classList.remove('results_disable');
             })
             .catch(err => {
-                console.log('Статус ответа news api: ' + err.status);
                 this._showNotFound(err.status);
             })
             .finally(() => {
@@ -49,15 +48,28 @@ export default class SearchInput {
             });
     }
 
-    _updateStorage(json, string) {
-        sessionStorage.setItem('lastReqest', string);
-        sessionStorage.setItem('showedNews', '0');
+    _writeStorage(json, string) {
+        const regexp = new RegExp(string, 'im');
+        console.log(regexp);
         let totalNews = 0;
+        let count = 0;
         json.articles.forEach( function(item, index) {
+
+            // search user request in headers and wright in 'count' for analitics
+            if (regexp.test(item.title)) {
+                count++
+            };
+            
+            // write every news in own record with own index, start by 'news1'
             sessionStorage.setItem(`news${(index + 1)}`, JSON.stringify(item));
             totalNews++;
         });
-        sessionStorage.setItem('totalNews', totalNews);
+
+        sessionStorage.setItem('totalNews', totalNews); // news returned by api
+        sessionStorage.setItem('countInHeaders', count); // matches requst in headers
+        sessionStorage.setItem('lastWeekNews', json.totalResults); // quantity of all news api results for analitics
+        sessionStorage.setItem('lastReqest', string); // user request
+        sessionStorage.setItem('showedNews', '0'); // rendered news on page
     }
 
     _handlePreloader() {
@@ -110,5 +122,9 @@ export default class SearchInput {
         this._input.setCustomValidity('Пожалуйста, введите ключевое слово');
     }    
 }
+
+
+
+
 
 

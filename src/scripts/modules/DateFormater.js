@@ -13,29 +13,29 @@ export default class DateFormater {
     _formatMonthToWord (month) {
         switch (month) {
             case '01':
-                return month = 'января';
+                return month = {genitive: 'января', nominative: 'январь'};
             case '02':
-                return month = 'февраля';
+                return month = {genitive: 'февраля', nominative: 'февраль'};
             case '03':
-                return monthWord = 'марта';
+                return month = {genitive: 'марта', nominative: 'март'};
             case '04':
-                return month = 'апреля';
+                return month = {genitive: 'апреля', nominative: 'апрель'};
             case '05':
-                return month = 'мая';
+                return month = {genitive: 'мая', nominative: 'май'};
             case '06':
-                return month = 'июня';
+                return month = {genitive: 'июня', nominative: 'июнь'};
             case '07':
-                return month = 'июля';
+                return month = {genitive: 'июля', nominative: 'июль'};
             case '08':
-                return month = 'августа';
+                return month = {genitive: 'августа', nominative: 'август'};
             case '09':
-                return month = 'сентября';
+                return month = {genitive: 'сентября', nominative: 'сентябрь'};
             case '10':
-                return month = 'октября';
+                return month = {genitive: 'октября', nominative: 'октябрь'};
             case '11':
-                return month = 'ноября';
+                return month = {genitive: 'ноября', nominative: 'ноябрь'};
             case '12':
-                return month = 'декабря';
+                return month = {genitive: 'декабря', nominative: 'декабрь'};
         }
     }
 
