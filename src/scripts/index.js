@@ -1,10 +1,12 @@
 // STYLES
 import "../styles/index.css";
 
+// RESORSES
+import defaultNewsImage from "../images/default-cardpic.jpg";
+
 // CONSTANTS
 import {NEWS_API_KEY as apiKey} from "./constants/constants";
 import {SHOW_NEWS_ONCE_TIME as showNewsOnceTime} from "./constants/constants";
-import {DEFAULT_NEWS_IMAGE as defaultNeswImage} from "./constants/constants";
 
 // MODULES
 import NewsApi from "./modules/NewsApi";
@@ -14,7 +16,7 @@ import CardsList from "./components/CadrsList";
 import Card from "./components/Card";
 
 // Create instances for other modules
-const cardInstanceCreator = () => new Card(dateFormaterInstanceCreator, defaultNeswImage);
+const cardInstanceCreator = () => new Card(dateFormaterInstanceCreator, defaultNewsImage);
 const dateFormaterInstanceCreator = () => new DateFormater;
 
 // Create workers

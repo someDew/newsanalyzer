@@ -18,7 +18,7 @@ export default class Card {
 
         const dateFormater = this._dateFormater();
         const dateObj = dateFormater.getFormatedDateObject(data.publishedAt);
-        this._cardBlock.innerHTML = this._cardTemplate;
+        this._cardBlock.insertAdjacentHTML('afterbegin', this._cardTemplate);
         
         /* change pic if it error on load */
         this._cardBlock.querySelector('.card__pic').addEventListener('error', (event) => {
