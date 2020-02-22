@@ -1,11 +1,12 @@
 export default class CardsList {
-    constructor(func, constant, domElem) {
-        this.cardsBlock = domElem;
-        this._showMoreButton = domElem.querySelector('.results__button');
-        this._cardInstanceCreator = func;
-        this._group = constant;
+    constructor(card, cardsQuantity, domElem, storageHandler) {
+        this._card = card;
+        this._cardsQuantity = cardsQuantity;
+        this._cardsBlock = domElem;
+        this._storageHandler = storageHandler;
+        this._moreButton = domElem.querySelector('.results__button');
         
-        this._showMoreButton.addEventListener('click', this.showCardsGroup.bind(this));
+        this._moreButton.addEventListener('click', this.showCardsGroup.bind(this));
     }
 
     _takeCardData() {
@@ -15,26 +16,36 @@ export default class CardsList {
     }
 
     _renderCard() {
-        const cardData = this._takeCardData();
-        const cardInstance = this._cardInstanceCreator();
-
-        const cardElem = cardInstance.buildCard(cardData);
-        this.cardsBlock.querySelector('.cards-list').appendChild(cardElem);
+        const cardData = this._storageHandler.getCardData();
+        const cardElem = this._card.buildCard(cardData);
+        this._cardsBlock.querySelector('.cards-list').appendChild(cardElem);
     }
 
     showCardsGroup() {
         let remainNews = sessionStorage.totalNews - sessionStorage.showedNews;
-        if (remainNews >= this._group) {
-            for ( let i = 0; i < this._group; i++) {
+        if (remainNews >= this._cardsQuantity) {
+            for ( let i = 0; i < this._cardsQuantity; i++) {
                 this._renderCard()
             }
-        } else if (remainNews < this._group) {
+        } else if (remainNews < this._cardsQuantity) {
             for ( let i = 0; i < remainNews; i++) {
                 this._renderCard()
             }
         }
         if (sessionStorage.totalNews === sessionStorage.showedNews) {
-            this._showMoreButton.classList.add('results__button_disabled');
+            this._moreButton.classList.add('results__button_disabled');
         }
+    }
+
+    deleteCards() {
+        this._cardsBlock.querySelector('.cards-list').innerHTML = '';
+    }
+
+    showCardsList() {
+        this._cardsBlock.classList.remove('results_disable');
+    }
+
+    hideCardsList() {
+        this._cardsBlock.classList.add('results_disable');
     }
 }

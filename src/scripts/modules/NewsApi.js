@@ -1,18 +1,16 @@
 export default class NewsApi {
-    constructor(func, key) {
-        this._dateFormater = func;
+    constructor(dateFormater, key, searchPeriod) {
+        this._dateFormater = dateFormater;
         this._apiKey = key;
+        this._searchPeriod = searchPeriod;
 
         this._from = '';
     }
 
     _calcFormatDate() {
-        const searchPeriod = 7*24*60*60*1000;
         let date = new Date();
-        date.setTime(new Date().setTime(date.getTime() - searchPeriod));
-
-        const dateFormater = this._dateFormater();
-        const dateObj = dateFormater.getFormatedDateObject(date);
+        date.setTime(new Date().setTime(date.getTime() - this._searchPeriod));
+        const dateObj = this._dateFormater.getFormatedDateObject(date);
 
         this._from = dateObj.formatYear + '-' + dateObj.formatMonth + '-' + dateObj.formatDate;
     }

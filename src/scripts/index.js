@@ -7,19 +7,22 @@ import defaultNewsImage from "../images/default-cardpic.jpg";
 // CONSTANTS
 import {NEWS_API_KEY as apiKey} from "./constants/constants";
 import {SHOW_NEWS_ONCE_TIME as showNewsOnceTime} from "./constants/constants";
+import {SEARCH_PERIOD as searchPeriod} from "./constants/constants";
 
 // MODULES
 import NewsApi from "./modules/NewsApi";
 import DateFormater from "./modules/DateFormater";
+import StorageHandler from "./modules/StorageHandler";
 import SearchInput from "./components/SearchInput";
 import CardsList from "./components/CadrsList";
 import Card from "./components/Card";
 
 // Create instances for other modules
-const cardInstanceCreator = () => new Card(dateFormaterInstanceCreator, defaultNewsImage);
-const dateFormaterInstanceCreator = () => new DateFormater;
+const dateFormater = new DateFormater;
+const storageHandler = new StorageHandler;
+const card = new Card(dateFormater, defaultNewsImage);
 
 // Create workers
-const newsApi = new NewsApi(dateFormaterInstanceCreator, apiKey);
-const cardsList = new CardsList(cardInstanceCreator, showNewsOnceTime, document.querySelector('.results'));
-const searchInput = new SearchInput(newsApi, cardsList);
+const newsApi = new NewsApi(dateFormater, apiKey, searchPeriod);
+const cardsList = new CardsList(card, showNewsOnceTime, document.querySelector('.results'), storageHandler);
+const searchInput = new SearchInput(newsApi, cardsList, storageHandler);

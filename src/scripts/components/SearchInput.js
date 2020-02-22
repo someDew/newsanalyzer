@@ -1,13 +1,14 @@
 export default class SearchInput {
-    constructor(newsApi, cardsList) {
+    constructor(newsApi, cardsList, storageHandler) {
         
-        this.newsApi = newsApi;
+        this._newsApi = newsApi;
         this._searchForm = document.forms.searchForm;
         this._input = this._searchForm.elements.searchInput;
         this._button = this._searchForm.elements.searchSubmit;
         this._preloader = document.querySelector('.preloader');
         this._errorMsg = document.querySelector('.notfound');
         this._cardsList = cardsList;
+        this._storageHandler = storageHandler;
 
         this._searchForm.addEventListener('submit', this._handleSubmit.bind(this));
         this._input.addEventListener('input', this._handleInput.bind(this));
@@ -19,57 +20,34 @@ export default class SearchInput {
         this._handlePreloader();
         this._hideNotFound();
         this._blockForm();
-        sessionStorage.clear();
-        this._cardsList.cardsBlock.querySelector('.cards-list').innerHTML = '';
-        this.newsApi.getNews(this._input.value)
-            .then(res => {                
-                if (res.ok) {                   
-                    return res.json();
+        this._storageHandler.clearStorage();
+        this._cardsList.hideCardsList();
+        this._cardsList.deleteCards();
+        this._newsApi.getNews(this._input.value)
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
                 }
-                return Promise.reject(res);
+                return Promise.reject(response);
             })
-            .then(res => {
-                if (res.totalResults !== 0) {
-                    return res;
+            .then(response => {
+                if (response.totalResults !== 0) {
+                    return response;
                 }
-                return Promise.reject(res);
+                return Promise.reject(response);
             })
-            .then(res => {
-                this._writeStorage(res, this._input.value)
+            .then(response => {
+                this._storageHandler.writeStorage(response, this._input.value)
                 this._cardsList.showCardsGroup();
-                this._cardsList.cardsBlock.classList.remove('results_disable');
+                this._cardsList.showCardsList();
             })
-            .catch(err => {
-                this._showNotFound(err.status);
+            .catch(error => {
+                this._showNotFound(error.status);
             })
             .finally(() => {
                 this._unblockForm();
                 this._handlePreloader();
             });
-    }
-
-    _writeStorage(json, string) {
-        const regexp = new RegExp(string, 'im');
-        console.log(regexp);
-        let totalNews = 0;
-        let count = 0;
-        json.articles.forEach( function(item, index) {
-
-            // search user request in headers and wright in 'count' for analitics
-            if (regexp.test(item.title)) {
-                count++
-            };
-            
-            // write every news in own record with own index, start by 'news1'
-            sessionStorage.setItem(`news${(index + 1)}`, JSON.stringify(item));
-            totalNews++;
-        });
-
-        sessionStorage.setItem('totalNews', totalNews); // news returned by api
-        sessionStorage.setItem('countInHeaders', count); // matches requst in headers
-        sessionStorage.setItem('lastWeekNews', json.totalResults); // quantity of all news api results for analitics
-        sessionStorage.setItem('lastReqest', string); // user request
-        sessionStorage.setItem('showedNews', '0'); // rendered news on page
     }
 
     _handlePreloader() {
