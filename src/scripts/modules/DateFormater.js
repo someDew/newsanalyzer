@@ -3,6 +3,19 @@ export default class DateFormater {
         this._date = {}
     }
 
+    getFormatedDateObject(date) {
+        this._date = new Date(date);
+        const formatedDateObject = {};
+
+        formatedDateObject.formatYear = this._date.getFullYear().toString();
+        formatedDateObject.formatMonth = this._formatDigitsDateParams((this._date.getMonth() + 1).toString());
+        formatedDateObject.formatDate = this._formatDigitsDateParams(this._date.getDate().toString());
+        formatedDateObject.formatDayWord = this._formatDayToWord(this._date.getDay().toString());
+        formatedDateObject.formatMonthWord = this._formatMonthToWord(formatedDateObject.formatMonth);
+
+        return formatedDateObject;
+    }
+
     _formatDigitsDateParams (string) {
         if (string.length === 1) {
             string = ('0' + string);
@@ -58,16 +71,4 @@ export default class DateFormater {
         }
     }
 
-    getFormatedDateObject(date) {
-        this._date = new Date(date);
-        const formatedDateObject = {};
-
-        formatedDateObject.formatYear = this._date.getFullYear().toString();
-        formatedDateObject.formatMonth = this._formatDigitsDateParams((this._date.getMonth() + 1).toString());
-        formatedDateObject.formatDate = this._formatDigitsDateParams(this._date.getDate().toString());
-        formatedDateObject.formatDayWord = this._formatDayToWord(this._date.getDay().toString());
-        formatedDateObject.formatMonthWord = this._formatMonthToWord(formatedDateObject.formatMonth);
-
-        return formatedDateObject;
-    }
 }

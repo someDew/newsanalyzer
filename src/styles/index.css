@@ -15,6 +15,7 @@
 @import url(../blocks/author/author.css);
 @import url(../blocks/input/input.css);
 @import url(../blocks/preloader/preloader.css);
-@import url(../blocks/notfound/notfound.css);
 @import url(../blocks/import-resorses/import-resorses.css);
 @import url(fonts.css);
+
+/* @import url(../blocks/notfound/notfound.css); */
