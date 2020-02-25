@@ -1,14 +1,15 @@
 export default class SearchInput {
-    constructor(newsApi, cardsList, storageHandler, notFound) {
+    constructor(newsApi, cardsList, storageHandler, notFound, preloader) {
         
         this._newsApi = newsApi;
-        this._searchForm = document.forms.searchForm;
-        this._input = this._searchForm.elements.searchInput;
-        this._button = this._searchForm.elements.searchSubmit;
-        this._preloader = document.querySelector('.preloader');
         this._cardsList = cardsList;
         this._storageHandler = storageHandler;
         this._notFound = notFound;
+        this._preloader = preloader;
+        
+        this._searchForm = document.forms.searchForm;
+        this._input = this._searchForm.elements.searchInput;
+        this._button = this._searchForm.elements.searchSubmit;
 
         this._searchForm.addEventListener('submit', this._handleSubmit.bind(this));
         this._input.addEventListener('input', this._handleInput.bind(this));
@@ -18,8 +19,8 @@ export default class SearchInput {
     _handleSubmit(event) {
         event.preventDefault();
         this._blockForm();
-        this._handlePreloader();
-        this._notFound.hideNotFound();
+        this._preloader.show();
+        this._notFound.hide();
         this._storageHandler.clearStorage();
         this._cardsList.hideCardsList();
         this._cardsList.deleteCards();
@@ -42,18 +43,14 @@ export default class SearchInput {
                 this._cardsList.showCardsList();
             })
             .catch(error => {
-                this._notFound.showNotFound(error.status);
+                this._notFound.show(error.status);
             })
             .finally(() => {
                 this._unblockForm();
-                this._handlePreloader();
+                this._preloader.hide();
             });
     }
-
-    _handlePreloader() {
-        this._preloader.classList.toggle('preloader_disable');
-    }
-
+    
     _blockForm() {
         this._input.setAttribute('disabled', 'true');
         this._button.setAttribute('disabled', 'true');

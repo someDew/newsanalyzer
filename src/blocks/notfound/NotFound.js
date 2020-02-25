@@ -1,23 +1,21 @@
 // STYLES
-import "./notfound.css"
+import './notfound.css'
 
 // RESORSES
-import notFoundImg from "./notfound.svg";
+import image from './notfound.svg';
+import template from './notfound-temp.js';
 
 export default class NotFound {
     constructor(domElem) {
         this._notFoundContainer = domElem;
-        this._notFoundImg = notFoundImg;
-        this._notFoundTemplate = `
-        <section class="notfound">
-            <img class="notfound__img" src="${this._notFoundImg}" alt="image results not found">
-            <h3 class="notfound__title">Ничего не найдено</h3>
-            <span class="notfound__text"></span>
-        </section>`;
+        this._notFoundImage = image;
+        this._notFoundTemplate = template;
     }
 
-    showNotFound(string) {
+    show(string) {
         this._notFoundContainer.insertAdjacentHTML('afterbegin', this._notFoundTemplate);
+        this._notFoundContainer.querySelector('.notfound__img').src = this._notFoundImage;
+
         const message = this._notFoundContainer.querySelector('.notfound__text');
         switch (string) {
             case 'ok':
@@ -40,10 +38,9 @@ export default class NotFound {
         }
     }
 
-    hideNotFound() {
+    hide() {
         if (this._notFoundContainer.querySelector('.notfound')) {
             this._notFoundContainer.removeChild(this._notFoundContainer.querySelector('.notfound'));
         }
-        return
     }
 }
