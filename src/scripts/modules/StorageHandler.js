@@ -1,6 +1,6 @@
 export default class StorageHandler {
-    constructor() {
-        // this._storage = sessionStorage;
+    constructor(searchPeriod) {
+        this._searchPeriod = searchPeriod;
     }
 
     clearStorage() {
@@ -8,31 +8,75 @@ export default class StorageHandler {
     }
 
     writeStorage(json, string) {
-        let count = 0;
-        let totalNews = 0;
-        const regexp = new RegExp(string, 'im');
+        
+        // user request
+        sessionStorage.setItem('lastReqest', string);
+
+        // quantity of all newsapi results for digits block
+        sessionStorage.setItem('lastWeekNews', json.totalResults);
+        
+        // number of rendered news on main page
+        sessionStorage.setItem('showedNews', '0');
+        
+        // number of news returned by api
+        sessionStorage.setItem('totalNews', json.articles.length);        
+        
+        let matches = 0;
+        const requestRegexp = new RegExp(string, 'im');
         json.articles.forEach( function(item, index) {
-
-            // search user request in response headers and wright in 'count' for analitics
-            if (regexp.test(item.title)) {
-                count++
-            };
             
-            // write every news in own record with own index, start by 'news1'
-            sessionStorage.setItem(`news${(index + 1)}`, JSON.stringify(item));
-            totalNews++;
+            // write every news in his own record with own index, start by 'news0'
+            sessionStorage.setItem(`news${(index)}`, JSON.stringify(item));
+            
+            // search user request in response headers and wright in 'matches' for analitics
+            if (requestRegexp.test(item.title)) {
+                matches++
+            }
         });
-
-        sessionStorage.setItem('totalNews', totalNews); // news returned by api
-        sessionStorage.setItem('countInHeaders', count); // matches requst in headers
-        sessionStorage.setItem('lastWeekNews', json.totalResults); // quantity of all news api results for analitics
-        sessionStorage.setItem('lastReqest', string); // user request
-        sessionStorage.setItem('showedNews', '0'); // rendered news on page
+        
+        // matches requst in response headers
+        sessionStorage.setItem('matchesInHeaders', matches);
     }
 
-    getCardData() {
-        sessionStorage.setItem('showedNews', (+sessionStorage.getItem('showedNews') + 1));
-        const cardData = sessionStorage.getItem(`news${sessionStorage.getItem('showedNews')}`);
-        return JSON.parse(cardData);
+    getNewsData(number) {
+        return JSON.parse(sessionStorage.getItem(`news${number}`));
+    }
+
+    _renderHistogram() {
+
+        // number of line in histogram, 0 is today, 1 is yesterday and so on
+        let lineNumber = 0;
+
+        // number of news in current line
+        let lineCount = 0;
+
+        for ( let i = 0; i < sessionStorage.getItem('totalNews'); i++) {
+            const newsData = this.getNewsData(i);
+
+            // newsapi send news in descending order starting from today's date
+            let today = new Date();
+
+            // first regexp will be match with today date, next with yesterday and so on
+            let newsDate = new Date(today.setDate(today.getDate() - lineNumber)).toISOString().slice(0, 10);
+            let newsDateRegexp = new RegExp(newsDate);
+
+            // 
+            if (newsDateRegexp.test(newsData.publishedAt)) {
+                lineCount++;
+            } else {
+                sessionStorage.setItem(`line${lineNumber}`, lineCount);
+                lineCount = 0;
+                lineNumber++;
+                i -= 1;
+            }
+        }
+        sessionStorage.setItem(`line${lineNumber}`, lineCount);
+
+        if (this._searchPeriod > lineNumber) {
+            const remainigLines = this._searchPeriod - lineNumber;
+            for ( let j = 1; j < remainigLines; j++) {
+                sessionStorage.setItem(`line${++lineNumber}`, 0);
+            }
+        }
     }
 }

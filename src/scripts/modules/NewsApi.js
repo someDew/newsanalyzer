@@ -2,7 +2,7 @@ export default class NewsApi {
     constructor(dateFormater, key, searchPeriod) {
         this._dateFormater = dateFormater;
         this._apiKey = key;
-        this._searchPeriod = searchPeriod;
+        this._searchPeriod = searchPeriod*24*60*60*1000;
 
         this._from = '';
     }

@@ -9,16 +9,13 @@ export default class CardsList {
         this._moreButton.addEventListener('click', this.showCardsGroup.bind(this));
     }
 
-    _takeCardData() {
-        sessionStorage.setItem('showedNews', (+sessionStorage.getItem('showedNews') + 1));
-        const cardData = sessionStorage.getItem(`news${sessionStorage.getItem('showedNews')}`);
-        return JSON.parse(cardData);
-    }
-
     _renderCard() {
-        const cardData = this._storageHandler.getCardData();
+        const cardData = this._storageHandler.getNewsData(sessionStorage.getItem('showedNews'));
         const cardElem = this._card.buildCard(cardData);
         this._cardsBlock.querySelector('.cards-list').appendChild(cardElem);
+        
+        // increase count of showed news
+        sessionStorage.setItem('showedNews', (+sessionStorage.getItem('showedNews') + 1));
     }
 
     showCardsGroup() {
@@ -32,6 +29,7 @@ export default class CardsList {
                 this._renderCard()
             }
         }
+
         if (sessionStorage.totalNews === sessionStorage.showedNews) {
             this._moreButton.classList.add('results__button_disabled');
         }
