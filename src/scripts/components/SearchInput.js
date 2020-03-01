@@ -1,12 +1,12 @@
 export default class SearchInput {
     constructor(newsApi, cardsList, storageHandler, notFound, preloader) {
-        
+
         this._newsApi = newsApi;
         this._cardsList = cardsList;
         this._storageHandler = storageHandler;
         this._notFound = notFound;
         this._preloader = preloader;
-        
+
         this._searchForm = document.forms.searchForm;
         this._input = this._searchForm.elements.searchInput;
         this._button = this._searchForm.elements.searchSubmit;
@@ -46,11 +46,12 @@ export default class SearchInput {
                 this._notFound.show(error.status);
             })
             .finally(() => {
+                this._storageHandler.calculateHistogram();
                 this._unblockForm();
                 this._preloader.hide();
             });
     }
-    
+
     _blockForm() {
         this._input.setAttribute('disabled', 'true');
         this._button.setAttribute('disabled', 'true');
@@ -67,7 +68,7 @@ export default class SearchInput {
 
     _handleInvalid() {
         this._input.setCustomValidity('Пожалуйста, введите ключевое слово');
-    }    
+    }
 }
 
 

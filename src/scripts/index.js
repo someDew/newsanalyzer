@@ -4,9 +4,9 @@ import '../styles/index.css';
 // RESORSES
 
 // CONSTANTS
-import {NEWS_API_KEY as apiKey} from './constants/constants.js';
-import {SHOW_NEWS_ONCE_TIME as showNewsOnceTime} from './constants/constants.js';
-import {SEARCH_PERIOD as searchPeriod} from './constants/constants.js';
+import { NEWS_API_KEY as apiKey } from './constants/constants.js';
+import { SHOW_NEWS_ONCE_TIME as showNewsOnceTime } from './constants/constants.js';
+import { SEARCH_PERIOD as searchPeriod } from './constants/constants.js';
 
 // MODULES
 import NewsApi from './modules/NewsApi';
@@ -21,7 +21,7 @@ import Preloader from '../blocks/preloader/Preloader.js';
 
 // Create instances for other modules
 const dateFormater = new DateFormater;
-const storageHandler = new StorageHandler;
+const storageHandler = new StorageHandler(searchPeriod);
 const card = new Card(dateFormater);
 const notFound = new NotFound(document.querySelector('.content'));
 const preloader = new Preloader(document.querySelector('.content'));

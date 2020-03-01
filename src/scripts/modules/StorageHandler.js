@@ -42,7 +42,7 @@ export default class StorageHandler {
         return JSON.parse(sessionStorage.getItem(`news${number}`));
     }
 
-    _renderHistogram() {
+    calculateHistogram() {
 
         // number of line in histogram, 0 is today, 1 is yesterday and so on
         let lineNumber = 0;
@@ -57,24 +57,37 @@ export default class StorageHandler {
             let today = new Date();
 
             // first regexp will be match with today date, next with yesterday and so on
-            let newsDate = new Date(today.setDate(today.getDate() - lineNumber)).toISOString().slice(0, 10);
-            let newsDateRegexp = new RegExp(newsDate);
+            // 'searchDate' inverse depend on 'lineNumber' 
+            let searchDate = new Date(today.setDate(today.getDate() - lineNumber)).toISOString().slice(0, 10);
+            let searchDateRegexp = new RegExp(searchDate);
 
-            // 
-            if (newsDateRegexp.test(newsData.publishedAt)) {
+            if (searchDateRegexp.test(newsData.publishedAt)) {
+                // if dates match - increase lineCount
                 lineCount++;
             } else {
+                // if control date dont match with current news 'publishAt':
+                // - write new line to Storage,
                 sessionStorage.setItem(`line${lineNumber}`, lineCount);
+
+                // - reset counter,
                 lineCount = 0;
+
+                // - increase line number, to proceed to checking the next date,
                 lineNumber++;
+
+                // - and decrease cycle index, for check match current news with next date
                 i -= 1;
             }
         }
+
+        // after all news cycle, write last line to Storage
         sessionStorage.setItem(`line${lineNumber}`, lineCount);
 
+        // histogram must contain 'searchPeriod' days statistic, that is why next check lines number
+        // and missing lines write with 0 value
         if (this._searchPeriod > lineNumber) {
             const remainigLines = this._searchPeriod - lineNumber;
-            for ( let j = 1; j < remainigLines; j++) {
+            for ( let j = 0; j < remainigLines; j++) {                
                 sessionStorage.setItem(`line${++lineNumber}`, 0);
             }
         }

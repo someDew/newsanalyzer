@@ -1,3 +1,6 @@
+// STYLES
+import './digits.css';
+
 export default class Digits {
     constructor(domElem) {
         this._block = domElem;

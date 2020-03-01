@@ -1,16 +1,16 @@
 export default class DateFormater {
     constructor() {
-        this._date = {}
+        
     }
 
-    getFormatedDateObject(date) {
-        this._date = new Date(date);
+    getFormatedDateObject(obj) {
+        let date = new Date(obj);
         const formatedDateObject = {};
 
-        formatedDateObject.formatYear = this._date.getFullYear().toString();
-        formatedDateObject.formatMonth = this._formatDigitsDateParams((this._date.getMonth() + 1).toString());
-        formatedDateObject.formatDate = this._formatDigitsDateParams(this._date.getDate().toString());
-        formatedDateObject.formatDayWord = this._formatDayToWord(this._date.getDay().toString());
+        formatedDateObject.formatYear = date.getUTCFullYear().toString();
+        formatedDateObject.formatMonth = this._formatDigitsDateParams((date.getUTCMonth() + 1).toString());
+        formatedDateObject.formatDate = this._formatDigitsDateParams(date.getUTCDate().toString());
+        formatedDateObject.formatDayWord = this._formatDayToWord(date.getUTCDay().toString());
         formatedDateObject.formatMonthWord = this._formatMonthToWord(formatedDateObject.formatMonth);
 
         return formatedDateObject;
