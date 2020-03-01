@@ -5,13 +5,12 @@
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
-    line-height: 16px;
 
-    color: #fff;
+    color: #F5F6F7;
 
     align-self: center;
     justify-self: end;    
     position: relative;
-    left: 18px;
+    left: 16px;
     width: 13px;
 }

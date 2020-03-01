@@ -50,24 +50,29 @@ export default class StorageHandler {
         // number of news in current line
         let lineCount = 0;
 
+        let searchDate = {};
+        let today = {};
+
         for ( let i = 0; i < sessionStorage.getItem('totalNews'); i++) {
             const newsData = this.getNewsData(i);
 
             // newsapi send news in descending order starting from today's date
-            let today = new Date();
+            today = new Date();
 
             // first regexp will be match with today date, next with yesterday and so on
             // 'searchDate' inverse depend on 'lineNumber' 
-            let searchDate = new Date(today.setDate(today.getDate() - lineNumber)).toISOString().slice(0, 10);
+            searchDate = new Date(today.setDate(today.getDate() - lineNumber)).toISOString().slice(0, 10);
             let searchDateRegexp = new RegExp(searchDate);
 
             if (searchDateRegexp.test(newsData.publishedAt)) {
+                
                 // if dates match - increase lineCount
                 lineCount++;
             } else {
+
                 // if control date dont match with current news 'publishAt':
                 // - write new line to Storage,
-                sessionStorage.setItem(`line${lineNumber}`, lineCount);
+                sessionStorage.setItem(`line${lineNumber}`, JSON.stringify([searchDate, lineCount]));
 
                 // - reset counter,
                 lineCount = 0;
@@ -81,14 +86,17 @@ export default class StorageHandler {
         }
 
         // after all news cycle, write last line to Storage
-        sessionStorage.setItem(`line${lineNumber}`, lineCount);
+        sessionStorage.setItem(`line${lineNumber}`, JSON.stringify([searchDate, lineCount]));
 
         // histogram must contain 'searchPeriod' days statistic, that is why next check lines number
         // and missing lines write with 0 value
         if (this._searchPeriod > lineNumber) {
             const remainigLines = this._searchPeriod - lineNumber;
-            for ( let j = 0; j < remainigLines; j++) {                
-                sessionStorage.setItem(`line${++lineNumber}`, 0);
+            for ( let j = 0; j < remainigLines; j++) {
+                ++lineNumber;
+                today = new Date();
+                searchDate = new Date(today.setDate(today.getDate() - lineNumber)).toISOString().slice(0, 10);
+                sessionStorage.setItem(`line${lineNumber}`, JSON.stringify([searchDate, 0]));
             }
         }
     }
