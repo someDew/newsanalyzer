@@ -52,6 +52,15 @@ export default class SearchInput {
             });
     }
 
+    renderPrevious() {
+        if (sessionStorage.totalNews) {
+            sessionStorage.setItem('showedNews', 0);
+            this._input.value = sessionStorage.lastReqest;
+            this._cardsList.showCardsGroup();
+            this._cardsList.showCardsList();
+        }
+    }
+
     _blockForm() {
         this._input.setAttribute('disabled', 'true');
         this._button.setAttribute('disabled', 'true');
@@ -70,9 +79,3 @@ export default class SearchInput {
         this._input.setCustomValidity('Пожалуйста, введите ключевое слово');
     }
 }
-
-
-
-
-
-

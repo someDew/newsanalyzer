@@ -29,5 +29,7 @@ const preloader = new Preloader(document.querySelector('.content'));
 // Create workers
 const newsApi = new NewsApi(dateFormater, apiKey, searchPeriod);
 const cardsList = new CardsList(card, showNewsOnceTime, document.querySelector('.results'), storageHandler);
+const searchInput = new SearchInput(newsApi, cardsList, storageHandler, notFound, preloader);
 
-new SearchInput(newsApi, cardsList, storageHandler, notFound, preloader);
+
+window.addEventListener('onload', searchInput.renderPrevious());
