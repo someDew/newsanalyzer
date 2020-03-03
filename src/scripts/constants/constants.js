@@ -6,3 +6,6 @@ export const SHOW_NEWS_ONCE_TIME = 3;
 // the number of days is counted from 0 to the period value
 // another words, 6 value will lead to a search for news for 7 days, starting today
 export const SEARCH_PERIOD = 6;
+
+// url to request last commits from github repo of this project
+export const GIT_COMMITS_URL = 'https://api.github.com/repos/someDew/newsanalyzer/commits'

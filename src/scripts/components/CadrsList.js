@@ -44,11 +44,4 @@ export default class CardsList {
     hideCardsList() {
         this._cardsBlock.classList.add('results_disable');
     }
-
-    // EXPEREMENTAL
-    showCardsGroup2(number) {
-        for (let i = 0; i < number; i++) {
-            this._renderCard()
-        }
-    }
 }

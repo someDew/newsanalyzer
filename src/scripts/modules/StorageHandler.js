@@ -12,13 +12,13 @@ export default class StorageHandler {
         // user request
         sessionStorage.setItem('lastReqest', string);
 
-        // quantity of all newsapi results for digits block
+        // number of all newsapi results for digits block
         sessionStorage.setItem('lastWeekNews', json.totalResults);
         
         // number of rendered news on main page
         sessionStorage.setItem('showedNews', '0');
         
-        // number of news returned by api
+        // number of news returned by api (not the same as 'lastWeekNews')
         sessionStorage.setItem('totalNews', json.articles.length);        
         
         let matches = 0;

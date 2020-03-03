@@ -19,17 +19,15 @@ import Card from '../blocks/card/Card.js';
 import NotFound from '../blocks/notfound/NotFound.js';
 import Preloader from '../blocks/preloader/Preloader.js';
 
-// Create instances for other modules
+// INSTANCES
 const dateFormater = new DateFormater;
 const storageHandler = new StorageHandler(searchPeriod);
 const card = new Card(dateFormater);
 const notFound = new NotFound(document.querySelector('.content'));
 const preloader = new Preloader(document.querySelector('.content'));
-
-// Create workers
 const newsApi = new NewsApi(dateFormater, apiKey, searchPeriod);
 const cardsList = new CardsList(card, showNewsOnceTime, document.querySelector('.results'), storageHandler);
 const searchInput = new SearchInput(newsApi, cardsList, storageHandler, notFound, preloader);
 
-
+// WORKERS
 window.addEventListener('onload', searchInput.renderPrevious());
