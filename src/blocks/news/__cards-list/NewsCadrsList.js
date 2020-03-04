@@ -1,6 +1,9 @@
-export default class NewsCardsList {
-    constructor(newsCard, showNewsOnceTime, domElem, storageHandler) {
-        this._card = newsCard;
+// PARENT CLASS
+import NewsCard from '../__card/NewsCard.js';
+
+export default class NewsCardsList extends NewsCard {
+    constructor(dateFormater, showNewsOnceTime, domElem, storageHandler) {        
+        super(dateFormater);
         this._showNewsOnceTime = showNewsOnceTime;
         this._cardsBlock = domElem;
         this._storageHandler = storageHandler;
@@ -11,7 +14,7 @@ export default class NewsCardsList {
 
     _renderCard() {
         const cardData = this._storageHandler.getNewsData(sessionStorage.getItem('showedNews'));
-        const cardElem = this._card.buildCard(cardData);
+        const cardElem = this.buildCard(cardData);
         this._cardsBlock.querySelector('.news__cards-list').appendChild(cardElem);
 
         // increase count of showed news

@@ -14,18 +14,16 @@ import DateFormater from './modules/DateFormater.js';
 import StorageHandler from './modules/StorageHandler.js';
 import SearchInput from './components/SearchInput.js';
 import NewsCardsList from '../blocks/news/__cards-list/NewsCadrsList.js';
-import NewsCard from '../blocks/news/__card/NewsCard.js';
 import NotFound from '../blocks/notfound/NotFound.js';
 import Preloader from '../blocks/preloader/Preloader.js';
 
 // INSTANCES
 const dateFormater = new DateFormater;
 const storageHandler = new StorageHandler(searchPeriod);
-const newsCard = new NewsCard(dateFormater);
 const notFound = new NotFound(document.querySelector('.content'));
 const preloader = new Preloader(document.querySelector('.content'));
 const newsApi = new NewsApi(dateFormater, apiKey, searchPeriod);
-const newsCardsList = new NewsCardsList(newsCard, showNewsOnceTime, document.querySelector('.news'), storageHandler);
+const newsCardsList = new NewsCardsList(dateFormater, showNewsOnceTime, document.querySelector('.news'), storageHandler);
 const searchInput = new SearchInput(newsApi, newsCardsList, storageHandler, notFound, preloader);
 
 // WORKERS
