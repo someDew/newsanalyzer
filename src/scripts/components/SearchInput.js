@@ -1,8 +1,8 @@
 export default class SearchInput {
-    constructor(newsApi, cardsList, storageHandler, notFound, preloader) {
+    constructor(newsApi, newsCardsList, storageHandler, notFound, preloader) {
 
         this._newsApi = newsApi;
-        this._cardsList = cardsList;
+        this._cardsList = newsCardsList;
         this._storageHandler = storageHandler;
         this._notFound = notFound;
         this._preloader = preloader;

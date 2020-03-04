@@ -1,0 +1,12 @@
+.news__link {
+    grid-area: link;
+
+    font-family: Roboto, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+
+    display: flex;
+    align-self: end;
+}

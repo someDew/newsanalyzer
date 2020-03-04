@@ -4,22 +4,19 @@ export default class NewsApi {
         this._apiKey = key;
         this._searchPeriod = searchPeriod;
 
-        this._from = '';
-    }
-
-    _calcFormatDate() {
-        let date = new Date();
-        date.setDate(date.getDate() - this._searchPeriod);
-        const dateObj = this._dateFormater.getFormatedDateObject(date);
-
-        this._from = dateObj.formatYear + '-' + dateObj.formatMonth + '-' + dateObj.formatDate;
+        this._searchFrom = '';
     }
 
     getNews(string) {
-        this._calcFormatDate();
+
+        // take date minus 'searchPeriod' from today
+        const date = new Date();
+        date.setDate(date.getDate() - this._searchPeriod);
+        this._searchFrom = date.toISOString().slice(0, 10);
+
         const url = 'https://newsapi.org/v2/everything?' +
                     `q=${string}&` +
-                    `from=${this._from}&` +
+                    `from=${this._searchFrom}&` +
                     `sortBy=publishedAt&` +
                     `language=ru&` +
                     `pageSize=100&` +

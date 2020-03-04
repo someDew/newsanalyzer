@@ -1,0 +1,48 @@
+@import url(./__title/news__title.css);
+@import url(./__link/news__link.css);
+@import url(./__cards-list/news__cards-list.css);
+@import url(./__button/news__button.css);
+@import url(./_disable/news_disable.css);
+
+.news {
+    display: grid;
+
+    grid-template-areas:
+    "title link"
+    "sep sep"
+    "cards-list cards-list"
+    "button button";
+
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 110px 64px 1fr 192px;
+
+    background: #F5F6F7;
+    padding: 16px 6.9%;
+
+}
+
+@media screen and (max-width: 1440px) {
+
+    .news {		
+        grid-template-rows: 8vw 4vw 1fr 192px;
+    }
+}
+
+@media screen and (max-width: 666px) {
+
+    .news {		
+        grid-template-areas:
+        "title"
+        "sep1"
+        "link"
+        "sep2"
+        "cards-list"
+        "button";
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 16px auto 39px 1fr 122px;
+
+        padding: 32px 3.8%;
+
+    }
+}

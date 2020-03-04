@@ -1,10 +1,10 @@
-export default class CardsList {
-    constructor(card, showNewsOnceTime, domElem, storageHandler) {
-        this._card = card;
+export default class NewsCardsList {
+    constructor(newsCard, showNewsOnceTime, domElem, storageHandler) {
+        this._card = newsCard;
         this._showNewsOnceTime = showNewsOnceTime;
         this._cardsBlock = domElem;
         this._storageHandler = storageHandler;
-        this._moreButton = domElem.querySelector('.results__button');
+        this._moreButton = domElem.querySelector('.news__button');
 
         this._moreButton.addEventListener('click', this.showCardsGroup.bind(this));
     }
@@ -12,7 +12,7 @@ export default class CardsList {
     _renderCard() {
         const cardData = this._storageHandler.getNewsData(sessionStorage.getItem('showedNews'));
         const cardElem = this._card.buildCard(cardData);
-        this._cardsBlock.querySelector('.cards-list').appendChild(cardElem);
+        this._cardsBlock.querySelector('.news__cards-list').appendChild(cardElem);
 
         // increase count of showed news
         sessionStorage.setItem('showedNews', (+sessionStorage.getItem('showedNews') + 1));
@@ -24,24 +24,24 @@ export default class CardsList {
             for (let i = 0; i < this._showNewsOnceTime; i++) {
                 this._renderCard()
             }
-            this._moreButton.classList.remove('results__button_disabled');
+            this._moreButton.classList.remove('news__button_disabled');
         } else {
             for (let i = 0; i < remainNews; i++) {
                 this._renderCard()
             }
-            this._moreButton.classList.add('results__button_disabled');
+            this._moreButton.classList.add('news__button_disabled');
         }
     }
 
     deleteCards() {
-        this._cardsBlock.querySelector('.cards-list').innerHTML = '';
+        this._cardsBlock.querySelector('.news__cards-list').innerHTML = '';
     }
 
     showCardsList() {
-        this._cardsBlock.classList.remove('results_disable');
+        this._cardsBlock.classList.remove('news_disable');
     }
 
     hideCardsList() {
-        this._cardsBlock.classList.add('results_disable');
+        this._cardsBlock.classList.add('news_disable');
     }
 }

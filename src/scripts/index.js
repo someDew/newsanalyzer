@@ -13,21 +13,20 @@ import NewsApi from './modules/NewsApi';
 import DateFormater from './modules/DateFormater.js';
 import StorageHandler from './modules/StorageHandler.js';
 import SearchInput from './components/SearchInput.js';
-import CardsList from './components/CadrsList.js';
-
-import Card from '../blocks/card/Card.js';
+import NewsCardsList from '../blocks/news/__cards-list/NewsCadrsList.js';
+import NewsCard from '../blocks/news/__card/NewsCard.js';
 import NotFound from '../blocks/notfound/NotFound.js';
 import Preloader from '../blocks/preloader/Preloader.js';
 
 // INSTANCES
 const dateFormater = new DateFormater;
 const storageHandler = new StorageHandler(searchPeriod);
-const card = new Card(dateFormater);
+const newsCard = new NewsCard(dateFormater);
 const notFound = new NotFound(document.querySelector('.content'));
 const preloader = new Preloader(document.querySelector('.content'));
 const newsApi = new NewsApi(dateFormater, apiKey, searchPeriod);
-const cardsList = new CardsList(card, showNewsOnceTime, document.querySelector('.results'), storageHandler);
-const searchInput = new SearchInput(newsApi, cardsList, storageHandler, notFound, preloader);
+const newsCardsList = new NewsCardsList(newsCard, showNewsOnceTime, document.querySelector('.news'), storageHandler);
+const searchInput = new SearchInput(newsApi, newsCardsList, storageHandler, notFound, preloader);
 
 // WORKERS
 window.addEventListener('onload', searchInput.renderPrevious());
