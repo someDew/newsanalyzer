@@ -79,7 +79,6 @@
           <img src="<%= require('../images/author_512px.jpg') %>" alt="site autors photo">
         </picture>
 
-
         <h2 class="author__title">Об&nbsp;авторе</h2>
         <p class="author__text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы
           занимаетесь, какими технологиями разработки владете.
@@ -94,24 +93,10 @@
 
       <section class="github">
         <h2 class="github__title">История коммитов из&nbsp;GitHub</h2>
-        <a class="github__link link" href="https://github.com/someDew/newsanalyzer">Открыть&nbsp;на&nbsp;GitHub<img
-            src="<%=require('../images/arrow.svg')%>" alt="open github" class="link__arrow"></a>
-        <button class="github__button button">Открыть&nbsp;на&nbsp;GitHub</button>
-        <div class="github__slider">
-
-          <div class="github__card">
-            <span class="github__card-date">2 января, 1988</span>
-            <img class="github__card-pic" src="<%=require('../images/default-user.png')%>" alt="contributor photo">
-            <h3 class="github__card-name">Default User</h3>
-            <a class="github__card-link link" href="">default.mail@web.site</a>
-            <p class="github__card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet officia, ut
-              accusantium molestiae itaque eum, quia maiores, adipisci quam repudiandae similique cupiditate dolorem
-              voluptatum nisi odit commodi unde enim praesentium!</p>
-          </div>
-
-
-
-        </div>
+        <a class="github__link link" href="https://github.com/someDew/newsanalyzer">Открыть&nbsp;на&nbsp;GitHub
+          <img src="<%=require('../images/arrow.svg')%>" alt="link to open github" class="link__arrow"></a>
+          <button class="github__button button">Открыть&nbsp;на&nbsp;GitHub</button>
+        <ul class="github__cards-list"></ul>
         <div class="github__indicator">
           <div class="indicator"></div>
           <div class="indicator indicator_select"></div>

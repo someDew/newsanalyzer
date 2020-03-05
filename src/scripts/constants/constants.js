@@ -9,3 +9,6 @@ export const SEARCH_PERIOD = 6;
 
 // url to request last commits from github repo of this project
 export const GIT_COMMITS_URL = 'https://api.github.com/repos/someDew/newsanalyzer/commits'
+
+// number of commits to show on about page
+export const COMMITS_TO_SHOW = 20;

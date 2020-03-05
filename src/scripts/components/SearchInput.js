@@ -25,18 +25,8 @@ export default class SearchInput {
         this._cardsList.hideCardsList();
         this._cardsList.deleteCards();
         this._newsApi.getNews(this._input.value)
-            .then(response => {
-                if (response.ok) {
-                    return response.json();
-                }
-                return Promise.reject(response);
-            })
-            .then(response => {
-                if (response.totalResults !== 0) {
-                    return response;
-                }
-                return Promise.reject(response);
-            })
+            .then(response => response.ok ? response.json() : Promise.reject(response))
+            .then(response => response.totalResults !== 0 ? response : Promise.reject(response))
             .then(response => {
                 this._storageHandler.writeStorage(response, this._input.value)
                 this._cardsList.showCardsGroup();

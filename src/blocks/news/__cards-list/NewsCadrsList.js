@@ -5,7 +5,7 @@ export default class NewsCardsList extends NewsCard {
     constructor(dateFormater, showNewsOnceTime, domElem, storageHandler) {        
         super(dateFormater);
         this._showNewsOnceTime = showNewsOnceTime;
-        this._cardsBlock = domElem;
+        this._newsBlock = domElem;
         this._storageHandler = storageHandler;
         this._moreButton = domElem.querySelector('.news__button');
 
@@ -15,7 +15,7 @@ export default class NewsCardsList extends NewsCard {
     _renderCard() {
         const cardData = this._storageHandler.getNewsData(sessionStorage.getItem('showedNews'));
         const cardElem = this.buildCard(cardData);
-        this._cardsBlock.querySelector('.news__cards-list').appendChild(cardElem);
+        this._newsBlock.querySelector('.news__cards-list').appendChild(cardElem);
 
         // increase count of showed news
         sessionStorage.setItem('showedNews', (+sessionStorage.getItem('showedNews') + 1));
@@ -37,14 +37,14 @@ export default class NewsCardsList extends NewsCard {
     }
 
     deleteCards() {
-        this._cardsBlock.querySelector('.news__cards-list').innerHTML = '';
+        this._newsBlock.querySelector('.news__cards-list').innerHTML = '';
     }
 
     showCardsList() {
-        this._cardsBlock.classList.remove('news_disable');
+        this._newsBlock.classList.remove('news_disable');
     }
 
     hideCardsList() {
-        this._cardsBlock.classList.add('news_disable');
+        this._newsBlock.classList.add('news_disable');
     }
 }

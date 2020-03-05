@@ -1,9 +1,9 @@
 @import url(./__title/github__title.css);
 @import url(./__link/github__link.css);
-@import url(./__slider/github__slider.css);
+@import url(./__cards-list/github__cards-list.css);
 @import url(./__button/github__button.css);
-@import url(./__card/github__card.css);
 @import url(./__indicator/github__indicator.css);
+@import url(../indicator/indicator.css);
 
 .github {
     display: grid;

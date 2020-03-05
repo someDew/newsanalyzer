@@ -1,6 +1,6 @@
 @import url(./__card-date/github__card-date.css);
 @import url(./__card-pic/github__card-pic.css);
-@import url(./__card-name/github__card-name.css);
+@import url(./__card-title/github__card-title.css);
 @import url(./__card-link/github__card-link.css);
 @import url(./__card-text/githu__card-text.css);
 
@@ -15,6 +15,7 @@
 
     background-color: #fff;
     border-radius: 16px;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {

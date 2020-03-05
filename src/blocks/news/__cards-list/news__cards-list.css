@@ -8,9 +8,6 @@
     grid-template-columns: repeat(3, minmax(220px, 403px));
 
     grid-gap: 16px;
-
-    /* justify-self: center;
-    width: 100%; */
 }
 
 @media screen and (max-width: 805px) {

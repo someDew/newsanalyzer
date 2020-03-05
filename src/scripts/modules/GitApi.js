@@ -4,6 +4,6 @@ export default class GitApi {
     }
 
     getCommits() {
-        return fetch(this._url)
+        return fetch(this._url);
     }
 }
