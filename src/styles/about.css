@@ -12,3 +12,5 @@
 @import url(../blocks/github/github.css);
 @import url(../blocks/import-resorses/import-resorses.css);
 @import url(fonts.css);
+
+@import url(../../node_modules/flickity/css/flickity.css);

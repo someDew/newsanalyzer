@@ -9,11 +9,16 @@ import { COMMITS_TO_SHOW as commitsToShow } from './constants/constants.js';
 import GitApi from './modules/GitApi.js';
 import DateFormater from './modules/DateFormater.js';
 import GithubCardsList from '../blocks/github/__cards-list/GithubCardsList.js';
+import Flickity from '../../node_modules/flickity/js/index.js';
 
 // INSTANCES
+const slider = new Flickity(document.querySelector('.carousel'), {
+    freeScroll: true,
+    wrapAround: true
+});
 const dateFormater = new DateFormater();
 const gitApi = new GitApi(gitCommitsUrl);
-const github = new GithubCardsList(dateFormater, gitApi, document.querySelector('.github'), commitsToShow);
+const github = new GithubCardsList(dateFormater, gitApi, document.querySelector('.github'), commitsToShow, slider);
 
 // WORKERS
-window.addEventListener('onload', github.renderCommits());
+window.onload = () => github.renderCommits();

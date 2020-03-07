@@ -15,6 +15,7 @@ export default class GithubCard {
     buildCard(data) {
         const dateObj = this._dateFormater.getFormatedDateObject(data.commit.committer.date);
         const cardBlock = document.createElement('li');
+        cardBlock.classList.add('carousel-cell')
         cardBlock.insertAdjacentHTML('afterbegin', this._template);
 
         // if you make commit from local with git bash, github dont return 'author.avatar_url' and script crush
