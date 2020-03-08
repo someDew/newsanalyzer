@@ -2,7 +2,8 @@
     grid-column: 1/5;
     grid-row: 4/5;
 
-    /* width: 100%; */
+    width: 150%;
+    left: -25%;
 }
 
 @media screen and (max-width: 570px) {
@@ -12,3 +13,7 @@
         grid-row: 4/5;
     }
 }
+
+/* .github__cards-list > .swiper-wrapper {
+    width: 150%;
+} */

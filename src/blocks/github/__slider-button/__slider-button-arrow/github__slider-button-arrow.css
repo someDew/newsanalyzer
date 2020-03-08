@@ -1,0 +1,6 @@
+@import url(./_next/github__slider-button-arrow_next.css);
+@import url(./_prev/github__slider-button-arrow_prev.css);
+
+.github__slider-button-arrow {
+    filter: invert(100%);
+}

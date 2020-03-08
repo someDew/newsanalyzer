@@ -5,10 +5,8 @@
 @import url(./__card-text/githu__card-text.css);
 
 .github__card {
-    /* max-width: 400px;
-    min-width: 288px; */
-
-    width: 400px;
+    max-width: 400px;
+    min-width: 336px;
 
     display: grid;
 

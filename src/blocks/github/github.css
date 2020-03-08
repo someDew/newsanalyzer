@@ -1,15 +1,16 @@
 @import url(./__title/github__title.css);
 @import url(./__link/github__link.css);
 @import url(./__cards-list/github__cards-list.css);
-@import url(./__button/github__button.css);
-@import url(./__indicator/github__indicator.css);
+@import url(./__slider-button/github__slider-button.css);
+@import url(./__git-open/github__git-open.css);
+@import url(./__pagination/github__pagination.css);
 @import url(../indicator/indicator.css);
 
 .github {
     display: grid;
 
     grid-template-columns: 104px 600px auto 104px;
-    grid-template-rows: 80px auto 64px auto 56px 80px;
+    grid-template-rows: 80px auto 64px 344px 80px;
 
     background: #F5F6F7;
 }
@@ -18,7 +19,7 @@
 
     .github {		
         grid-template-columns: 7vw 600px auto 7vw;
-        grid-template-rows: 5vw auto 4vw auto 56px 5vw;
+        grid-template-rows: 5vw auto 4vw 344px 5vw;
     }
 }
 

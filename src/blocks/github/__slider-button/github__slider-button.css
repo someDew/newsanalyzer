@@ -1,0 +1,24 @@
+@import url(./__slider-button-arrow/github__slider-button-arrow.css);
+@import url(./_prev/github__slider-button_prev.css);
+@import url(./_next/github__slider-button_next.css);
+
+
+
+
+.github .github__slider-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: black;
+
+    border-radius: 100%;
+
+    position: absolute;
+    top: 38%;
+    z-index: 10;
+    cursor: pointer;
+}

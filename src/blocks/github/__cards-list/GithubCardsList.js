@@ -8,7 +8,7 @@ export default class GithubCardsList extends GithubCard {
         this._api = gitApi;
         this._commitsBlock = domElem;
         this._commitsToShow = commitsToShow;
-        this.slider = slider;
+        this._slider = slider;
     }
 
     renderCommits() {
@@ -18,8 +18,7 @@ export default class GithubCardsList extends GithubCard {
             .then(response => {                
                 for (let i = 0; i < this._commitsToShow; i++) {
                     const cardElem = this.buildCard(response[i]);
-                    /* this._commitsBlock.querySelector('.github__cards-list').appendChild(cardElem); */                    
-                    this.slider.append(cardElem);
+                    this._slider.appendSlide(cardElem);
                 }
 
             })

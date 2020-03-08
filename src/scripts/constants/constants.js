@@ -12,3 +12,30 @@ export const GIT_COMMITS_URL = 'https://api.github.com/repos/someDew/newsanalyze
 
 // number of commits to show on about page
 export const COMMITS_TO_SHOW = 20;
+
+
+// options of slider for about page
+export const SLIDER_OPTIONS = {
+    
+    navigation: {
+        nextEl: '.github__slider-button_next',
+        prevEl: '.github__slider-button_prev',
+    },
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
+
+    loop: true,
+    loopFillGroupWithBlank: true,
+    slidesPerView: 5,
+    slidesPerGroup: 1,
+    spaceBetween: 16,
+
+    grabCursor: true,
+};

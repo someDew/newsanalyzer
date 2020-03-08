@@ -1,0 +1,12 @@
+.github__pagination {
+    width: 100%;
+}
+
+.github__pagination > .swiper-pagination-bullet {
+    background-color: #000;
+    opacity: .6;
+}
+
+.github__pagination > .swiper-pagination-bullet-active {
+    opacity: 1;
+}
