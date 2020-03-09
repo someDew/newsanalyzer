@@ -6,4 +6,6 @@
 @import url(../blocks/link/link.css);
 @import url(../blocks/social/social.css);
 @import url(../blocks/graph/graph.css);
-@import url(fonts.css);
+
+/* ETERNAL STYLES */
+@import url(../vendor/fonts.css);

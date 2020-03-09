@@ -4,7 +4,7 @@
 @import url(./__slider-button/github__slider-button.css);
 @import url(./__git-open/github__git-open.css);
 @import url(./__pagination/github__pagination.css);
-@import url(../indicator/indicator.css);
+@import url(./__gradient/github__gradient.css);
 
 .github {
     display: grid;
