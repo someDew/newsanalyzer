@@ -16,16 +16,35 @@ export const COMMITS_TO_SHOW = 20;
 
 // options of slider for about page
 export const SLIDER_OPTIONS = {
-    
-    navigation: {
-        nextEl: '.github__slider-button_next',
-        prevEl: '.github__slider-button_prev',
+
+    breakpoints: {
+        1150: {
+            slidesPerView: 5,
+        },
+        930: {
+            slidesPerView: 4,
+        },
+        611: {
+            slidesPerView: 3,
+        },
+        1: {
+            spaceBetween: 0,
+            
+            slidesPerView: 1,
+            centeredSlides: true,
+            centeredSlidesBounds: true,
+        },
     },
 
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
+    
+    navigation: {
+        nextEl: '.github__slider-button_next',
+        prevEl: '.github__slider-button_prev',
+    },    
 
     observer: true,
     observeParents: true,

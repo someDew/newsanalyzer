@@ -6,14 +6,13 @@
     left: -25%;
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 610px) {
 
     .github__cards-list {
         grid-column: 2/3;
         grid-row: 4/5;
+
+        width: 100%;
+        left: 0;
     }
 }
-
-/* .github__cards-list > .swiper-wrapper {
-    width: 150%;
-} */

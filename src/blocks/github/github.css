@@ -19,7 +19,7 @@
 
     .github {		
         grid-template-columns: 7vw 600px auto 7vw;
-        grid-template-rows: 5vw auto 4vw 344px 5vw;
+        grid-template-rows: 5vw auto 4vw 344px 4vw;
     }
 }
 
@@ -27,15 +27,31 @@
 
     .github {		
         grid-template-columns: 7vw minmax(288px, 410px) auto 7vw;
-        grid-template-rows: 5vw auto 4vw auto 40px 5vw;        
+        grid-template-rows: 5vw auto 4vw 344px 4vw;        
     }
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 768px) {
+
+    .github {        
+        grid-template-rows: 5vw auto 4vw 300px 4vw;        
+    }
+}
+
+@media screen and (max-width: 610px) {
 
     .github {		
         grid-template-columns: 7vw auto 7vw;
-        grid-template-rows: 5vw auto 4vw auto 40px 2vw auto 5vw;
+        grid-template-rows: 5vw auto 4vw 300px 2vw auto 4vw;
+        
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .github {		
+        grid-template-columns: 7vw auto 7vw;
+        grid-template-rows: 5vw auto 4vw 300px 2vw auto 4vw;
         
     }
 }

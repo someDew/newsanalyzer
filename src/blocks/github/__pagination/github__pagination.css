@@ -2,11 +2,18 @@
     width: 100%;
 }
 
-.github__pagination > .swiper-pagination-bullet {
+.github.github .github__pagination > .swiper-pagination-bullet {
     background-color: #000;
     opacity: .6;
 }
 
-.github__pagination > .swiper-pagination-bullet-active {
+@media screen and (max-width: 400px) {
+
+    .github.github .github__pagination > .swiper-pagination-bullet {
+        margin: 0 2px;
+    }
+}
+
+.github.github .github__pagination > .swiper-pagination-bullet-active {
     opacity: 1;
 }

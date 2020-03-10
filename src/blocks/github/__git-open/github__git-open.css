@@ -6,17 +6,18 @@
     opacity: .6;
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 610px) {
 
     .github__git-open {
         display: block;
         
         grid-column: 2/3;
-        grid-row: 7/8;
+        grid-row: 6/7;
 
         justify-self: center;
     
         width: 288px;
+        min-width: 200px;
         height: 56px;
 
         border: 1px solid #1A1B22;
