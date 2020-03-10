@@ -4,6 +4,9 @@
 
     width: 150%;
     left: -25%;
+
+    display: grid;
+    grid-template-rows: auto 60px;
 }
 
 @media screen and (max-width: 610px) {
@@ -14,5 +17,7 @@
 
         width: 100%;
         left: 0;
+
+        grid-template-rows: auto 40px;
     }
 }

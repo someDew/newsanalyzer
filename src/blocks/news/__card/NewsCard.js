@@ -25,10 +25,10 @@ export default class NewsCard {
         cardBlock.querySelector('.news__card').href = data.url;
         cardBlock.querySelector('.news__card-pic').src = data.urlToImage;
         cardBlock.querySelector('.news__card-date').dateTime = data.publishedAt;
-        cardBlock.querySelector('.news__card-date').innerText = dateObj.formatDate + ' ' + dateObj.formatMonthWord.genitive + ' ' + dateObj.formatYear;
-        cardBlock.querySelector('.news__card-title').innerText = data.title;
-        cardBlock.querySelector('.news__card-text').innerText = data.description;
-        cardBlock.querySelector('.news__card-link').innerText = data.source.name;
+        cardBlock.querySelector('.news__card-date').textContent = dateObj.formatDate + ' ' + dateObj.formatMonthWord.genitive + ' ' + dateObj.formatYear;
+        cardBlock.querySelector('.news__card-title').textContent = data.title;
+        cardBlock.querySelector('.news__card-text').textContent = data.description;
+        cardBlock.querySelector('.news__card-link').textContent = data.source.name;
 
         return cardBlock;
     }

@@ -31,10 +31,10 @@ export default class GithubCard {
 
         cardBlock.querySelector('.github__card').href = data.html_url;
         cardBlock.querySelector('.github__card-date').dateTime = data.commit.committer.date;
-        cardBlock.querySelector('.github__card-date').innerText = dateObj.formatDate + ' ' + dateObj.formatMonthWord.genitive + ', ' + dateObj.formatYear;
-        cardBlock.querySelector('.github__card-title').innerText = data.commit.committer.name;
-        cardBlock.querySelector('.github__card-text').innerText = data.commit.message;
-        cardBlock.querySelector('.github__card-link').innerText = data.commit.committer.email;
+        cardBlock.querySelector('.github__card-date').textContent = dateObj.formatDate + ' ' + dateObj.formatMonthWord.genitive + ', ' + dateObj.formatYear;
+        cardBlock.querySelector('.github__card-title').textContent = data.commit.committer.name;
+        cardBlock.querySelector('.github__card-text').textContent = data.commit.message;
+        cardBlock.querySelector('.github__card-link').textContent = data.commit.committer.email;
         
 
         return cardBlock;

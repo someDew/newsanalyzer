@@ -10,7 +10,7 @@
     display: grid;
 
     grid-template-columns: 104px 600px auto 104px;
-    grid-template-rows: 80px auto 64px 344px 80px;
+    grid-template-rows: 80px auto 64px auto 80px;
 
     background: #F5F6F7;
 }
@@ -19,22 +19,21 @@
 
     .github {		
         grid-template-columns: 7vw 600px auto 7vw;
-        grid-template-rows: 5vw auto 4vw 344px 4vw;
+        grid-template-rows: 5vw auto 4vw auto 4vw;
     }
 }
 
 @media screen and (max-width: 950px) {
 
     .github {		
-        grid-template-columns: 7vw minmax(288px, 410px) auto 7vw;
-        grid-template-rows: 5vw auto 4vw 344px 4vw;        
+        grid-template-columns: 7vw minmax(250px, 410px) auto 7vw;        
     }
 }
 
 @media screen and (max-width: 768px) {
 
     .github {        
-        grid-template-rows: 5vw auto 4vw 300px 4vw;        
+        grid-template-rows: 5vw auto 4vw auto 4vw;        
     }
 }
 
@@ -42,7 +41,7 @@
 
     .github {		
         grid-template-columns: 7vw auto 7vw;
-        grid-template-rows: 5vw auto 4vw 300px 2vw auto 4vw;
+        grid-template-rows: 5vw auto 4vw auto 2vw auto 4vw;
         
     }
 }
@@ -50,7 +49,6 @@
 @media screen and (max-width: 450px) {
 
     .github {		
-        grid-template-columns: 7vw auto 7vw;
         grid-template-rows: 5vw auto 4vw 300px 2vw auto 4vw;
         
     }

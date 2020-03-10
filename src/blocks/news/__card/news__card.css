@@ -8,7 +8,7 @@
     display: grid;
     
     grid-template-columns: 1.7vw 1fr 1.7vw;
-    grid-template-rows: 20vw 44px auto minmax(0, 1fr) 54px;
+    grid-template-rows: 20vw 44px auto 1fr 54px;
 
     background: #FFF;
     border-radius: 16px;
@@ -18,20 +18,20 @@
 
     overflow: hidden;
 
-    max-height: 576px;
+    height: 100%;
 }
 
 @media screen and (min-width: 1440px) {
 
     .news__card {		
-        grid-template-rows: 272px 44px auto minmax(0, 1fr) 54px;
+        grid-template-rows: 272px 44px auto 1fr 54px;
     }
 }
 
 @media screen and (max-width: 805px) {
 
     .news__card {		
-        grid-template-rows: 30vw 44px auto minmax(0, 1fr) 48px;
+        grid-template-rows: 30vw 44px auto 1fr 48px;
     }
 }
 
@@ -39,6 +39,6 @@
 
     .news__card {		
         grid-template-columns: 16px 1fr 16px;
-        grid-template-rows: 60vw 44px auto minmax(0, 1fr) 48px;
+        grid-template-rows: 60vw 44px auto 1fr 48px;
     }
 }

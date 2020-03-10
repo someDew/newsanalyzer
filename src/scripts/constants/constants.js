@@ -44,7 +44,9 @@ export const SLIDER_OPTIONS = {
     navigation: {
         nextEl: '.github__slider-button_next',
         prevEl: '.github__slider-button_prev',
-    },    
+    },
+    
+    mousewheel: {},
 
     observer: true,
     observeParents: true,
