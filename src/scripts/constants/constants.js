@@ -13,6 +13,17 @@ export const GIT_COMMITS_URL = 'https://api.github.com/repos/someDew/newsanalyze
 // number of commits to show on about page
 export const COMMITS_TO_SHOW = 20;
 
+// this object contains text transcripts of errors returned by news api
+export const NEWS_API_ERRORS = {
+    ok: 'К сожалению результаты по данному запросу отсутствуют. Попробуйте изменить запрос.',
+    400: 'Недопустимый формат запроса. Попробуйте изменить запрос.',
+    401: 'К сожалению возникла проблема с авторизацией. Пожалуйста, попробуйте позже.',
+    404: 'К сожалению сервер недоступен. Пожалуйста, попробуйте позже.',
+    429: 'Слишком частые запросы. Пожалуйста, попробуйте позже.',
+    500: 'К сожалению произошла ошибка на сервере. Пожалуйста, попробуйте позже.',
+    default: 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Пожалуйста, попробуйте позже.',
+};
+
 
 // options of slider for about page
 export const SLIDER_OPTIONS = {

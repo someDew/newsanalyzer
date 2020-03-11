@@ -1,6 +1,5 @@
 //PARENT
 import GithubCard from '../__card/GithubCard.js';
-/* import Flickity from '../../../../node_modules/flickity/js/flickity.js'; */
 
 export default class GithubCardsList extends GithubCard {
     constructor(dateFormater, gitApi, domElem, commitsToShow, slider) {
@@ -22,25 +21,8 @@ export default class GithubCardsList extends GithubCard {
                 }
 
             })
-
-            // next in progress...
             .catch(error => {
                 console.log(error);
-                /* this._notFound.show(error.status); */
-            })
-            .finally(() => {
-                /* this._storageHandler.calculateHistogram();
-                this._unblockForm();
-                this._preloader.hide(); */
-            });
-    }
-
-    _initSlider() {
-        const slider = new Flickity('.carousel', {
-            freeScroll: true,
-            wrapAround: true
-        });
-
-        return slider
+            })            
     }
 }

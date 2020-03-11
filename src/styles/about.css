@@ -11,6 +11,5 @@
 @import url(../blocks/author/author.css);
 @import url(../blocks/github/github.css);
 
-/* ETERNAL STYLES */
+/* EXTERNAL STYLES */
 @import url(../vendor/fonts.css);
-@import url(../../node_modules/swiper/css/swiper.css);

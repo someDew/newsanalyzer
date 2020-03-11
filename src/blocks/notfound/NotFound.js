@@ -4,6 +4,7 @@ import './notfound.css'
 // RESORSES
 import image from './notfound.svg';
 import template from './notfound-temp.js';
+import { NEWS_API_ERRORS as errors } from '../../scripts/constants/constants.js';
 
 export default class NotFound {
     constructor(domElem) {
@@ -18,23 +19,19 @@ export default class NotFound {
 
         const message = this._notFoundContainer.querySelector('.notfound__text');
         switch (string) {
-            case 'ok':
-                message.innerText = 'К сожалению результаты по данному запросу отсутствуют. Попробуйте изменить запрос.';
+            case 'ok': message.textContent = errors.ok;
                 break;
-            case 400:
-                message.innerText = 'Недопустимый формат запроса. Попробуйте изменить запрос.';
+            case 400: message.textContent = errors[400];
                 break;
-            case 401:
-                message.innerText = 'К сожалению возникла проблема с авторизацией. Пожалуйста, попробуйте позже.';
+            case 401: message.textContent = errors[401];
                 break;
-            case 429:
-                message.innerText = 'Слишком частые запросы. Пожалуйста, попробуйте позже.';
+            case 404: message.textContent = errors[404];
                 break;
-            case 500:
-                message.innerText = 'К сожалению произошла ошибка на сервере. Пожалуйста, попробуйте позже.';
+            case 429: message.textContent = errors[429];
                 break;
-            default:
-                message.innerText = 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Пожалуйста, попробуйте позже.';
+            case 500: message.textContent = errors[500];
+                break;
+            default: message.textContent = errors.default;
         }
     }
 
