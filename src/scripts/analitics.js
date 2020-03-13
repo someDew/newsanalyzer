@@ -8,10 +8,13 @@ import { SEARCH_PERIOD as searchPeriod } from './constants/constants.js';
 import DateFormater from './modules/DateFormater.js';
 import Digits from '../blocks/digits/Digits.js';
 import Histogram from '../blocks/histogram/Histogram.js';
+import StorageHandler from './modules/StorageHandler.js'; 
 
-// Create instances for other modules
+// INSTANCES
 const dateFormater = new DateFormater;
+const storageHandler = new StorageHandler(searchPeriod); 
+const histogram = new Histogram(document.querySelector('.histogram'), searchPeriod, dateFormater, storageHandler);
+new Digits(document.querySelector('.digits'), storageHandler);
 
-// Create workers
-new Digits(document.querySelector('.digits'));
-new Histogram(document.querySelector('.histogram'), searchPeriod, dateFormater);
+// WORKERS
+window.onload = () => histogram.renderHistogram();

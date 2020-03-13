@@ -7,7 +7,7 @@ export default class SearchInput {
         this._notFound = notFound;
         this._preloader = preloader;
 
-        this._searchForm = document.forms.searchForm;
+        this._searchForm = document.querySelector('.search__form');
         this._input = this._searchForm.elements.searchInput;
         this._button = this._searchForm.elements.searchSubmit;
 
@@ -24,8 +24,7 @@ export default class SearchInput {
         this._storageHandler.clearStorage();
         this._cardsList.hideCardsList();
         this._cardsList.deleteCards();
-        this._newsApi.getNews(this._input.value)
-            .then(response => response.ok ? response.json() : Promise.reject(response))
+        this._newsApi.getNews(this._input.value)            
             .then(response => response.totalResults !== 0 ? response : Promise.reject(response))
             .then(response => {
                 this._storageHandler.writeStorage(response, this._input.value)
@@ -36,16 +35,15 @@ export default class SearchInput {
                 this._notFound.show(error.status);
             })
             .finally(() => {
-                this._storageHandler.calculateHistogram();
                 this._unblockForm();
                 this._preloader.hide();
             });
     }
 
     renderPrevious() {
-        if (sessionStorage.totalNews) {
-            sessionStorage.setItem('showedNews', 0);
-            this._input.value = sessionStorage.lastReqest;
+        if (this._storageHandler.getTotalNews()) {            
+            this._storageHandler.writeShowedNews(0);
+            this._input.value = this._storageHandler.getLastReqest();
             this._cardsList.showCardsGroup();
             this._cardsList.showCardsList();
         }

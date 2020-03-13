@@ -12,13 +12,15 @@ import { SLIDER_OPTIONS as sliderOptions } from './constants/constants.js';
 import GitApi from './modules/GitApi.js';
 import DateFormater from './modules/DateFormater.js';
 import GithubCardsList from '../blocks/github/__cards-list/GithubCardsList.js';
+import GithubCard from '../blocks/github/__card/GithubCard.js';
 import Swiper from 'swiper';
 
 // INSTANCES
 const dateFormater = new DateFormater();
 const gitApi = new GitApi(gitCommitsUrl);
 const slider = new Swiper(document.querySelector('.swiper-container'), sliderOptions);
-const github = new GithubCardsList(dateFormater, gitApi, document.querySelector('.github'), commitsToShow, slider);
+const githubCard = new GithubCard(dateFormater)
+const github = new GithubCardsList(gitApi, commitsToShow, slider, githubCard);
 
 // WORKERS
 window.onload = () => github.renderCommits();

@@ -4,7 +4,7 @@ export default class DateFormater {
     }
 
     getFormatedDateObject(obj) {
-        let date = new Date(obj);
+        const date = new Date(obj);
         const formatedDateObject = {};
 
         formatedDateObject.formatYear = date.getUTCFullYear().toString();

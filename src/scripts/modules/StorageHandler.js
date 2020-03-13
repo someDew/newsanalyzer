@@ -4,29 +4,29 @@ export default class StorageHandler {
     }
 
     clearStorage() {
-        sessionStorage.clear();
+        localStorage.clear();
     }
 
     writeStorage(json, string) {
         
         // user request
-        sessionStorage.setItem('lastReqest', string);
+        localStorage.setItem('lastReqest', string);
 
         // number of all newsapi results for digits block
-        sessionStorage.setItem('lastWeekNews', json.totalResults);
+        localStorage.setItem('lastWeekNews', json.totalResults);
         
         // number of rendered news on main page
-        sessionStorage.setItem('showedNews', '0');
+        localStorage.setItem('showedNews', '0');
         
         // number of news returned by api (not the same as 'lastWeekNews')
-        sessionStorage.setItem('totalNews', json.articles.length);        
+        localStorage.setItem('totalNews', json.articles.length);        
         
         let matches = 0;
         const requestRegexp = new RegExp(string, 'im');
         json.articles.forEach( function(item, index) {
             
             // write every news in his own record with own index, start by 'news0'
-            sessionStorage.setItem(`news${(index)}`, JSON.stringify(item));
+            localStorage.setItem(`news${(index)}`, JSON.stringify(item));
             
             // search user request in response headers and wright in 'matches' for analitics
             if (requestRegexp.test(item.title)) {
@@ -35,69 +35,42 @@ export default class StorageHandler {
         });
         
         // matches requst in response headers
-        sessionStorage.setItem('matchesInHeaders', matches);
+        localStorage.setItem('matchesInHeaders', matches);
     }
 
     getNewsData(number) {
-        return JSON.parse(sessionStorage.getItem(`news${number}`));
+        return JSON.parse(localStorage.getItem(`news${number}`));
+    }
+    
+    getLineData(number) {
+        return JSON.parse(localStorage.getItem(`line${number}`));
     }
 
-    calculateHistogram() {
+    getTotalNews() {
+        return localStorage.totalNews;
+    }
 
-        // number of line in histogram, 0 is today, 1 is yesterday and so on
-        let lineNumber = 0;
+    writeLineItem(lineNumber, searchDate, lineCount = 0) {
+        localStorage.setItem(`line${lineNumber}`, JSON.stringify([searchDate, lineCount]));
+    }
 
-        // number of news in current line
-        let lineCount = 0;
+    getLastReqest() {
+        return localStorage.lastReqest;
+    }
 
-        let searchDate = {};
-        let today = {};
+    getLastWeekNews() {
+        return localStorage.lastWeekNews;
+    }
 
-        for ( let i = 0; i < sessionStorage.getItem('totalNews'); i++) {
-            const newsData = this.getNewsData(i);
+    getMatchesInHeaders() {
+        return localStorage.matchesInHeaders;
+    }
 
-            // newsapi send news in descending order starting from today's date
-            today = new Date();
+    readShowedNews() {
+        return localStorage.showedNews;
+    }
 
-            // first regexp will be match with today date, next with yesterday and so on
-            // 'searchDate' inverse depend on 'lineNumber' 
-            searchDate = new Date(today.setDate(today.getDate() - lineNumber)).toISOString().slice(0, 10);
-            let searchDateRegexp = new RegExp(searchDate);
-
-            if (searchDateRegexp.test(newsData.publishedAt)) {
-                
-                // if dates match - increase lineCount
-                lineCount++;
-            } else {
-
-                // if control date dont match with current news 'publishAt':
-                // - write new line to Storage,
-                sessionStorage.setItem(`line${lineNumber}`, JSON.stringify([searchDate, lineCount]));
-
-                // - reset counter,
-                lineCount = 0;
-
-                // - increase line number, to proceed to checking the next date,
-                lineNumber++;
-
-                // - and decrease cycle index, for check match current news with next date
-                i -= 1;
-            }
-        }
-
-        // after all news cycle, write last line to Storage
-        sessionStorage.setItem(`line${lineNumber}`, JSON.stringify([searchDate, lineCount]));
-
-        // histogram must contain 'searchPeriod' days statistic, that is why next check lines number
-        // and missing lines write with 0 value
-        if (this._searchPeriod > lineNumber) {
-            const remainigLines = this._searchPeriod - lineNumber;
-            for ( let j = 0; j < remainigLines; j++) {
-                ++lineNumber;
-                today = new Date();
-                searchDate = new Date(today.setDate(today.getDate() - lineNumber)).toISOString().slice(0, 10);
-                sessionStorage.setItem(`line${lineNumber}`, JSON.stringify([searchDate, 0]));
-            }
-        }
+    writeShowedNews(number) {
+        localStorage.showedNews = number;
     }
 }

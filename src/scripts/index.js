@@ -13,6 +13,7 @@ import NewsApi from './modules/NewsApi';
 import DateFormater from './modules/DateFormater.js';
 import StorageHandler from './modules/StorageHandler.js';
 import SearchInput from './components/SearchInput.js';
+import NewsCard from '../blocks/news/__card/NewsCard.js';
 import NewsCardsList from '../blocks/news/__cards-list/NewsCadrsList.js';
 import NotFound from '../blocks/notfound/NotFound.js';
 import Preloader from '../blocks/preloader/Preloader.js';
@@ -20,11 +21,13 @@ import Preloader from '../blocks/preloader/Preloader.js';
 // INSTANCES
 const dateFormater = new DateFormater;
 const storageHandler = new StorageHandler(searchPeriod);
-const notFound = new NotFound(document.querySelector('.content'));
-const preloader = new Preloader(document.querySelector('.content'));
+const content = document.querySelector('.content');
+const notFound = new NotFound(content);
+const preloader = new Preloader(content);
 const newsApi = new NewsApi(dateFormater, apiKey, searchPeriod);
-const newsCardsList = new NewsCardsList(dateFormater, showNewsOnceTime, document.querySelector('.news'), storageHandler);
+const newsCard = new NewsCard(dateFormater);
+const newsCardsList = new NewsCardsList(showNewsOnceTime, document.querySelector('.news'), storageHandler, newsCard);
 const searchInput = new SearchInput(newsApi, newsCardsList, storageHandler, notFound, preloader);
 
 // WORKERS
-window.addEventListener('onload', searchInput.renderPrevious());
+window.onload = () => searchInput.renderPrevious();

@@ -22,6 +22,7 @@ export default class NewsApi {
                     `pageSize=100&` +
                     `apiKey=${this._apiKey}`;
 
-        return fetch(url);
+        return fetch(url)
+            .then(response => response.ok ? response.json() : Promise.reject(response));
     }
 }

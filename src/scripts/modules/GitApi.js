@@ -4,6 +4,7 @@ export default class GitApi {
     }
 
     getCommits() {
-        return fetch(this._url);
+        return fetch(this._url)
+            .then(response => response.ok ? response.json() : Promise.reject(response));
     }
 }

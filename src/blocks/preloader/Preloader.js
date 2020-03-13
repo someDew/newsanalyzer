@@ -12,11 +12,12 @@ export default class Preloader {
 
     show() {
         this._preloaderContainer.insertAdjacentHTML('afterbegin', this._preloaderTemplate);
+        this._preloaderBlock = this._preloaderContainer.querySelector('.preloader');
     }
 
     hide() {
-        if (this._preloaderContainer.querySelector('.preloader')) {
-            this._preloaderContainer.removeChild(this._preloaderContainer.querySelector('.preloader'));
+        if (this._preloaderBlock) {
+            this._preloaderContainer.removeChild(this._preloaderBlock);
         }
     }
 }
