@@ -20,10 +20,10 @@
       <nav class="nav header__nav">
         <ul>
           <li class="nav__item">
-            <a class="link" href="./index.html">Главная</a>
+            <a class="link" href="./index.html"><div><span>Главная</span></div></a>
           </li>
           <li class="nav__item  nav__item_select">
-            <a class="link" href="./about.html">О&nbsp;проекте</a>
+            <a class="link" href="./about.html"><div><span>О&nbsp;проекте</span></div></a>
           </li>
         </ul>
       </nav>
@@ -35,17 +35,14 @@
         <p class="forclients__text">Этот сайт — дипломный проект студента Яндкс.Практикума. Его цель — показать, чему
           научился студент, и какими технологиями владеет.<br><br>Вёртска сайта выполнена по методологии БЭМ. Это делает
           сайт гибким и масштабируемым. Кроме того, добавлять новые страницы и функциальность проще и быстрее, чем в
-          проектах, выполненных по другим методологиям. Также
-          сайт проще и дешевле поддерживать.<br><br>Карточки с новостям приходят с сервера и обрабатываются асихронно.
-          То
-          есть сайт продолжает работать, пока от сервера приходит ответ. Это повышает удобство использования
-          сервиса.<br><br>При создании проекта была использона
+          проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.<br><br>Карточки с
+          новостям приходят с сервера и обрабатываются асихронно. То есть сайт продолжает работать, пока от сервера 
+          приходит ответ. Это повышает удобство использования сервиса.<br><br>При создании проекта была использона
           сборка технологией Webpack. Это современных подход к разработке сайтов. Код оптимизируется, а значит, сайт
-          работает быстрее. Также настроена сайт работает в старых браузерах. Даже
-          если посетители — пользователи старых операционных систем у них не будет проблем с отображением. А значит
-          потенциальная аудитория возрастает.<br><br>Проект был проверен экспертами Яндекс.Практикума. И если вашему
-          бизесу
-          нужен сайт, мы рекомендуем обратиться к этому студенту.</p>
+          работает быстрее. Также настроена сайт работает в старых браузерах. Даже если посетители — пользователи старых
+          операционных систем у них не будет проблем с отображением. А значит потенциальная аудитория возрастает.<br><br>
+          Проект был проверен экспертами Яндекс.Практикума. И если вашему бизесу нужен сайт, мы рекомендуем обратиться
+          к этому выпускнику.</p>
       </section>
 
       <section class="tech">
@@ -79,59 +76,60 @@
           <img src="<%= require('../images/author_512px.jpg') %>" alt="site autors photo">
         </picture>
 
-
         <h2 class="author__title">Об&nbsp;авторе</h2>
-        <p class="author__text">Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы
-          занимаетесь, какими технологиями разработки владете.
+        <p class="author__text">Привет, меня зовут Андрей и этот сайт - мой первый полностью самостоятельный web
+          проект.
           <br><br>
-          Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь
-          потенциальным заказчикам.
+          Когда-то давно, когда школьные годы подходили к концу и нужно было определяться с будущей
+          профессией, я колебался между новой, тогда еще мало кому понятной, профессией программиста и другими - более
+          традиционными. Тогда, по многим причинам, выбор был сделан не в пользу программирования.
           <br><br>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit dicta libero labore. Beatae excepturi commodi
-          harum vitae distinctio qui, ipsum officia facilis deleniti illum architecto assumenda ducimus blanditiis id
-          explicabo?</p>
+          Так сложилось, что я всегда интересовался технологиями и среди друзей и знакомых имел репутацию "чувака, который шарит".
+          Да и профессиональная деятельность моя часто была связана с программированием (в определенной степени). Увлекаясь 
+          электроникой, в 2015 году я собрал и написал программу на 20 строк для небольшого устройства на базе контроллера Arduino. 
+          Результат приводил меня в восторг...          
+          <br><br>
+          Именно такой восторг я испытываю теперь, написав с нуля этот поисковик новостей. Теперь я ищу интересные проекты, где 
+          буду полезен и смогу все глубже погружаться в тему frontend и backend разработки. Если Вашей команде нужен увлеченный 
+          фронтэндер, ищите меня в <a class="link" href="https://t.me/dewandrew">telegram</a>.</p>
       </section>
 
       <section class="github">
         <h2 class="github__title">История коммитов из&nbsp;GitHub</h2>
-        <a class="github__link link" href="https://github.com/someDew/newsanalyzer">Открыть&nbsp;на&nbsp;GitHub<img
-            src="<%=require('../images/arrow.svg')%>" alt="open github" class="link__arrow"></a>
-        <button class="github__button button">Открыть&nbsp;на&nbsp;GitHub</button>
-        <div class="github__slider">
-
-          <div class="github__card">
-            <span class="github__card-date">2 января, 1988</span>
-            <img class="github__card-pic" src="<%=require('../images/default-user.png')%>" alt="contributor photo">
-            <h3 class="github__card-name">Default User</h3>
-            <a class="github__card-link link" href="">default.mail@web.site</a>
-            <p class="github__card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet officia, ut
-              accusantium molestiae itaque eum, quia maiores, adipisci quam repudiandae similique cupiditate dolorem
-              voluptatum nisi odit commodi unde enim praesentium!</p>
+        <a class="github__link link" href="https://github.com/someDew/newsanalyzer">Открыть&nbsp;на&nbsp;GitHub
+          <img src="<%=require('../images/arrow.svg')%>" alt="link to open github" class="link__arrow"></a>
+        <button class="github__git-open button">Открыть&nbsp;на&nbsp;GitHub</button>
+        <div class="github__cards-list swiper-container">
+          <ul class="swiper-wrapper"></ul>
+          <div class="github__pagination swiper-pagination"></div>
+          <div class="github__slider-button github__slider-button_prev">
+            <img src="<%=require('../images/arrow.svg')%>" alt="previous slide button" class="github__slider-button-arrow github__slider-button-arrow_prev">
           </div>
-
-
-
-        </div>
-        <div class="github__indicator">
-          <div class="indicator"></div>
-          <div class="indicator indicator_select"></div>
-          <div class="indicator"></div>
+          <div class="github__slider-button github__slider-button_next">
+            <img src="<%=require('../images/arrow.svg')%>" alt="next slide button" class="github__slider-button-arrow github__slider-button-arrow_next">
+          </div>
+          <div class="github__gradient github__gradient_left"></div>
+          <div class="github__gradient github__gradient_right"></div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p class="copyright footer__copyright">©&nbsp;2019&nbsp;Andrew</p>
+      <div class="footer__copyright copyright">
+        <span class="copyright__author">©&nbsp;2019&nbsp;Andrew&nbsp;B.<br>
+          <a class="copyright__powered link" href='https://newsapi.org/' target='_blank'>powered&nbsp;by&nbsp;NewsApi.org</a>
+        </span>        
+      </div>
       <nav class="nav footer__nav">
         <ul>
           <li class="nav__item">
-            <a class="link" href="index.html">Главная</a>
+            <a class="link" href="index.html"><div><span>Главная</span></div></a>
           </li>
           <li class="nav__item">
-            <a class="link" href="about.html">О&nbsp;проекте</a>
+            <a class="link" href="about.html"><div><span>О&nbsp;проекте</span></div></a>
           </li>
           <li class="nav__item">
-            <a class="link" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a>
+            <a class="link" href="https://praktikum.yandex.ru/"><div><span>Яндекс.Практикум</span></div></a>
           </li>
         </ul>
       </nav>

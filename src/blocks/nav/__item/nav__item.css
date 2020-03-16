@@ -13,6 +13,17 @@
     margin-left: 33px;
 }
 
+.nav__item > a {
+    height: 100%;
+}
+
+.nav__item > a > div {
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+
 .nav__item:first-of-type {
     margin-left: 0px;
 }

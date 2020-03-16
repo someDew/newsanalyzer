@@ -1,26 +1,13 @@
 @import url(./__img/notfound__img.css);
 @import url(./__title/notfound__title.css);
 @import url(./__text/notfound__text.css);
-@import url(./_disable/notfoundr_disable.css);
 
 .notfound {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 
-	padding: 80px 0;
-	margin: 0;
-	
-	box-sizing: border-box;
+	padding: 6vw 7vw;
 	
 	background-color: #F5F6F7;
-	
-	overflow: hidden;
-}
-
-@media screen and (max-width: 1440px) {
-	
-	.notfound {		
-		padding: 6vw 0;
-    }
 }

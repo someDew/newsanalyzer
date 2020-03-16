@@ -1,26 +1,43 @@
 @import url(./__card-date/github__card-date.css);
 @import url(./__card-pic/github__card-pic.css);
-@import url(./__card-name/github__card-name.css);
+@import url(./__card-title/github__card-title.css);
 @import url(./__card-link/github__card-link.css);
 @import url(./__card-text/githu__card-text.css);
 
 .github__card {
     max-width: 400px;
-    min-width: 288px;
+    min-width: 336px;
+    height: 100%;
 
     display: grid;
 
     grid-template-columns: 24px 64px 16px auto 24px;
-    grid-template-rows: 24px auto 16px auto auto 16px minmax(60px, 122px) 24px;
+    grid-template-rows: 24px 24px 16px 34px 30px 16px auto 24px;
 
     background-color: #fff;
     border-radius: 16px;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
 
     .github__card {
         grid-template-columns: 24px 48px 16px auto 24px;
-        grid-template-rows: 24px auto 16px auto auto 16px minmax(60px, 88px) 24px;
+        
+        min-width: 250px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+
+    .github__card {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .github__card {
+        grid-template-columns: 16px 48px 16px auto 16px;
     }
 }

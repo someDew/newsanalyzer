@@ -1,0 +1,6 @@
+.github__gradient_right {
+    right: 16.6%;
+    left: auto;
+
+    background: linear-gradient(90deg, rgba(245, 246, 247, 0) 0%, #F5F6F7 100%);
+}

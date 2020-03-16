@@ -1,0 +1,25 @@
+.news__cards-list {
+    grid-area: cards-list;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 403px));
+
+    grid-gap: 16px;
+}
+
+@media screen and (max-width: 805px) {
+
+    .news__cards-list {
+        grid-template-columns: repeat(2, minmax(220px, 403px));
+    }
+}
+
+@media screen and (max-width: 495px) {
+
+    .news__cards-list {
+        grid-template-columns: 1fr;
+    }
+}

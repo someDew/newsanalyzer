@@ -1,0 +1,19 @@
+@import url(./_left/github__gradient_left.css);
+@import url(./_right/github__gradient_right.css);
+
+.github__gradient {
+    position: absolute;
+
+    height: 100%;
+    width: 60px;
+
+    top: 0;    
+    z-index: 6;
+}
+
+@media screen and (max-width: 610px) {
+
+    .github__gradient {
+        display: none;
+    }
+}

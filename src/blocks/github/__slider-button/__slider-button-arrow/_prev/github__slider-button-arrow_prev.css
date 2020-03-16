@@ -1,0 +1,4 @@
+.github__slider-button-arrow_prev {
+    transform: scale(-1, 1);
+    margin-right: 3px;
+}

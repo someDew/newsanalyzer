@@ -1,10 +1,11 @@
 @import url(../blocks/page/page.css);
 @import url(../blocks/header/header.css);
 @import url(../blocks/footer/footer.css);
+@import url(../blocks/copyright/copyright.css);
 @import url(../blocks/nav/nav.css);
 @import url(../blocks/link/link.css);
 @import url(../blocks/social/social.css);
-@import url(../blocks/digits/digits.css);
 @import url(../blocks/graph/graph.css);
-@import url(../blocks/histogram/histogram.css);
-@import url(fonts.css);
+
+/* ETERNAL STYLES */
+@import url(../vendor/fonts.css);

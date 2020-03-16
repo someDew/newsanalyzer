@@ -1,0 +1,20 @@
+.news__title {
+    grid-area: title;
+
+    font-family: Roboto Slab, Georgia, "Times",	"Nimbus Roman No9 L", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+
+    display: flex;
+    align-self: end;
+}
+
+@media screen and (max-width: 768px) {
+
+    .news__title {		
+        font-size: 30px;
+        line-height: 34px;
+    }
+}

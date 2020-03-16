@@ -1,0 +1,29 @@
+.github__git-open {
+    display: none;
+}
+
+.github__git-open:hover {
+    opacity: .6;
+}
+
+@media screen and (max-width: 610px) {
+
+    .github__git-open {
+        display: block;
+        
+        grid-column: 2/3;
+        grid-row: 6/7;
+
+        justify-self: center;
+    
+        width: 288px;
+        min-width: 200px;
+        height: 56px;
+
+        border: 1px solid #1A1B22;
+        box-sizing: border-box;
+        border-radius: 90px;
+
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,23 @@
+.github__cards-list {
+    grid-column: 1/5;
+    grid-row: 4/5;
+
+    width: 150%;
+    left: -25%;
+
+    display: grid;
+    grid-template-rows: auto 60px;
+}
+
+@media screen and (max-width: 610px) {
+
+    .github__cards-list {
+        grid-column: 2/3;
+        grid-row: 4/5;
+
+        width: 100%;
+        left: 0;
+
+        grid-template-rows: auto 40px;
+    }
+}

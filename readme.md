@@ -1,5 +1,5 @@
 # NewsAnalyzer
-## v0.0.3
+## v1.0.0
 ---
   
 ### About:
@@ -8,7 +8,7 @@ Hi! And wellcome.
 
 [![newsanalyzer screenshot](https://pictures.s3.yandex.net/resources/Snimok_ekrana_2019-10-11_v_15.05.22_1570795557.png "github.io/newsanalyzer")](https://somedew.github.io/newsanalyzer)
 
-'NewsAnalyzer' is a my _final qualifying work_ in Yandex.Praktikum. Its simple web application to search for news by keywords.
+'NewsAnalyzer' is a my _final qualifying work_ in Yandex.Praktikum. Its simple web application to search for news on Russian language by keywords.
 
 ### Features:
 
@@ -18,7 +18,8 @@ Hi! And wellcome.
 - Click on card with news redirect to news source;
 - In section 'Analitics' user can see statistics of mentions in the media on this topic for the last 7 days;
 - In section 'About' user can see me :) and some boring words;
-- Also, user can view the commit history in the application repository on github.com.
+- Also, user can view the commit history in 'About' section from the application repository on github.com;
+- Click on commit card redirect to commit details page on github
 
 ### Use technology:
 
@@ -26,6 +27,9 @@ Hi! And wellcome.
 - CSS;
 - HTML5;
 - WebPack4;
+- BEM methodology;
+- NPM paсkages;
+- GIT technology
 
 ### Fast start:
 
@@ -36,13 +40,20 @@ Hi! And wellcome.
 
 ### Whats new:
 
-- Created all app layouts
-- Built environment for automatic build, development and publication of the project;
-- Created github repo with coolest ever readme file.
+- All functions now is worked
 
 ### Issues:
 
-- today is nothing works, sorry
+- in IOS 13 git commits block work incorrect
+
+### This project was made possible by:
+
+* [Yandex.Praktikum](https://praktikum.yandex.ru)
+* [NewsApi](https://newsapi.org)
+* [WebPack](https://webpack.js.org)
+* [Babel](https://babeljs.io)
+* [PostCSS](https://vk.com/postcss)
+* [GitHub](http://github.com)
 
 -----
 > Feel free to ask your questions **@dewandrew**

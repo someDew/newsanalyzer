@@ -7,8 +7,8 @@
     width: 100%;
     height: auto;
     display: block;
-
-    text-overflow: ellipsis;
+    
+    text-align: justify;
 
     font-family: Roboto, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
     font-style: normal;
