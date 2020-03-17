@@ -10,8 +10,6 @@ export default class GithubCard {
         this._dateFormater = dateFormater;
         this._template = githubCardTemplate;
         this._image = defaultUserImage;
-
-
     }
 
     buildCard(data) {
@@ -40,7 +38,6 @@ export default class GithubCard {
         cardBlock.querySelector('.github__card-title').textContent = data.commit.committer.name;
         cardBlock.querySelector('.github__card-text').textContent = data.commit.message;
         cardBlock.querySelector('.github__card-link').textContent = data.commit.committer.email;
-        
 
         return cardBlock;
     }

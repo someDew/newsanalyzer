@@ -27,7 +27,7 @@ export default class SearchInput {
         this._newsApi.getNews(this._input.value)            
             .then(response => response.totalResults !== 0 ? response : Promise.reject(response))
             .then(response => {
-                this._storageHandler.writeStorage(response, this._input.value)
+                this._storageHandler.storeNews(response, this._input.value)
                 this._cardsList.showCardsGroup();
                 this._cardsList.showCardsList();
             })
