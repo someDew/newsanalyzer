@@ -1,10 +1,8 @@
 export default class NewsApi {
-    constructor(dateFormater, key, searchPeriod) {
-        this._dateFormater = dateFormater;
-        this._apiKey = key;
-        this._searchPeriod = searchPeriod;
-
-        this._searchFrom = '';
+    constructor(properties) {
+        this._apiKey = properties.apiKey;
+        this._dateFormater = properties.dateFormater;
+        this._searchPeriod = properties.searchPeriod;
     }
 
     getNews(string) {
@@ -12,11 +10,11 @@ export default class NewsApi {
         // take date minus 'searchPeriod' from today
         const date = new Date();
         date.setDate(date.getDate() - this._searchPeriod);
-        this._searchFrom = date.toISOString().slice(0, 10);
+        const searchFrom = date.toISOString().slice(0, 10);
 
         const url = 'https://newsapi.org/v2/everything?' +
                     `q=${string}&` +
-                    `from=${this._searchFrom}&` +
+                    `from=${searchFrom}&` +
                     `sortBy=publishedAt&` +
                     `language=ru&` +
                     `pageSize=100&` +

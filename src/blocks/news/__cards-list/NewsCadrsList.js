@@ -1,12 +1,12 @@
 export default class NewsCardsList {
-    constructor(showNewsOnceTime, domElem, storageHandler, newsCard) {        
-        this._showNewsOnceTime = showNewsOnceTime;
-        this._newsBlock = domElem;
-        this._storageHandler = storageHandler;
-        this._newsCard = newsCard;
-        this._moreButton = domElem.querySelector('.news__button');
-
+    constructor(properties) {        
+        this._showNewsOnceTime = properties.showNewsOnceTime;
+        this._newsBlock = properties.elements.news;
+        this._storageHandler = properties.storageHandler;
+        this._newsCard = properties.newsCard;
+        
         this._cardsList = this._newsBlock.querySelector('.news__cards-list');
+        this._moreButton = this._newsBlock.querySelector('.news__button');
         this._moreButton.addEventListener('click', this.showCardsGroup.bind(this));
     }
 

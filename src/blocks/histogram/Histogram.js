@@ -5,13 +5,13 @@ import './histogram.css';
 import { lineTemplate, lineItemTemplate } from './histogram-line-temp.js'
 
 export default class Histogram {
-    constructor(domElem, searchPeriod, dateFormater, storageHandler) {
-        this._histogramContainer = domElem;
+    constructor(properties) {
         this._lineTemplate = lineTemplate;
         this._lineItemTemplate = lineItemTemplate;
-        this._searchPeriod = searchPeriod;
-        this._dateFormater = dateFormater;
-        this._storageHandler = storageHandler;
+        this._histogramContainer = properties.elements.histogram;
+        this._searchPeriod = properties.searchPeriod;
+        this._dateFormater = properties.dateFormater;
+        this._storageHandler = properties.storageHandler;
     }
 
     renderHistogram() {
