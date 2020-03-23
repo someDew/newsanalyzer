@@ -2,9 +2,9 @@
 import './digits.css';
 
 export default class Digits {
-    constructor(domElem, storageHandler) {
-        this._block = domElem;
-        this._storageHandler = storageHandler;
+    constructor(properties) {
+        this._block = properties.elements.digits;
+        this._storageHandler = properties.storageHandler;
 
         this._block.addEventListener('onload', this._renderDigits());
     }

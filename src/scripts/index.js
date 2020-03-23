@@ -7,6 +7,7 @@ import '../styles/index.css';
 import { NEWS_API_KEY as apiKey } from './constants/constants.js';
 import { SHOW_NEWS_ONCE_TIME as showNewsOnceTime } from './constants/constants.js';
 import { SEARCH_PERIOD as searchPeriod } from './constants/constants.js';
+import { DOM_ELEMENTS as elements } from './constants/constants.js';
 
 // MODULES
 import NewsApi from './modules/NewsApi';
@@ -21,13 +22,12 @@ import Preloader from '../blocks/preloader/Preloader.js';
 // INSTANCES
 const dateFormater = new DateFormater;
 const storageHandler = new StorageHandler(searchPeriod);
-const content = document.querySelector('.content');
-const notFound = new NotFound(content);
-const preloader = new Preloader(content);
-const newsApi = new NewsApi(dateFormater, apiKey, searchPeriod);
+const notFound = new NotFound(elements.content);
+const preloader = new Preloader(elements.content);
+const newsApi = new NewsApi({ dateFormater, apiKey, searchPeriod });
 const newsCard = new NewsCard(dateFormater);
-const newsCardsList = new NewsCardsList(showNewsOnceTime, document.querySelector('.news'), storageHandler, newsCard);
-const searchInput = new SearchInput(newsApi, newsCardsList, storageHandler, notFound, preloader);
+const newsCardsList = new NewsCardsList({ showNewsOnceTime, elements, storageHandler, newsCard });
+const searchInput = new SearchInput({ newsApi, newsCardsList, storageHandler, notFound, preloader });
 
 // WORKERS
 window.onload = () => searchInput.renderPrevious();

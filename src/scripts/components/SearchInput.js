@@ -1,11 +1,11 @@
 export default class SearchInput {
-    constructor(newsApi, newsCardsList, storageHandler, notFound, preloader) {
+    constructor(properties) {
 
-        this._newsApi = newsApi;
-        this._cardsList = newsCardsList;
-        this._storageHandler = storageHandler;
-        this._notFound = notFound;
-        this._preloader = preloader;
+        this._newsApi = properties.newsApi;
+        this._cardsList = properties.newsCardsList;
+        this._storageHandler = properties.storageHandler;
+        this._notFound = properties.notFound;
+        this._preloader = properties.preloader;
 
         this._searchForm = document.querySelector('.search__form');
         this._input = this._searchForm.elements.searchInput;
@@ -27,7 +27,7 @@ export default class SearchInput {
         this._newsApi.getNews(this._input.value)            
             .then(response => response.totalResults !== 0 ? response : Promise.reject(response))
             .then(response => {
-                this._storageHandler.writeStorage(response, this._input.value)
+                this._storageHandler.storeNews(response, this._input.value)
                 this._cardsList.showCardsGroup();
                 this._cardsList.showCardsList();
             })

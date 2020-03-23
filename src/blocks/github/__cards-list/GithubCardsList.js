@@ -1,9 +1,9 @@
 export default class GithubCardsList{
-    constructor(gitApi, commitsToShow, slider, githubCard) {        
-        this._api = gitApi;
-        this._commitsToShow = commitsToShow;
-        this._slider = slider;
-        this._githubCard = githubCard;
+    constructor(properties) {        
+        this._api = properties.gitApi;
+        this._commitsToShow = properties.commitsToShow;
+        this._slider = properties.slider;
+        this._githubCard = properties.githubCard;
     }
 
     renderCommits() {

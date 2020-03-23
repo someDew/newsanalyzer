@@ -11,11 +11,13 @@
     line-height: 30px;
     
     background: #FFFFFF;
+
+    word-break: break-word;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
 
-    .card__title {		
+    .news__card-title {		
         font-size: 22px;
         line-height: 24px;
     }

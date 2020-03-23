@@ -31,7 +31,6 @@ export const NEWS_API_ERRORS = {
                text: 'Возможно, проблема с соединением или сервер недоступен. Пожалуйста, попробуйте позже.'}
 };
 
-
 // options of slider for about page
 export const SLIDER_OPTIONS = {
 
@@ -78,3 +77,12 @@ export const SLIDER_OPTIONS = {
 
     grabCursor: true,
 };
+
+// DOM elements to pass to modules
+export const DOM_ELEMENTS = {
+    content: document.querySelector('.content'),
+    news: document.querySelector('.news'),
+    digits: document.querySelector('.digits'),
+    histogram: document.querySelector('.histogram'),
+    slider: document.querySelector('.swiper-container'),
+}

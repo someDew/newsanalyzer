@@ -11,6 +11,7 @@
     background: #FFFFFF;
 
     overflow: hidden;
-    text-overflow: ellipsis;
     text-align: justify;
+    text-overflow: ellipsis;
+    word-break: break-word;
 }
