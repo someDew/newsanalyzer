@@ -6,7 +6,7 @@
 
 Hi! And wellcome. 
 
-[![newsanalyzer screenshot](https://pictures.s3.yandex.net/resources/Snimok_ekrana_2019-10-11_v_15.05.22_1570795557.png "github.io/newsanalyzer")](https://somedew.github.io/newsanalyzer)
+[![newsanalyzer screenshot](https://pictures.s3.yandex.net/resources/Snimok_ekrana_2019-10-11_v_15.05.22_1570795557.png "github.io/newsanalyzer")](https://somedew.github.io/newsanalyzer/)
 
 'NewsAnalyzer' is a _final qualifying work_ in Yandex.Praktikum. Its simple web application to search for news on Russian language by keywords.
 
@@ -76,5 +76,4 @@ Hi! And wellcome.
 * [GitHub](http://github.com);
 * And many others.
 
------
-> Feel free to ask your questions **@dewandrew**
+> Feel free to ask your questions in [telegram](http://t.me/dewandrew)
