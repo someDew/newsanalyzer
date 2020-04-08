@@ -45,7 +45,7 @@ export const SLIDER_OPTIONS = {
             slidesPerView: 3,
         },
         1: {
-            spaceBetween: 0,
+            spaceBetween: 8,
             
             slidesPerView: 1,
             centeredSlides: true,

@@ -76,4 +76,4 @@ Hi! And wellcome.
 * [GitHub](http://github.com);
 * And many others.
 
-> Feel free to ask your questions in [telegram](http://t.me/dewandrew)
+> Feel free to ask your questions in [telegram](https://t.me/frontandrew)

@@ -14,7 +14,7 @@
 @media screen and (max-width: 1440px) {
     
     .author {		
-        grid-template-columns: 7vw minmax(232px, 464px) 3.8vw minmax(288px, 10000px) 7vw;
+        grid-template-columns: 7vw minmax(232px, 464px) 3.8vw minmax(288px, 1000px) 7vw;
         grid-template-rows: 5vw auto 1fr 5vw;
     }
 }

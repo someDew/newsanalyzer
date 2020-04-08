@@ -30,26 +30,11 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-
-    .github {        
-        grid-template-rows: 5vw auto 4vw auto 4vw;        
-    }
-}
-
 @media screen and (max-width: 610px) {
 
     .github {		
         grid-template-columns: 7vw auto 7vw;
         grid-template-rows: 5vw auto 4vw auto 2vw auto 4vw;
-        
-    }
-}
-
-@media screen and (max-width: 450px) {
-
-    .github {		
-        grid-template-rows: 5vw auto 4vw 300px 2vw auto 4vw;
         
     }
 }
