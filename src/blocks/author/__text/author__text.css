@@ -8,6 +8,7 @@
     height: auto;
     display: block;
     
+    word-break: break-word;
     text-align: justify;
 
     font-family: Roboto, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
