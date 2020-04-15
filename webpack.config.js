@@ -1,5 +1,5 @@
 
-const path = require('path'); // утилита path превращает путь в абсолютный тк WP не понимает относительных
+const path = require('path'); // утилита path превращает путь в абсолютный тк WebPack не понимает относительных
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
