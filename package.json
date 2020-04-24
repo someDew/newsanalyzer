@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/someDew/newsanalyzer.git"
+    "url": "git+https://github.com/frontandrew/newsanalyzer.git"
   },
-  "author": "@dewandrew",
+  "author": "@frontandrew",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/someDew/newsanalyzer/issues"
+    "url": "https://github.com/frontandrew/newsanalyzer/issues"
   },
-  "homepage": "https://somedew.github.io/newsanalyzer",
+  "homepage": "https://frontandrew.github.io/newsanalyzer",
   "devDependencies": {
     "@babel/cli": "7.7.0",
     "@babel/core": "7.7.2",
