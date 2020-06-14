@@ -12,7 +12,9 @@ export default class NewsApi {
         date.setDate(date.getDate() - this._searchPeriod);
         const searchFrom = date.toISOString().slice(0, 10);
 
-        const url = 'https://newsapi.org/v2/everything?' +
+        // newsapi.org free plan now work only for localhost reqests
+        // it is work throw yandex now
+        const url = 'https://praktikum.tk/news/v2/everything?' +
                     `q=${string}&` +
                     `from=${searchFrom}&` +
                     `sortBy=publishedAt&` +

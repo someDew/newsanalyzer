@@ -1,12 +1,16 @@
 # NewsAnalyzer
-## v1.0.3
+## v1.0.4
 ---
   
 ### About:
 
 Hi! And wellcome. 
 
+<div align="center">
+
 [![newsanalyzer screenshot](https://pictures.s3.yandex.net/resources/Snimok_ekrana_2019-10-11_v_15.05.22_1570795557.png "github.io/newsanalyzer")](https://frontandrew.github.io/newsanalyzer/)
+
+</div>
 
 'NewsAnalyzer' is a my _final qualifying work_ in Yandex.Praktikum. Its simple web application to search for news on Russian language by keywords. Please, [try it](https://frontandrew.github.io/newsanalyzer/).
 
@@ -33,18 +37,23 @@ Hi! And wellcome.
 
 ### Fast start:
 
-0. First you must install [Node.js](https://nodejs.org/en/) and comandline tool, for example [git bash](https://git-scm.com/downloads)
-1. Download repo and unpack on your local
-2. To install environment `npm install`. This download necessary npm packages
-3. To build project local run `npm run build`. This build project from source in dist directory
-4. To develop/debug project local run `npm run dev`. This run webpack dev server on your local on 8080 port
+0. For start please install [Node.js](https://nodejs.org/en/) and comandline tool, for example [git bash](https://git-scm.com/downloads)
+1. Then clone or download repo and unpack on your local
+2. Run `npm install` to install the environment for downloading necessary npm packages
+3. Run `npm run build` to build project local. It will build project from source in dist directory
+4. Run `npm run start` to develop/debug project local. It will start webpack-dev-server on your local, port 8080.
 
 ### Whats new:
 
 <details>
+    <summary>v1.0.4</summary>
+    <li>New way to do request throw yandex</li>
+</details>
+
+<details>
     <summary>v1.0.3</summary>
     <li>Fixed bug with incorrect links from NesApi</li>
-    <li>>Supplemented readme file</li>
+    <li>Supplemented readme file</li>
 </details>
 
 <details>
